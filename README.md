@@ -1,2 +1,7 @@
-# ss11-rgeom
-Vorlesungsmitschrieb Riemannsche Geometrie, Sommersemester 2011, Uni Stuttgart
+# Riemannsche Geometrie
+
+Dozent Prof. Dr. U. Semmelmann
+
+[Vorlesungswebseite](http://www.igt.uni-stuttgart.de/LstGeo/Semmelmann/riemgeo.t)
+
+Sommersemester 2011, Uni Stuttgart
