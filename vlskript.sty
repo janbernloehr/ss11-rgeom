@@ -1,0 +1,597 @@
+% Dieser Style definiert alles Notwendige um mathematische Texte
+% zu setzten.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{vlskript}[2011/04/28 v. 1.0 common document style]
+
+% =============================================================================
+% 					KOMA Optionen Deklaration
+% =============================================================================
+\DeclareOption{pdftitle}{ \PassOptionsToPackage{{\CurrentOption}}{hyperref} }
+\DeclareOption{pdfauthor}{ \PassOptionsToPackage{{\CurrentOption}}{hyperref} }
+\DeclareOption{baseurl}{ \PassOptionsToPackage{{\CurrentOption}}{hyperref} }
+
+\KOMAProcessOptions\relax
+
+% =============================================================================
+% 					Paket Einbindung
+% =============================================================================
+\RequirePackage{ifthen}					% if, then, else in latex
+\RequirePackage[ngerman]{babel}			% Deutsche Silbentrennung
+\RequirePackage[applemac]{inputenc}		% UTF-8 Encoding 
+\RequirePackage[T1]{fontenc}			% T1 Fonts
+
+\RequirePackage{amsmath,array,stmaryrd}
+										% Standard Mathe Pakete
+\RequirePackage[romanfamily=bright-osf,math-style=iso,stdmathdigits=true,scale=.79]%
+			   {lucimatx}				% Lucida Schriftart
+\RequirePackage[mathscr]{euscript}		% Euler Skript
+\RequirePackage{scalefnt}				% Scale Font
+
+\RequirePackage{enumitem}				% Eigene Aufzählungen
+
+\RequirePackage{pstricks-add,pst-pdf}	% Zeichnungen mit pstricks
+\RequirePackage{float}					% Setzen von figures.
+
+\RequirePackage{color}	 				% Farben
+\RequirePackage{caption} 				% Abbildungsüberschriten
+
+\RequirePackage{fancyhdr} 				% Header
+\RequirePackage{marginnote}				% Header / Footer schreiben in margin
+
+\RequirePackage{makeidx}				% Bibliography
+\RequirePackage{bbding}					% Proof Symbol
+
+\RequirePackage[thmmarks,amsmath,amsthm]
+			   {ntheorem}				% Theorem Umgebungen
+\RequirePackage{titlesec}				% Titelei
+
+\RequirePackage{tikz}					% Kommutative Diagramme
+\usetikzlibrary{matrix,arrows}
+
+
+% PDF Optionen
+\RequirePackage[
+% Hyperlink-Optionen
+hyperfootnotes=true, % Fußnoten verlinken
+hyperindex=true, % Seitenzahlen als Link
+%backref=true, % Rücklinks von bibitem,
+% erfordert Leerzeile nach jedem bibitem
+breaklinks=true, % Zeilenumbruch bei Links
+% Farben
+colorlinks=true, % true = farbige Links, false = Rahmen
+linkcolor=linkred, % Farbe für Links auf gleicher Seite
+%pagecolor=gray, % Farbe für Links auf anderen Seiten
+citecolor=gray, % Farbe für Links auf Zitatstellen
+filecolor=magenta,
+urlcolor=linkred, % Farbe für Links auf URLs
+anchorcolor=blue, % Farbe für Anker (?)
+menucolor=red, % Farbe für Acrobatmenüeinträge
+% Fehlermeldungen reduzieren
+plainpages=false,
+% PDF-Metainformationen
+unicode=true, % Mit Unicode kodierte Texte
+pdfproducer={pdflatex},
+% Adobe Reader: Anzeigeoptionen
+bookmarks=true, % Acrobat-Lesezeichen einfügen
+bookmarksnumbered=true, % Kapitelnummern für Lesezeichen
+bookmarksopen=true, % Acrobat-Lesezeichen links geöffnet
+bookmarksopenlevel=2, % Geöffnete Hierarchiestufe
+% Lesezeichentyp. Fehlen aber.
+pdfview=FitH, % Zoom beim Link-Traversieren
+% FitH=Seitenbreite anpassen
+% weitere: Fit, FitH, FitV, FitR, FitBH
+pdfstartview=FitH, % Zoom beim Öffnen
+pdfstartpage={1}, % Seite, die angezeigt wird
+pdfpagelayout=OneColumn % Anzeigemodus, hier 1 Seite fortlaufend
+% SinglePage, OneColumn,
+% TwoColumnLeft, TwoColumnRight
+%pdfpagemode=None, % Optionen: UseOutlines = Bookmarks links
+% UseThumbs, FullScreen
+]{hyperref}
+
+% =============================================================================
+% 					Seitenstil
+% =============================================================================
+
+\DeclareCaptionFont{gray-bold}{\small\bfseries\color{gray}}
+\DeclareCaptionFont{gray-light}{\color{gray}\footnotesize}
+
+\DeclareCaptionLabelFormat{number-only}{#2}
+\DeclareCaptionFormat{llap}{\llap{#1#2}\quad#3\par}
+
+\captionsetup{format=llap,labelformat=number-only,labelsep=quad,singlelinecheck=no,labelfont=gray-light,textfont=gray-bold}
+
+% Numerierung anpassen
+\renewcommand\thesection{\arabic{chapter}-\Alph{section}}
+\renewcommand\thesubsection{{\small\ensuremath{\blacksquare}}}
+% \renewcommand\theex{\arabic{ex}}
+
+% Section fonts anpassen
+\setkomafont{chapter}{\normalfont\bfseries\Huge\color{darkblue}}
+\setkomafont{section}{\normalfont\bfseries\Large\color{darkblue}}
+\setkomafont{subsection}{\normalfont\bfseries\color{darkblue}}
+
+\restylefloat{figure}		% Option H='here!' für figures
+
+\pagestyle{fancyplain} 		% Fancy Header & Footer aktivieren
+
+
+% =============================================================================
+% 					Header & Footer
+% =============================================================================
+
+\fancyhf{}					% Header & Footer resetten
+
+\newcommand{\sidenote}[1]{%	Schreiben des Margins
+\noindent\leavevmode\llap{#1\enspace}%
+}
+
+\renewcommand{\headrule}{}	% Clear Headrule
+
+\renewcommand{\chaptermark}[1]{\markboth{\textsc{#1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\textsc{#1}}{}}
+
+
+% =============================================================================
+% 					Häufig verwendete Farben
+% =============================================================================
+
+\definecolor{darkblue}{rgb}{0.09,0.20,0.43}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{lightgray}{rgb}{0.9,0.9,0.9}
+\definecolor{proofgray}{rgb}{0.3,0.3,0.3}
+\definecolor{framecolor}{rgb}{0,0,0}
+\definecolor{gdarkgray}{rgb}{0.39,0.39,0.40}
+\definecolor{glightgray}{rgb}{0.93,0.93,0.93}
+
+\definecolor{purple}{rgb}{0.55,.16,0.44}
+\definecolor{yellow}{rgb}{0.78,.51,0.13}
+\definecolor{htmlyellow}{rgb}{1,1,0}
+\definecolor{linkred}{rgb}{0.545,0.275,0.29}
+
+% Hervorhebung in Definitionen etc.
+\renewcommand{\emph}[1]{{\color{purple}#1}}
+
+% =============================================================================
+% 					PSTricks Standards
+% =============================================================================
+
+\psset{linecolor=gdarkgray}
+\psset{tickcolor=gdarkgray}
+\psset{fillcolor=glightgray}
+
+% =============================================================================
+% 					Listen
+% =============================================================================
+
+\newcommand{\labelitem}		% itemize
+	       {\footnotesize\ensuremath{\blacksquare}}
+\renewcommand{\labelenumi}	% Standard Aufzählung (a)
+		     {{\normalfont(\alph{enumi})}}
+\renewcommand{\labelitemi}  % Standard Liste
+			 {{\footnotesize\ensuremath{\blacksquare}}}
+
+% Vordefinierte Listen
+\newenvironment{remenum}%
+	{\begin{enumerate}[label=\textsc{\alph{*}}.,leftmargin=17pt]}{\end{enumerate}}
+\newenvironment{defnenum}%
+	{\begin{enumerate}[label=\arabic{*})]}{\end{enumerate}}
+\newenvironment{defnpropenum}%
+	{\begin{enumerate}[label={\rm (\alph{*})}]}{\end{enumerate}}
+\newenvironment{propenum}%
+	{\begin{enumerate}[label=\alph{*})]}{\end{enumerate}}
+\newenvironment{equivenum}%
+	{\begin{enumerate}[label=(\roman{*})]}{\end{enumerate}}
+\newenvironment{exenum}%
+	{\begin{enumerate}[label=\alph{*}.,leftmargin=17pt]}{\end{enumerate}}
+% \newenvironment{proofenumarm}%
+% 	{\begin{enumerate}[label=\arabic{*}.,leftmargin=17pt]}{\end{enumerate}}
+% \newenvironment{proofenumarabic}%
+% 	{\begin{enumerate}[label=\arabic{*}.),leftmargin=17pt]}{\end{enumerate}}
+% \newenvironment{proofenumarabicbr}%
+% 	{\begin{enumerate}[label=(\arabic{*}),leftmargin=17pt]}{\end{enumerate}}
+% \newenvironment{proofenumroman}%
+% 	{\begin{enumerate}[label=(\roman{*}),leftmargin=17pt]}{\end{enumerate}}
+% \newenvironment{proofenum}%
+% 	{\begin{enumerate}[label=\alph{*}),leftmargin=17pt]}{\end{enumerate}}
+
+% =============================================================================
+% 					Styles für Theoreme wie Definition, Satz, Beweis etc.
+% =============================================================================
+
+% Fonts definieren
+\newcommand{\blueheaderfont}%
+	{\normalfont\normalsize\bfseries\color{darkblue}}
+\newcommand{\yellowheaderfont}%
+	{\normalfont\normalsize\bfseries\scshape\small\color{yellow}}
+\newcommand{\itheaderfont}%
+	{\normalfont\itshape}
+\renewcommand{\marginfont}%
+	{\normalfont\small\color{gray}}
+\newcommand{\prooffont}%
+	{\normalfont\normalsize\itshape}
+
+% Styles definieren
+\newtheoremstyle{graymarginwithblueheader}%
+	{\item[\llap{\marginfont{##2}}\hskip\labelsep \blueheaderfont{##1}]}%
+	{\item[\llap{\marginfont{##2}}\hskip\labelsep \blueheaderfont{##3}]}%
+
+\newtheoremstyle{graymarginwithyellowheader}%
+	{\item[\llap{\marginfont{##2}}\hskip\labelsep \yellowheaderfont{##1}]}%
+	{\item[\llap{\marginfont{##2}}\hskip\labelsep \yellowheaderfont{##3}]}%
+
+\newtheoremstyle{graymarginwithitblackheader}%
+	{\item[\llap{\marginfont{##2}}\hskip\labelsep \itheaderfont{##1}]}%
+	{\item[\llap{\marginfont{##2}}\hskip\labelsep \itheaderfont{##3}]}%
+
+\newtheoremstyle{graymarginwithblueheadern}%
+	{\item[\hskip\labelsep \blueheaderfont{##1}]}%
+	{\item[\hskip\labelsep \blueheaderfont{##3}]}%
+
+\newtheoremstyle{graymarginwithyellowheadern}%
+	{\item[\hskip\labelsep \yellowheaderfont{##1}]}%
+	{\item[\hskip\labelsep \yellowheaderfont{##3}]}%
+
+\newtheoremstyle{graymarginwithitblackheadern}%
+	{\item[\hskip\labelsep \itheaderfont{##1}]}%
+	{\item[\hskip\labelsep \itheaderfont{##3}]}%
+
+\newtheoremstyle{yellowheader}%
+	{\item[\hskip\labelsep \yellowheaderfont{##1 ##2}]}%
+	{\item[\hskip\labelsep \yellowheaderfont{##3 ##2}]}%
+
+\newtheoremstyle{nonumberproof}
+ 	{\item[\hskip\labelsep \prooffont{##1}]}%
+ 	{\item[\hskip\labelsep \prooffont{##3}]}
+
+% qed Umgebung resetten
+%\theoremheaderfont{\itshape}
+\theorembodyfont{\normalfont}
+\theoremstyle{nonumberproof}
+\theoremsymbol{}
+\renewtheorem{proof}{Beweis.}
+
+% =============================================================================
+% 					Theorem Umgebungen
+% =============================================================================
+% Theorem Umgebungen *MIT* Numerierung
+\theoremstyle{graymarginwithblueheader}
+\theorembodyfont{\itshape}
+\theoremseparator{}
+\theoremsymbol{}
+
+\newtheorem{prop}{Satz}[chapter]
+\newtheorem{lem}[prop]{Lemma}
+\newtheorem{defn}[prop]{Definition}
+\newtheorem{cor}[prop]{Korollar}
+\newtheorem{thm}[prop]{Theorem}
+
+\theoremstyle{yellowheader}
+\theorembodyfont{\normalfont}
+\theoremseparator{}
+\theoremsymbol{}
+
+\newtheorem{ex}{Beispiel}
+
+\theoremstyle{graymarginwithitblackheader}
+\theorembodyfont{\normalfont}
+\theoremseparator{}
+\theoremsymbol{}
+
+\newtheorem{rem}[prop]{Bemerkung.}
+
+% Theorem Umgebungen *OHNE* Numerierung
+\theoremstyle{graymarginwithblueheadern}
+\theorembodyfont{\itshape}
+\theoremseparator{}
+\theoremsymbol{}
+
+\renewtheorem{prop*}{Satz}
+\renewtheorem{lem*}{Lemma}
+\renewtheorem{defn*}{Definition}
+\renewtheorem{cor*}{Korollar}
+
+\theoremstyle{graymarginwithyellowheadern}
+\theorembodyfont{\normalfont}
+\theoremseparator{}
+\theoremsymbol{}
+
+\renewtheorem{ex*}{Beispiel}
+
+\theoremstyle{graymarginwithitblackheadern}
+\theorembodyfont{\normalfont}
+\theoremseparator{}
+\theoremsymbol{}
+
+\renewtheorem{rem*}{Bemerkung.}
+
+
+% =============================================================================
+% 					Mathematische Ergänzungen
+% =============================================================================
+
+% funktionierendes \atop
+\renewcommand{\atop}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
+
+\newcommand{\pcal}[1]{
+{\text{\scalefont{.82}\ensuremath{\mathscr{#1}}}}
+}
+
+\newcommand{\defl}{\coloneq}
+\newcommand{\defr}{\eqcolon}
+
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+
+\renewcommand{\iff}{\Leftrightarrow}
+\renewcommand{\bar}[1]{\overline{#1}}
+
+\newcommand{\ii}{\mathrm{i}}
+
+\DeclareMathOperator{\Par}{Par}
+\renewcommand{\o}{\mathrm{o}}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\Pf}{Pf}
+\DeclareMathOperator{\Hess}{Hess}
+\newcommand{\dM}{\,\diffd M}
+
+\newcommand{\ic}{\reflectbox{\rotatebox[origin=c]{180}{\,$\neg$}}\,}
+
+% rcases (s. cases)
+\newenvironment{rcases}{% 
+  \left.\renewcommand*\lbrace.% 
+  \begin{cases}}% 
+{\end{cases}\right\rbrace}
+
+% Abschlusssymbole
+\renewcommand{\qed}{{\small\quad~\color{darkblue}\text{\RectangleBold}}}
+\newcommand{\fish}%
+	{\quad\ensuremath{\color{darkblue}\rtimes}}
+\newcommand{\bsp}%
+	{\quad\ensuremath{\color{yellow}\blacksquare}}
+\newcommand{\map}%
+	{\quad\ensuremath{\multimap}}
+
+% Mehr Platz um Quantoren
+\let\existsorig\exists 
+\renewcommand{\exists}{\ \existsorig\ } 
+\let\forallorig\forall 
+\renewcommand{\forall}{\ \forallorig\ } 
+
+\newcommand{\setd}[1]%					  			Menge
+	{\left\{ #1 \right\}}
+\newcommand{\setdef}[2]%				  			Menge mit Eigenschaft
+	{\left\{ #1\,:\,#2\right\}}
+\newcommand{\abs}[1]%					  			Absolutbetrag
+	{\left|#1\right|}
+\newcommand{\norm}[1]%					  			Norm
+	{\left\|#1\right\|}
+
+
+
+\DeclareMathOperator\rad{rad}%						Rad
+\DeclareMathOperator\card{card}%					Cardinality
+\newcommand{\unito}{\twoheadrightarrow}%			Gleichmäßige Konvergenz
+\newcommand{\opento}{\hookrightarrow}%				Von einer offenen Teilmenge nach *
+\DeclareMathOperator{\dist}{dist}
+\renewcommand\hom{\simeq}	%						Homotop
+\newcommand{\rels}[1]%					  			rel. A 
+	{\text{ rel. }\ensuremath{#1}}
+\newcommand{\rel}[1]%					  			rel. {...}
+	{\rels{\left\{#1\right\}}}
+\DeclareMathOperator{\Top}{Top}	%					Kategorie der Top Räume
+
+\newcommand{\lin}[1]%								Linearer Aufspann / Skalarprod.
+	{\left\langle#1\right\rangle}
+\newcommand{\com}[1]%								Kommutator
+	{\left[#1\right]}
+	
+\newcommand{\dcup}{\dot{\cup}}	%					Disjunkte Vereinigung	
+
+\DeclareMathOperator\trace{tr}%						Spur #2
+\DeclareMathOperator\Epi{Epi}%						Epimorphismenring
+\DeclareMathOperator\ggT{ggT}%						größter gemeinsamer Teiler
+\DeclareMathOperator\kgV{kgV}%						kleinstes gemeinsames Vielfaches
+\DeclareMathOperator\adj{adj}%						Adjungierte
+\DeclareMathOperator\chr{char}%						Charakteristik des Körpers
+\DeclareMathOperator\ann{ann}%						Annulator
+\newcommand\ideal{\trianglelefteq}%					Ideal
+\DeclareMathOperator\ind{ind}%						Index
+\renewcommand{\div}{\operatorname{div}}%			Divergenz
+\DeclareMathOperator\rot{rot}%						Rotation
+
+\renewcommand{\C}{\mathbb{C}}%					Komplexe Zahlen
+\newcommand{\N}{\mathbb{N}}%					Natürlcihe Zahlen
+\newcommand{\R}{\mathbb{R}}	%					Reelle Zahlen
+\newcommand{\RA}{\overline{\mathbb{R}}}%		Abschluss von R
+\newcommand{\Z}{\mathbb{Z}}	%					Ganze Zahlen
+\newcommand{\Q}{\mathbb{Q}}%					Rationale Zahlen
+\newcommand{\F}{\mathbb{F}}%					Endlicher Körper
+\newcommand{\K}{\mathbb{K}}	%					Beliebiger Körper
+\newcommand{\KH}{\hat{\mathbb{K}}}%				K Hut (\RA/C)
+
+\renewcommand{\AA}{\mathcal{A}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\CC}{\pcal{C}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\EE}{\mathcal{E}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\GG}{\mathcal{G}}
+\newcommand{\HH}{\pcal{H}}
+\newcommand{\II}{\mathcal{I}}
+\newcommand{\JJ}{\mathcal{J}}
+\newcommand{\KK}{\mathcal{K}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\NN}{\mathcal{N}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\QQ}{\mathcal{Q}}
+\newcommand{\RR}{\mathcal{R}}
+\renewcommand{\SS}{\mathcal{S}}
+\newcommand{\TT}{\mathcal{T}}
+\newcommand{\UU}{\mathcal{U}}
+\newcommand{\VV}{\mathcal{V}}
+\newcommand{\WW}{\pcal{W}}
+\newcommand{\XX}{\mathcal{X}}
+\newcommand{\YY}{\mathcal{Y}}
+\newcommand{\ZZ}{\mathcal{Z}}
+
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\h}{\mathfrak{h}}
+
+% Griechische Buchstaben
+\newcommand{\ph}{\varphi}
+\renewcommand{\th}{\vartheta}
+\newcommand{\ep}{\varepsilon}
+
+% Differentialformen
+
+\newcommand{\diffd}{\mathrm{d}}
+\newcommand{\ddt}{\frac{\diffd}{\dt}}
+
+\newcommand{\dph}{\diffd \ph}
+\newcommand{\dth}{\diffd \th}
+\newcommand{\dphi}{\diffd \phi}
+\newcommand{\dpsi}{\diffd \psi}
+
+\newcommand{\dL}{\diffd L}
+\newcommand{\dR}{\diffd R}
+
+\newcommand{\dg}{\diffd g}
+
+\newcommand{\dpi}{\diffd \pi}
+\newcommand{\domega}{\diffd \omega}
+\newcommand{\dsigma}{\diffd \sigma}
+\newcommand{\dtau}{\diffd \tau}
+\newcommand{\dOmega}{\diffd \Omega}
+\newcommand{\dzeta}{\diffd \zeta}
+\newcommand{\dxi}{\diffd \xi}
+
+\newcommand{\dmu}{\diffd \mu}
+\newcommand{\dnu}{\diffd \nu}
+\newcommand{\dlambda}{\diffd \lambda}
+\newcommand{\dlamb}[1]{\diffd \lambda^{#1}}
+\newcommand{\dmumu}{\diffd (\mu\otimes\mu')}
+\newcommand{\drho}{\diffd \rho}
+
+\newcommand{\db}{\diffd b}
+
+\newcommand{\df}{\diffd f}
+\newcommand{\dF}{\diffd F}
+
+\newcommand{\dH}{\diffd H}
+
+\newcommand{\dk}{\diffd k}
+\newcommand{\dn}{\diffd n}
+
+\newcommand{\ddp}{\diffd p}
+\newcommand{\dP}{\diffd P}
+
+\newcommand{\ddq}{\diffd q}
+\newcommand{\ddotq}{\diffd \dot{q}}
+
+\newcommand{\dr}{\diffd r}
+\newcommand{\ds}{\diffd s}
+\newcommand{\dt}{\diffd t}
+
+\newcommand{\du}{\diffd u}
+\newcommand{\dv}{\diffd v}
+\newcommand{\dw}{\diffd w}
+
+\newcommand{\dx}{\diffd x}
+\newcommand{\dy}{\diffd y}
+\newcommand{\dz}{\diffd z}
+
+\newcommand{\dA}{\diffd A}
+\newcommand{\dB}{\diffd B}
+\newcommand{\dE}{\diffd E}
+\newcommand{\dN}{\diffd N}
+
+\newcommand{\dQ}{\diffd Q}
+\newcommand{\dV}{\diffd V}
+\newcommand{\dW}{\diffd W}
+
+\newcommand{\const}{\mathrm{const}}
+
+\newcommand{\e}{\mathrm{e}}
+
+\renewcommand\O{\mathrm{O}}
+\newcommand\so{\mathfrak{so}}
+\renewcommand\sp{\mathfrak{sp}}
+\newcommand\su{\mathfrak{su}}
+\renewcommand\u{\mathfrak{u}}
+\renewcommand\sl{\mathfrak{sl}}
+\newcommand\SO{\mathrm{SO}}
+\newcommand\SL{\mathrm{SL}}
+\newcommand\Spin{\mathrm{Spin}}
+\newcommand\SU{\mathrm{SU}}
+\newcommand\Sp{\mathrm{Sp}}
+\newcommand\GL{\mathrm{GL}}
+\renewcommand\U{\mathrm{U}}
+\renewcommand\G{\mathrm{G}}
+\newcommand\Ad{\mathrm{Ad}}
+\newcommand\ad{\mathrm{ad}}
+\newcommand\CP{\C\mathrm{P}}
+%
+\newcommand\Cas{\mathrm{Cas}}
+\newcommand\End{\mathrm{End}\,}
+\newcommand\Hom{\mathrm{Hom}\,}
+\newcommand\Hol{\mathrm{Hol}}
+\newcommand\hol{\mathfrak{hol}}
+\newcommand\Iso{\mathrm{Iso}}
+\newcommand\id{\mathrm{id}}
+\newcommand\im{\mathrm{im}\,}
+\newcommand\rg{\mathrm{rg}\,}
+\newcommand\vol{\mathrm{vol}}
+\newcommand\pr{\mathrm{pr}}
+\newcommand\Sym{\mathrm{Sym}}
+\renewcommand\Im{\mathrm{Im}}
+\renewcommand\Re{\mathrm{Re}}
+\newcommand\Lie{\mathrm{Lie}}
+\newcommand\Der{\mathrm{Der}}
+\newcommand\Tr{\mathrm{Tr}}
+\newcommand\Diff{\mathrm{Diff}}
+%
+\renewcommand\#{\sharp}
+\renewcommand\b{\flat}
+\newcommand\D{\Delta}
+\renewcommand\g{\mathfrak{g}}
+\renewcommand\k{\mathfrak{k}}
+\newcommand\m{\mathfrak{m}}
+\renewcommand\L{\Lambda}
+\renewcommand\l{\lambda}
+\newcommand\p{\mathfrak{p}}
+\renewcommand\h{\mathfrak{h}}
+\renewcommand\S{\mathrm{Sym}}
+\newcommand\W{\mathcal{W}\,}
+\renewcommand\tt{\mathfrak{t}\,}
+\newcommand\diag{\mathrm{diag}\,}
+\newcommand\grad{\mathrm{grad}\,}
+%
+\newcommand\Aut{\mathrm{Aut}}
+\newcommand\ins{\,\lrcorner\,\,}
+\newcommand\bea{\begin{eqnarray*}}
+\newcommand\eea{\end{eqnarray*}}
+\newcommand\Ric{\mathrm{Ric}}
+\newcommand\tr{\mathrm{tr}}
+\newcommand\la{\langle}
+\newcommand\ra{\rangle}
+\newcommand\Ul{\mathcal{U}\,}
+\newcommand\E{\mathcal{E}\,}
+\newcommand\spin{\mathfrak{spin}}
+\newcommand\gl{\mathfrak{gl}}
+
+\newcommand\sgn{\mathrm{sgn}}
+\newcommand\Zent{\mathrm{Zent}}
+\newcommand\Eig{\mathrm{Eig}}
+\newcommand\Zl{\mathrm{Zent}\,\Ul (\g)}
+\newcommand\Abb{\mathrm{Abb}}
+\newcommand\Id{\mathrm{Id}}
+\newcommand\sign{\mathrm{sign}}
+\newcommand\ord{\mathrm{ord}}
+\newcommand\supp{\mathrm{supp}\,}
+%
+\newcommand\al{i\,}
+
+\newcommand{\hor}{\mathrm{hor}}
