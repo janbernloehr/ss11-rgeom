@@ -90,7 +90,7 @@ Viel Spaß!
 \index{Faser}\index{Faserung}\index{Faserung!lokal-triviale}
 \index{Faser!-typ}\index{lokale Trivialität}\index{Basis}
 \index{Totalraum}\index{Projektion}
-Sei $\pi: E\to M$ eine glatte Abbildung zwischen Mannigfaltigkeiten $E$ und $M$
+Sei $\pi\colon E\to M$ eine glatte Abbildung zwischen Mannigfaltigkeiten $E$ und $M$
 und $F$ eine weitere Mannigfaltigkeit. Man nennt das Tupel $(E,\pi,M;F)$
 \emph{lokal-triviale Faserung vom Fasertyp $F$}, falls es zu jedem Punkt $x\in
 M$ eine Umgebung $U\subset M$ von $x$ und einen Diffeomorphismus
@@ -107,7 +107,7 @@ $\phi_U$ \emph{lokale Trivialisierungen}. $E$ heißt \emph{Totalraum}, $M$
 Für jedes $x\in M$ ist die \emph{Faser} $E_x \defl \pi^{-1}(x) \subset E$
 eine Untermannigfaltigkeit von $E$ und unter dem Diffeomorphismus
 \begin{align*}
-\phi_{U,x} = \pr_2\circ\phi_U\big|_{E_x} : E_x\to F
+\phi_{U,x} = \pr_2\circ\phi_U\big|_{E_x} \colon E_x\to F
 \end{align*}
 diffeomorph zu $F$. Insbesondere sind alle Fasern $E_x$ für $x\in M$ zueinander
 diffeomorph.
@@ -183,7 +183,7 @@ Abbildungen definieren, die zwischen den lokalen Trivialisierungen wechseln.
 Sei $\setd{U_i}$ eine offene Überdeckung von $M$ und $\phi_i\defl \phi_{U_i}$
 die zugehörigen lokalen Trivialisierungen von $E$. Dann heißt die Abbildung
 \begin{align*}
-\phi_i\circ\phi_k^{-1} : (U_i\cap U_k)\times F\to (U_i\cap U_k)\times F
+\phi_i\circ\phi_k^{-1} \colon (U_i\cap U_k)\times F\to (U_i\cap U_k)\times F
 \end{align*}
 \emph{Übergangsfunktion} zwischen den Bündelkarten $(U_i,\phi_i)$ und
 $(U_k,\phi_k)$.\fish
@@ -192,7 +192,7 @@ $(U_k,\phi_k)$.\fish
 
 Durch diese Definition werden Abbildungen
 \begin{align*}
-\phi_{ik}: U_i\cap U_k\to \Diff(F),\qquad x\mapsto
+\phi_{ik}\colon U_i\cap U_k\to \Diff(F),\qquad x\mapsto
 \phi_{i,x}\circ\phi_{k,x}^{-1}
 \end{align*}
 induziert. Später werden wir sehen, dass das Bündel bereits vollständig durch
@@ -218,7 +218,7 @@ Zwei lokal triviale Faserungen $(E,\pi,M;F)$ und
 $(\tilde{E},\tilde{\pi},M;\tilde{F})$ heißen \emph{isomorph}, falls ein
 Diffeomorphismus
 \begin{align*}
-\psi: E\to \tilde{E}
+\psi\colon E\to \tilde{E}
 \end{align*}
 existiert, mit $\tilde{\pi}\circ\psi = \pi$.\fish
 \end{defn}
@@ -252,7 +252,7 @@ F,\pr_1,M;F)$.
 
 \begin{ex}
 \begin{exenum}
-\item \textit{Überlagerungen} $p: \tilde{M}\to M$ sind lokal triviale
+\item \textit{Überlagerungen} $p\colon \tilde{M}\to M$ sind lokal triviale
 Faserungen mit diskreter Faser.
 \item \textit{Tangentialbündel} $(TM,\pi,M;\R^n)$ und
 \textit{Formenbündel} $(\Lambda^k TM,\pi,M;\Lambda^k\R^n)$ sind lokal triviale
@@ -271,13 +271,13 @@ Faserung gegeben, wobei $\pi$ die Fußpunktabbildung ist, d.h.
 \end{align*}
 Die Faser $E_x$ ist gerade die Menge aller Basen von $T_xM$ und folglich ist $F
 = \GL_n$.
-\item \index{Pullback-Bündel}\textit{Pullback-Bündel}. Sei $f: N\to M$ eine
+\item \index{Pullback-Bündel}\textit{Pullback-Bündel}. Sei $f\colon N\to M$ eine
 glatte Abbildung und $(E,\pi,M;F)$ eine lokal triviale Faserung. Man definiert nun
 \begin{align*}
 f^*E \defl \setdef{(y,e)\in N\times E}{f(y) = \pi(e)} \subset N\times E, 
 \end{align*}
 mit Projektionsabbildung $\bar{\pi}(y,e) = y$.
-Für den Spezialfall einer Untermannigfaltigkeit $i: N\opento M$ ist gerade $i^*E
+Für den Spezialfall einer Untermannigfaltigkeit $i\colon N\opento M$ ist gerade $i^*E
 = E\big|_N$.\boxc
 \end{exenum}
 \end{ex}
@@ -327,12 +327,12 @@ bezeichnet.\fish
 
 \begin{rem}
 Ist der Fasertyp ein euklidischer Raum, d.h. $F\cong \R^n$, so existiert ein
-allgemeiner Fortsetzungssatz: Sei $A\subset M$ abgeschlossen und $s: A\to E$
-glatt --- d.h. $s: A^\circ \to E$ ist glatt und für jedes $x\in\partial A$
-existiert eine Umgebung $U\subset M$ von $x$, so dass $s: U\to E$ ebenfalls
+allgemeiner Fortsetzungssatz: Sei $A\subset M$ abgeschlossen und $s\colon A\to E$
+glatt --- d.h. $s\colon A^\circ \to E$ ist glatt und für jedes $x\in\partial A$
+existiert eine Umgebung $U\subset M$ von $x$, so dass $s\colon U\to E$ ebenfalls
 glatt ist ---, dann existiert eine glatte globale Fortsetzung von $s$ zu
 \begin{align*}
-\tilde{s}: M\to E,\qquad \tilde{s}\big|_A = s.
+\tilde{s}\colon M\to E,\qquad \tilde{s}\big|_A = s.
 \end{align*}
 Da es immer möglich ist, einen Schnitt zu finden, der in einem Punkt glatt ist, lässt
 sich auch $\Gamma(E)\neq\varnothing$ immer garantieren.\map
@@ -345,7 +345,7 @@ die mit der Faserung verträglich ist.
 
 \begin{defn}
 \index{Hauptfaserbündel (HFB)}
-Sei $G$ eine Lie-Gruppe und $\pi: P\to M$ eine glatte Abbildung. Das Tupel
+Sei $G$ eine Lie-Gruppe und $\pi\colon P\to M$ eine glatte Abbildung. Das Tupel
 $(P,\pi,M;G)$ heißt \emph{$G$-Hauptfaserbündel ($G$-HFB) auch
 $G$-Prinzipalbündel} über $M$, falls gelten:
 \begin{defnenum}
@@ -363,7 +363,7 @@ $G$-Prinzipalbündel} über $M$, falls gelten:
   \phi_i : P_{U_i}\to U\times G,\qquad
   \phi_i(p) = (\pi(p),S_{U_i}(p)),
   \end{align*}
-  ist ein äquivarianter  Diffeomorphismus, wobei $S_{U_i}: P_{U_i}\to G$ glatt, und
+  ist ein äquivarianter  Diffeomorphismus, wobei $S_{U_i}\colon P_{U_i}\to G$ glatt, und
   \begin{align*}
   \phi_i(p\cdot g) = \phi_i(p)\cdot g \defr (\pi(p),S_{U_i}(p)g),\qquad \forall g\in
   G,\quad p\in P_{U_i},
@@ -377,7 +377,7 @@ einer \emph{Eichung}.
 
 \begin{rem}[Notation.]
 Um ein $G$-Hauptfaserbündel $(P,\pi,M;G)$ zu bezeichnen, schreiben wir auch oft
-nur $\pi: P\to M$ bzw. lassen die Projektion ganz weg und bezeichnen das
+nur $\pi\colon P\to M$ bzw. lassen die Projektion ganz weg und bezeichnen das
 $G$-Hauptfaserbündel mit $P\to M$.\map
 \end{rem}
 
@@ -410,8 +410,8 @@ ist ein Diffeomorphismus, d.h. alle Fasern $P_x$ sind diffeomorph zu $G$.\map
 
 
 
-Zwei lokal triviale Faserungen $\pi: E\to M$ und $\tilde{\pi}: \tilde{E}\to M$
-heißen isomorph, falls es einen Diffeomorphismus $\psi: E\to \tilde{E}$ gibt,
+Zwei lokal triviale Faserungen $\pi\colon E\to M$ und $\tilde{\pi}\colon \tilde{E}\to M$
+heißen isomorph, falls es einen Diffeomorphismus $\psi\colon E\to \tilde{E}$ gibt,
 der Fasern in Fasern überführt. Bei Hauptfaserbündeln ist es sinnvoll zusätzlich
 noch zu fordern, dass dieser Isomorphismus mit der $G$-Wirkung verträglich ist.
 
@@ -419,7 +419,7 @@ noch zu fordern, dass dieser Isomorphismus mit der $G$-Wirkung verträglich ist.
 \index{Hauptfaserbündel!isomorph}
 Zwei $G$-Hauptfaserbündel über der Basis $M$, $(P,\pi,M;G)$ und
 $(\tilde{P},\tilde{\pi},M;G)$ heißen \emph{isomorph}, falls es einen
-$G$-äquivarianten Isomorphismus $\psi: P\to \tilde{P}$ gibt, der die Fasern
+$G$-äquivarianten Isomorphismus $\psi\colon P\to \tilde{P}$ gibt, der die Fasern
 erhält, d.h.  $\psi(p \cdot g) = \psi(p) \cdot g $ und  $\tilde{\pi} \circ \psi=\pi$. 
 Folgendes Diagramm kommutiert:
 
@@ -478,7 +478,7 @@ $T_xM$, d.h. $P_x \cong \GL_n$, für $n= \dim M$.
 
 Die lokale Trivialität wird beschrieben durch die Abbildungen
 \begin{align*}
-S_{U_i}:P_{U_i} \to \GL_n,
+S_{U_i}\colon P_{U_i} \to \GL_n,
 \end{align*}
 für $U_i\subset M$ offen, mit
 \begin{align*}
@@ -489,9 +489,9 @@ Basis $(e_1,\ldots,e_n)$ in die Standardbasis überführt.
 \item \textit{Homogene Räume}. Sei $H\subset G$ eine abgeschlossene Untergruppe,
 dann ist $G/H$ ein homogener Raum und durch
 \begin{align*}
-\pi: G\to G/H,\qquad g\mapsto [g]
+\pi\colon G\to G/H,\qquad g\mapsto [g]
 \end{align*}
-ist ein $H$-Hauptfaserbündel $\pi: G\to G/H$ gegeben. Die Gruppenwirkung
+ist ein $H$-Hauptfaserbündel $\pi\colon G\to G/H$ gegeben. Die Gruppenwirkung
 entspricht gerade der Rechtsmultiplikation mit Elementen aus $H\subset G$.
 \item Die $n$-dimensionale Sphäre lässt sich als homogener Raum auffassen, 
 \begin{align*}
@@ -507,9 +507,9 @@ Man betrachtet die $2n+1$-dimensionale Sphäre eingebettet in $\C^{n+1}$ und
 identifiziert jeden Punkt auf der Sphäre mit einer Geraden in der komplexen
 Ebene,
 \begin{align*}
-\pi : S^{2n+1}\subset\C^{n+1}\to \CP^n,\qquad v\mapsto [v].
+\pi\colon S^{2n+1}\subset\C^{n+1}\to \CP^n,\qquad v\mapsto [v].
 \end{align*}
-Man erhält ein $\U(1)$-Hauptfaserbündel $\pi: S^{2n+1}\to \CP^n$; alle Fasern sind
+Man erhält ein $\U(1)$-Hauptfaserbündel $\pi\colon S^{2n+1}\to \CP^n$; alle Fasern sind
 diffeomorph zu $S^1\cong \U(1)$. Somit ist $S^{2n+1}\to \CP^n$ ein
 $\U(1)$-Hauptfaserbündel und die Gruppenwirkung ist gerade die
 Standard-Skalarmultiplikation in $\C^{n+1}$,
@@ -523,7 +523,7 @@ U_i \defl \setdef{[z_0:\ldots:z_i:\ldots :z_n]}{z_i\neq 0},\qquad 0\le i\le n.
 \end{align*}
 Man definiert nun Abbildungen
 \begin{align*}
-S_{U_i} : \pi^{-1}(U_i) \to  \U(1),\qquad
+S_{U_i} \colon \pi^{-1}(U_i) \to  \U(1),\qquad
 (z_0,\ldots,z_n)\mapsto \frac{z_i}{\abs{z_i}},\qquad 0\le i\le n.
 \end{align*}
 Diese spielen gerade die Rolle der $S_{U_i}=\pr_2\circ \phi_{U_i}$ in der Definition des
@@ -535,7 +535,7 @@ Hauptfaserbündels.\boxc
 Sei $P$ ein $G$-Hauptfaserbündel über $M$ und $\setd{U_i}$ eine offene
 Überdeckung von $M$. Man definiert nun Abbildungen
 \begin{align*}
-g_{ij} : U_i\cap U_j\to G,\qquad g_{ij}(x)\defl S_{U_i}(p)S_{U_j}(p)^{-1},
+g_{ij} \colon U_i\cap U_j\to G,\qquad g_{ij}(x)\defl S_{U_i}(p)S_{U_j}(p)^{-1},
 \end{align*}
 für $x\in M$ und $\pi(p)=x$.\fish
 \end{defn}
@@ -603,7 +603,7 @@ $g_{ij}$ oftmals ebenfalls die Bezeichnung Übergangsfunktionen. Sie erfüllen
 auch die Kozyklenbedingung:
 
 \begin{lem}
-Die Abbildungen $g_{ij}: U_i\cap U_j\to G$ für eine offene Überdeckung
+Die Abbildungen $g_{ij}\colon U_i\cap U_j\to G$ für eine offene Überdeckung
 $\setd{U_i}$ von $M$ sind $G$-Kozyklen, d.h.
 \begin{propenum}
 \item $g_{ii}(x) = e$ für alle $x\in U$.
@@ -613,7 +613,7 @@ Insbesondere gilt $g_{ij}(x)^{-1} = g_{ji}(x)$.\fish
 \end{lem}
 
 \begin{prop}
-Sei $G$ eine Lie-Gruppe und $\pi: P\to M$ glatt. Das Tupel $(P,\pi,M;G)$ ist ein
+Sei $G$ eine Lie-Gruppe und $\pi\colon P\to M$ glatt. Das Tupel $(P,\pi,M;G)$ ist ein
 $G$-Hauptfaserbündel genau dann, wenn es einen Bündelatlas
 $\setd{U_i,\phi_{i}}$ und $G$-Kozyklen $g_{ij}$ gibt, so dass die Kozyklen
 $\phi_{ij}$ durch Linkstranslation mit $g_{ij}$ gegeben sind,
@@ -645,7 +645,7 @@ Trivialisierungen. Insbesondere ist ein Hauptfaserbündel genau dann trivial, we
 es einen globalen Schnitt besitzt. \fish
 \end{lem}
 \begin{proof}
-%Die Projektion $\pi: P\to M$  erfüllt
+%Die Projektion $\pi\colon P\to M$  erfüllt
 
 $\Rightarrow$: Gegeben sei ein lokaler Schnitt $s_U$. Für $x\in U$ ist
 $s_U(x)\in P_x$ und folglich existiert für jedes $p\in P_x$ ein eindeutiges
@@ -659,7 +659,7 @@ Man definiert nun als lokale Trivialisierung
 \end{align*}
 Die Glattheit von $\phi_U$ folgt aus der Glattheit von $\sigma_U$.
 
-$\Leftarrow$: Gegeben sei eine lokale Trivialisierung $\phi_U: \pi^{-1}(U)\to
+$\Leftarrow$: Gegeben sei eine lokale Trivialisierung $\phi_U\colon \pi^{-1}(U)\to
 U\times G$. Zu $x\in U$ definiert man nun
 \begin{align*}
 s_U\defl \phi_U^{-1}(x,e),
@@ -705,7 +705,7 @@ der Zusammenhang übertragen sich --- einmal für das Hauptfaserbündel definier
 --- dann auf diese Vektorbündel. Exemplarisch behandeln wir in diesem Abschnitt
 das Tangentialbündel.
 
-Sei $\pi: P\to M$ ein $G$-Hauptfaserbündel, dann ist $P = \dot{\bigcup}_{x\in
+Sei $\pi\colon P\to M$ ein $G$-Hauptfaserbündel, dann ist $P = \dot{\bigcup}_{x\in
 M} P_x$ und alle Fasern $P_x$ sind diffeomorph zu $G$.
 Wirke $G$ außerdem von links auf einer Mannigfaltigkeit $F$, d.h. es existiert
 eine Abbildung
@@ -725,7 +725,7 @@ Man definiert nun $E=(P\times F)/G \defr P\times_G F$, wobei die Punkte in $E$
 (p,v)\sim (p\cdot g,g^{-1}\cdot v)\qquad \text{für alle }g\in G.
 \end{align*}
 Man identifiziert also alle Punkte in $P\times F$, die in einer $G$-Bahn liegen.
-Die Projektion von $E$ auf $M$ ist dann gegeben durch $\hat{\pi}: E\to M$,
+Die Projektion von $E$ auf $M$ ist dann gegeben durch $\hat{\pi}\colon E\to M$,
 $[p,v] \mapsto \pi(p)$.
 
 \begin{prop}
@@ -821,7 +821,7 @@ $\supset$: Sei $\bar{s}\in \Cs^\infty(P,F)^G$, dann definiert man für $x\in M$,
 \begin{align*}
 s(x) \defl [p,\bar{s}(p)],\qquad \text{für ein }p\in P_x.
 \end{align*}
-Der Schnitt $s:M\to E$ ist wohl definiert, d.h. unabhängig von der Wahl von $p \in E_x$,
+Der Schnitt $s\colon M\to E$ ist wohl definiert, d.h. unabhängig von der Wahl von $p \in E_x$,
 denn für $q\in P_x$ beliebig existiert ein
 $g\in G$, so dass $q = p\cdot g$ und es gilt
 \begin{align*}
@@ -836,7 +836,7 @@ $p\in P_x$,
 \begin{align*}
 \bar{s}(p) = [p]^{-1}(s\circ \pi(p)). 
 \end{align*}
-Dann ist die Funktion $\bar{s}:P\to F$ $G$-äquivariant, denn für $p\in P$ und
+Dann ist die Funktion $\bar{s}\colon P\to F$ $G$-äquivariant, denn für $p\in P$ und
 $g\in G$ ist
 \begin{align*}
 \bar{s}(p\cdot g) = [p\cdot g]^{-1}(s\circ \pi(p\cdot g))
@@ -892,7 +892,7 @@ Sei $M$ eine Mannigfaltigkeit und $G$ eine Lie-Gruppe, die von links auf einer
 Mannigfaltigkeit $F$ wirkt. Weiter sei $\setd{U_i}$ eine offene Überdeckung
 von $M$ und
 \begin{align*}
-g_{ij}: U_i\cap U_j\to G
+g_{ij}\colon U_i\cap U_j\to G
 \end{align*}
 eine Familie von $G$-Kozyklen. Dann gibt es bis auf Isomorphie genau eine lokal
 triviale Faserung $(E,\hat{\pi},M;F)$ deren Kozyklen durch Linkstranslation der
@@ -910,7 +910,7 @@ und für $(x_i,v_i)\in U_i\times F$, $(x_k,v_k)\in U_k\times F$ eine
 \iff x_i = x_k = x \text{ und }
 v_k = g_{ki}v_i.
 \end{align*}
-Setzt man $E = \hat{E}/_\sim$ und $\hat{\pi}([x,v]) = x$, so ist $\pi: E\to M$
+Setzt man $E = \hat{E}/_\sim$ und $\hat{\pi}([x,v]) = x$, so ist $\pi\colon E\to M$
 eine lokal triviale Faserung mit lokalen Trivialisierungen
 \begin{align*}
 \psi_i : E_{U_i} = \pi^{-1}(U_i) \to U_i\times F,\qquad [x_i,v]\mapsto (x_i,v).
@@ -968,19 +968,19 @@ wird.
 Zwei Vektorbündel $(E,\pi,M;V)$ und $(\tilde{E},\tilde{\pi},M;\tilde V)$ heißen
 \emph{isomorph}, wenn es einen fasertreuen Diffeomorphismus
 \begin{align*}
-\psi: E\to \tilde{E}
+\psi\colon E\to \tilde{E}
 \end{align*}
-gibt, so dass $\psi_x \defl \psi\big|_{E_x} : E_x\to \tilde{E}_x$ für jedes
+gibt, so dass $\psi_x \defl \psi\big|_{E_x} \colon E_x\to \tilde{E}_x$ für jedes
 $x\in M$ ein Vektorraumisomorphismus ist.
 
-Allgemeiner heißt eine differenzierbare, fasertreue Abbildung $\psi: E\to \tilde{E}$
+Allgemeiner heißt eine differenzierbare, fasertreue Abbildung $\psi\colon E\to \tilde{E}$
 \emph{Homomorphismus der Vektorbündel}, wenn alle $\psi_x$
 lineare Abbildungen sind.\fish
 \end{defn}
 
 
 \begin{lem}
-Sei $\pi: P\to M$ ein $G$-Hauptfaserbündel, und seien zwei Vektorbündel
+Sei $\pi\colon P\to M$ ein $G$-Hauptfaserbündel, und seien zwei Vektorbündel
 \begin{align*}
 E_1 = P\times_{\rho_1} V_1,\qquad E_2 = P\times_{\rho_2} V_2, 
 \end{align*}
@@ -988,10 +988,10 @@ definiert mit den Darstellungen
 \begin{align*}
 \rho_1 : G\to \GL(V_1),\qquad \rho_2 : G\to \GL(V_2).
 \end{align*}
-Jede $G$-äquivariante Abbildung $f: V_1\to V_2$ induziert
+Jede $G$-äquivariante Abbildung $f\colon V_1\to V_2$ induziert
 einen Homomorphismus von Vektorbündeln
 \begin{align*}
-\hat{f}: E_1\to E_2,\qquad [p,v] \mapsto [p,f(v)].\fish
+\hat{f}\colon E_1\to E_2,\qquad [p,v] \mapsto [p,f(v)].\fish
 \end{align*}
 \end{lem}
 \begin{proof}
@@ -1094,13 +1094,13 @@ Form $\sigma_j : U_j \to S^{2n+1}$ mit
 Damit lassen sich die lokalen Trivialisierungen des tautologischen Bündels
 angeben durch
 \begin{align*}
-\phi_i: \gamma_n\big|_{U_i} \to U_i\times \C,\qquad (L,\xi) \mapsto (L,z),\qquad
+\phi_i\colon \gamma_n\big|_{U_i} \to U_i\times \C,\qquad (L,\xi) \mapsto (L,z),\qquad
 \xi = \sigma_i(L)\cdot z.
 \end{align*}
 Die Abbildungen $\phi_i$ sind bijektiv, glatt und linear Isomorphismen in den
 Fasern. Die Übergangsfunktionen
 \begin{align*}
-\phi_j\circ\phi_i^{-1}: (U_i\cap U_j)\times\C\to (U_i\cap U_j)\times\C,\qquad
+\phi_j\circ\phi_i^{-1}\colon (U_i\cap U_j)\times\C\to (U_i\cap U_j)\times\C,\qquad
 (L,z) \mapsto (L,g_{ij}(L)\cdot z)
 \end{align*}
 sind ebenfalls glatt und somit ist $\gamma_n$ assoziiert zu dem
@@ -1112,7 +1112,7 @@ Hauptfaserbündel, das durch die $g_{ij}$ erzeugt wird.\boxc
 Sei nun $P$ ein $G$-Hauptfaserbündel, $V$ ein Vektorraum und $\rho$
 eine $G$-Darstellung, d.h.
 $
-\rho: G\to \Aut(V)=\GL(V)
+\rho\colon G\to \Aut(V)=\GL(V)
 $
 ist ein Gruppen-Homomorphismus. Dann wirkt $G$ auf $V$ durch
 $
@@ -1150,12 +1150,12 @@ Jedes Vektorbündel ist assoziiert zu einem $G$-Hauptfaserbündel mit linearer
 Strukturgruppe $G$, d.h. $G$ ist eine Untergruppe der $\GL_n$.\fish
 \end{lem}
 \begin{proof}
-Sei $\pi: E\to M$ ein Vektorbündel mit Fasertyp $V$ und $G=\GL(V)$. Sei
+Sei $\pi\colon E\to M$ ein Vektorbündel mit Fasertyp $V$ und $G=\GL(V)$. Sei
 $\setd{(U_i,\psi_i)}$ ein Bündelatlas von $E$, dann sind für jedes $x\in M$ die
 Abbildungen $\psi_{i,x}\circ\psi_{k,x}^{-1}$ lineare Isomorphismen von $V$.
 Folglich bilden die Kozyklen nach $G$ ab,
 \begin{align*}
-g_{ij}: U_i\cap U_k \to G.
+g_{ij}\colon U_i\cap U_k \to G.
 \end{align*}
 Nach Satz \ref{prop:Kozyklen-bestimmen-AFB-HFB} existiert ein zum $G$-Hauptfaserbündel
 assoziiertes Faserbündel mit $G$-Kozyklen $g_{ij}$. Da dieses bis auf Isomorphie
@@ -1181,7 +1181,7 @@ Seien $(E,\pi,M;V)$ und $(\tilde{E},\tilde{\pi},M;\tilde{V})$ zwei Vektorbündel
 \begin{align*}
 E\oplus \tilde{E} = \bigcup_{x\in M} E_x\oplus \tilde{E}_x,
 \end{align*}
-mit Projektion $\hat{\pi} : E\oplus \tilde{E}\to M$, $e_x\oplus
+mit Projektion $\hat{\pi} \colon E\oplus \tilde{E}\to M$, $e_x\oplus
 \tilde{e}_x\mapsto x$. Die lokalen Trivialisierungen sind gegeben durch
 \begin{align*}
 \hat{\pi}^{-1}(U)\to U\times (V\oplus \tilde{V}),\qquad
@@ -1228,12 +1228,12 @@ E = P\times_\rho V,\qquad \tilde{E} = P \times_{\tilde{\rho}} \tilde V,
 \end{align*}
 mit Darstellungen
 \begin{align*}
-\rho : G\to \GL(V),\qquad \tilde{\rho}: G\to \GL(\tilde V).
+\rho : G\to \GL(V),\qquad \tilde{\rho}\colon G\to \GL(\tilde V).
 \end{align*}
 Dann ist die Whitney-Summe gegeben durch $E\oplus \tilde{E} =
 P\times_{\rho\oplus \tilde{\rho}} (V\oplus \tilde V)$, mit der Darstellung
 \begin{align*}
-\rho\oplus\tilde{\rho} : G\to \GL(V\oplus \tilde V),\qquad 
+\rho\oplus\tilde{\rho} \colon G\to \GL(V\oplus \tilde V),\qquad 
 g\mapsto 
 \begin{pmatrix}
 \rho(g)\\
@@ -1244,7 +1244,7 @@ g\mapsto
 
 %%% Vorlesung vom 11. Mai 2011
 %TODO: Nachtragen, dass man im reellen Fall \bar{E}=E setzt.
-%TODO: Nachtragen, Notation für HFB \pi: P\to M, P \to M. 
+%TODO: Nachtragen, Notation für HFB \pi\colon P\to M, P \to M. 
 
 \section{Bündelmetriken}
 
@@ -1341,9 +1341,9 @@ $P_x$ und $E$ ist zu einem $\U(n)$-Hauptfaserbündel $P\to M$ assoziiert.\qed
 \begin{ex}
 \begin{exenum}
 \item \textit{Konstruktion von Bündelmetriken in assoziierten Vektorbündeln}.
-Sei $\pi: P\to M$ ein $G$-Hauptfaserbündel und
+Sei $\pi\colon P\to M$ ein $G$-Hauptfaserbündel und
 \begin{align*}
-\rho: G\to \GL(V)
+\rho\colon G\to \GL(V)
 \end{align*}
 eine Darstellung auf $V$. Weiter sei $\lin{\cdot,\cdot}_V$ ein $G$-invariantes
 Skalarprodukt auf $V$, d.h.
@@ -1382,9 +1382,9 @@ formalisiert werden.
 
 \begin{defn}
 \index{$\lambda$-Reduktion}
-Sei $\pi_P: P\to M$ ein $G$-Hauptfaserbündel und $\lambda: H\to G$ ein
+Sei $\pi_P\colon P\to M$ ein $G$-Hauptfaserbündel und $\lambda\colon H\to G$ ein
 Gruppenhomomorphismus von Lie-Gruppen. Eine \emph{$\lambda$-Reduktion von $P$}
-ist ein $H$-Hauptfaserbündel $\pi_Q: Q\to M$ und eine Abbildung $f: Q\to P$ mit
+ist ein $H$-Hauptfaserbündel $\pi_Q\colon Q\to M$ und eine Abbildung $f\colon Q\to P$ mit
 folgenden Eigenschaften:
 \begin{defnenum}
   \item $f$ ist fasertreu, d.h. $\pi_P\circ f = \pi_Q$.
@@ -1428,7 +1428,7 @@ Sei $P_{\GL_n}\to M$ das Rahmenbündel von $M$.
 \begin{exenum}
 \item \textit{Riemannsche Mannigfaltigkeiten}. Eine Riemannsche Metrik $g$ auf
 $M$ definiert eine Reduktion von $P_{\GL_n}$ auf ein
-$P_{\O_n}$-Hauptfaserbündel, wobei $i: \O_n\opento \GL_n$ eine Lie-Untergruppe
+$P_{\O_n}$-Hauptfaserbündel, wobei $i\colon \O_n\opento \GL_n$ eine Lie-Untergruppe
 ist.
 
 {
@@ -1446,7 +1446,7 @@ column sep=2.5em, text height=1.5ex, text depth=0.25ex]
 
 }
 
-Sei umgekehrt $f: Q = P_{\O_n} \to P_{\GL_n}$ eine $\O_n$-Reduktion von
+Sei umgekehrt $f\colon Q = P_{\O_n} \to P_{\GL_n}$ eine $\O_n$-Reduktion von
 $P_{\GL_n}$. Dann definiert $(Q,f)$ wie folgt eine Riemannsche Metrik auf
 $M$: Seien $x\in M$ und $q\in Q_x$, dann ist $f(q) = (v_1,\ldots,v_n)$ eine
 Basis von $T_xM$. Man definiert die Metrik $g$ nun punktweise durch die
@@ -1519,7 +1519,7 @@ zu verstehen ist.
 \item \textit{Spin Strukturen}.
 Die nichttriviale zweifache Überlagerung der $\SO_n$
 \begin{align*}
-\lambda: \Spin_n \overset{2x}{\longrightarrow} \SO(n)
+\lambda\colon \Spin_n \overset{2x}{\longrightarrow} \SO(n)
 \end{align*}
 ist eine Lie-Gruppe, die sogenannte \emph{Spin-Gruppe} $\Spin_n$. Sie ist
 zusammenhängend für $n\ge 2$ und einfach zusammenhängend für $n\ge 3$, d.h.
@@ -1540,7 +1540,7 @@ In der Quantenelektrodynamik interpretiert man Elementarteilchen wie das
 Elektron als Schnitte in diesen Spinor Bündeln.
 \item \textit{Triviales Hauptfaserbündel}.
 Wie jede Gruppe besitzt die $\GL_n$ die triviale Untergruppe
-$\setd{e}\subset G$. Sei $f: Q\to P$ eine $\setd{e}$-Reduktion von $P$. Dann
+$\setd{e}\subset G$. Sei $f\colon Q\to P$ eine $\setd{e}$-Reduktion von $P$. Dann
 ist jede Faser $Q_x$ für $x\in M$ diffeomorph zu $\setd{e}$ und folglich
 \begin{align*}
 Q = \bigcup_{x\in M} Q_x = M\times \setd{e}\cong M. 
@@ -1553,10 +1553,10 @@ und somit existiert ein globaler Schnitt von $Q$
 \begin{align*}
 \sigma : M\to Q,\qquad x\mapsto \hat{x} = \setd{x}\times\setd{e}.
 \end{align*}
-Durch $s = f\circ \sigma: M\to P$ ist somit ein globaler Schnitt von $P$ gegeben
+Durch $s = f\circ \sigma\colon M\to P$ ist somit ein globaler Schnitt von $P$ gegeben
 und folglich ist $P$ trivial.
 
-Existiert umgekehrt ein globaler Schnitt $s: M\to P$, dann definiert die
+Existiert umgekehrt ein globaler Schnitt $s\colon M\to P$, dann definiert die
 Abbildung
 \begin{align*}
 f: Q=M\times\setd{e}\to P,\qquad (x,e)\mapsto s(x)
@@ -1574,7 +1574,7 @@ Das Rahmenbündel lässt sich auch auffassen als
 \begin{align*}
 P_{\GL_n} = \setdef{f: \R^n\to T_x M}{f \text{ ist ein linearer Isomorphismus}},
 \end{align*}
-denn eine Abbildung $f: \R^n\to T_xM$ ist genau dann ein Isomorphismus, wenn sie
+denn eine Abbildung $f\colon \R^n\to T_xM$ ist genau dann ein Isomorphismus, wenn sie
 Basen von $\R^n$ in Basen von $T_xM$ überführt.
 Analog dazu betrachtet man auch
 \begin{align*}
@@ -1585,7 +1585,7 @@ Isomorphismus}}.\map
 \end{rem}
 
 \begin{prop}
-Sei $\lambda: H\to G$ ein Gruppenhomomorphismus von Lie-Gruppen, $\rho: G\to
+Sei $\lambda\colon H\to G$ ein Gruppenhomomorphismus von Lie-Gruppen, $\rho\colon G\to
 \GL(V)$ eine Darstellung von $G$ über einem Vektorraum $V$ und $P\to M$ ein
 $G$-Hauptfaserbündel mit einer $\lambda$-Reduktion $(Q,f)$. Dann gilt
 \begin{align*}
@@ -1622,7 +1622,7 @@ mit $\rho = \id$ und $\lambda = i: \O_n\opento \GL_n$.\boxc
 \begin{proof}[Beweis des Satzes.]
 Wir geben direkt die Abbildung
 \begin{align*}
-\psi: Q\times_{\rho\circ\lambda} V \to P\times_\rho V,\qquad
+\psi\colon Q\times_{\rho\circ\lambda} V \to P\times_\rho V,\qquad
 [q,v]\mapsto [f(q),v],
 \end{align*}
 an, und weisen im Folgenden nach, dass es sich dabei um einen 
@@ -1710,7 +1710,7 @@ Die Differenzierbarkeit der Distribution ist hier so zu verstehen, dass $\Delta$
 lokal durch differenzierbare Vektorfelder aufgespannt wird.\map
 \end{rem}
 
-Die Projektion $\pi: P\to M$ des Hauptfaserbündels ist eine Submersion, d.h. das
+Die Projektion $\pi\colon P\to M$ des Hauptfaserbündels ist eine Submersion, d.h. das
 Differential $\dpi$ ist surjektiv. Aus dem Satz vom regulären Wert folgt nun,
 dass jede Faser $P_x = \pi^{-1}(x)$ für $x\in M$ eine differenzierbare
 Untermannigfaltigkeit von $P$ ist. Insbesondere ist dann $T_uP_x\subset T_uP$
@@ -1776,7 +1776,7 @@ Vektorfeld} zu $X\in\g$ definiert durch
 \tilde{X}(u) \defl \left. \frac{\ddd}{\dt} u\cdot \exp(tX)\right|_{t=0},\qquad
 u\in N,
 \end{align*}
-wobei $\exp: \g\to G$ die Exponentialabbildung bezeichnet.\fish
+wobei $\exp\colon \g\to G$ die Exponentialabbildung bezeichnet.\fish
 \end{defn}
 
 \begin{prop}
@@ -1804,7 +1804,7 @@ Folglich ist
 \begin{align*}
 \dim T_uP = \dim T_x M + \dim T_e G = \dim M + \dim T^v_uP.
 \end{align*}
-Andererseits ist $\pi: P\to M$ eine Submersion, also gilt 
+Andererseits ist $\pi\colon P\to M$ eine Submersion, also gilt 
 \begin{align*}
 \dim \ker \dpi_u + \dim M = \dim T_uP.
 \end{align*}
@@ -1863,7 +1863,7 @@ Rechtsinvarianz von $T^vP$.\qed
 \end{proof}
 
 \begin{rem}
-Für jedes $X\in\g$ ist das fundamentale Vektorfeld $\tilde{X}: P\to T^vP$ global
+Für jedes $X\in\g$ ist das fundamentale Vektorfeld $\tilde{X}\colon P\to T^vP$ global
 definiert und glatt. Falls $X\neq 0$, dann ist $\tilde X$ auch nullstellenfrei. Insbesondere ist das vertikale
 Tangentialbündel $T^vP$ somit parallelisierbar.\map
 \end{rem}
@@ -1990,9 +1990,9 @@ ug^{-1}\cdot\exp(tX)\cdot g\bigg|_{t=0}
 \begin{prop}
 \label{prop:Zusammenhang-Zusammenhangsform-1:1}
 Zusammenhänge und Zusammenhangsformen auf einem $G$-Hauptfaserbündel
-$\pi: P\to M$ stehen in bijektiver Beziehung zueinander:
+$\pi\colon P\to M$ stehen in bijektiver Beziehung zueinander:
 \begin{propenum}
-\item Sei $T^hP: P\to TP$, $u\mapsto T^h_uP$ ein Zusammenhang auf $P$, dann
+\item Sei $T^hP\colon P\to TP$, $u\mapsto T^h_uP$ ein Zusammenhang auf $P$, dann
 wird durch
 \begin{align*}
 A_u(\tilde{X}(u)+Y_h) \defl X,
@@ -2035,7 +2035,7 @@ $Y=\tilde{Y}(u)$. Somit gilt
 0 = A_u(Y) = A(\tilde{Y})(u) = Y.  
 \end{align*}
 Daher sind $A_u$ und $T^v_uP$ tatsächlich
-disjunkt. Weiterhin ist $A_u: T^v_uP \to \g$ nach der Formel $A(\tilde{X}) =
+disjunkt. Weiterhin ist $A_u\colon T^v_uP \to \g$ nach der Formel $A(\tilde{X}) =
 X$ surjektiv und folglich
 \begin{align*}
 \dim \ker A_u = \dim T_uP - \dim \g = \dim T_uP - \dim T^v_uP.
@@ -2153,7 +2153,7 @@ oder auch \emph{Maurer-Cartan-Form} von $G$.\fish
 Die Zusammenhangsform $A\in\Omega^1(P,\g)$ des kanonischen flachen Zusammenhangs
 ist gegeben durch
 \begin{align*}
-A_{(x,g)} : T_xM\oplus T_gG \to \g,\qquad (X,Y) \mapsto \mu_G(Y).\fish
+A_{(x,g)} \colon T_xM\oplus T_gG \to \g,\qquad (X,Y) \mapsto \mu_G(Y).\fish
 \end{align*}
 \end{lem}
 \begin{proof}
@@ -2243,7 +2243,7 @@ Seien nun $\dom_j$ und $\dqomega_j$ die durch
 \begin{align*}
 \dom_j(X_1,X_2) = X_j,\qquad \dqomega_j(X_1,X_2) = \bar{X_j},
 \end{align*}
-definierten 1-Formen auf $S^3$ und $A: TS^3\to \ii\R$ die 1-Form
+definierten 1-Formen auf $S^3$ und $A\colon TS^3\to \ii\R$ die 1-Form
 \begin{align*}
 A_{(w_1,w_2)} \defl \frac{1}{2}\left(\bar{w}_1 \dom_1 - w_1\dqomega_1
 + \bar{w}_2 \dom_2 - w_2\dqomega_2\right).
@@ -2330,7 +2330,7 @@ Produkt. Dann gilt
 \begin{proof}
 Wir bezeichnen die glatte $G$-Wirkung auf $P$ mit
 \begin{align*}
-\phi: P\times G\to P,\qquad (p,g)\mapsto p\cdot g,
+\phi\colon P\times G\to P,\qquad (p,g)\mapsto p\cdot g,
 \end{align*}
 und für $p\in P$ und $g\in G$ die Multiplikationen mit
 \begin{align*}
@@ -2361,7 +2361,7 @@ folgt schließlich
 \begin{defn}
 \index{Zusammenhangsform!lokale}
 Sei $A\in\Omega^1(P,\g)$ eine Zusammenhangsform auf $P$, $U\subset M$ eine
-offene Umgebung und $s: U\to P$ ein lokaler Schnitt von $P$. Die lokale 1-Form
+offene Umgebung und $s\colon U\to P$ ein lokaler Schnitt von $P$. Die lokale 1-Form
 \begin{align*}
 A^s \defl s^* A =  A\circ \ds \in \Omega^1(U,\g)
 \end{align*}
@@ -2451,7 +2451,7 @@ Die (*)-Bedingung übersetzt sich somit zu
 \begin{align*}
 A_j = g_{ij}^{-1}A_i g_{ij} + g_{ij}^{-1}\dg_{ij}.
 \end{align*}
-\item Ist $P$ trivial, dann existiert ein globaler Schnitt $s: M\to P$ und die
+\item Ist $P$ trivial, dann existiert ein globaler Schnitt $s\colon M\to P$ und die
 Zusammenhangsform auf ganz $P$ ist bereits  durch $A^s\in
 \Omega^1(M,\g)$ gegeben.\map
 \end{remenum}
@@ -2601,14 +2601,14 @@ Zusammenhangsform auf }\GL(M).\fish
 
 \begin{proof}
 
-$\leftsquigarrow$: Sei $A: T\GL(M) \to \gl(n)$ eine Zusammenhangsform auf
+$\leftsquigarrow$: Sei $A\colon T\GL(M) \to \gl(n)$ eine Zusammenhangsform auf
 $\GL(M)$. Die Standard-Einheitsmatrizen $E_{ij}$, die eine 1 in der $i$-ten
 Zeile und $j$-ten Spalte haben und sonst nur aus der Null bestehen, bilden eine
 Basis von $\gl(n)$. Somit lässt sich $A$ schreiben als
 \begin{align*}
 A = \sum_{i,j=1}^n \omega_{ij} E_{ij},
 \end{align*}
-mit 1-Formen $\omega_{ij}: T\GL(M)\to \R$. Sei nun 
+mit 1-Formen $\omega_{ij}\colon T\GL(M)\to \R$. Sei nun 
 \begin{align*}
 s=(s_1,\ldots,s_n): U\to \GL(M)
 \end{align*}
@@ -2655,7 +2655,7 @@ A^s = g^{-1}A^{s'}g + g^{-1}\dg,
 erhält man nach einer längeren Rechnung $(\nabla_X Y)_s = (\nabla_X Y)_{s'}$.
 
 $\rightsquigarrow$: Sei nun eine kovariante Ableitung auf $TM$ gegeben, dann
-erhält man zu einem lokalen Schnitt $s: U \to \GL(M)$ analog zu obiger
+erhält man zu einem lokalen Schnitt $s\colon U \to \GL(M)$ analog zu obiger
 Definition die 1-Formen $\omega_{ik}$. Diese setzt man nun zu einer lokalen
 1-Formen auf $U$ zusammen und verifiziert, dass es sich um eine
 lokale Zusammenhangsform handelt. Anschließend verklebt man diese lokalen Formen
@@ -2725,7 +2725,7 @@ Also ist der vertikale Tangentialraum an einen Punkt $g\in G$ durch
 Linkstranslation von $\h$ gegeben, $T^v_g G = \setdef{\tilde{X}(g)}{X\in \h} =
 \dL_g(\h)$. Wir definieren nun
 \begin{align*}
-T^h : G\to TG,\qquad g\mapsto T_g^hG = \dL_g(\m), 
+T^h \colon G\to TG,\qquad g\mapsto T_g^hG = \dL_g(\m), 
 \end{align*}
 dann ist $T^h$ offenbar linksinvariant, denn
 \begin{align*}
@@ -2790,7 +2790,7 @@ bezeichnet man mit $\Omega^k(M,E)$.\fish
 Alternativ ist eine $k$-Form mit Werten in $E$ eine $\Cs^\infty(M)$
 multilineare, alternierende Abbildung
 \begin{align*}
-\omega: \underbrace{\chi(M)\times \cdots \times \chi(M)}_{k\text{-mal}}\to
+\omega\colon \underbrace{\chi(M)\times \cdots \times \chi(M)}_{k\text{-mal}}\to
 \Gamma(E)
 \end{align*}
 \item Eine weitere alternative Definition ist $\Omega^k(M,E)
@@ -2804,7 +2804,7 @@ $\omega_i\in\Omega^k(M,\R)$.\map
 \end{remenum}
 \end{rem}
 
-Sei nun $\pi: P\to M$ ein $G$-Hauptfaserbündel, $V$ ein Vektorraum und $\rho:
+Sei nun $\pi\colon P\to M$ ein $G$-Hauptfaserbündel, $V$ ein Vektorraum und $\rho\colon
 G\to \GL(V)$ eine $G$-Darstellung. Das Vektorbündel $E$ sei weiterhin als
 assoziiertes Faserbündel
 \begin{align*}
@@ -2838,7 +2838,7 @@ $\rho$} bezeichnet man mit $\Omega^k_\hor(P,V)^{(P,\rho)}$.\fish
 
 \begin{ex}
 Wir betrachten die Menge der Zusammenhänge $\Cs(P)$ auf dem
-$G$"=Hauptfaserbündel $\pi: P\to M$. Sind nun $A_1$ und $A_2$
+$G$"=Hauptfaserbündel $\pi\colon P\to M$. Sind nun $A_1$ und $A_2$
 Zusammenhangsformen, dann sind sie nach Voraussetzung vom Typ $\Ad$ aber
 \textit{nicht} horizontal. Jedoch ist ihre Differenz horizontal und daher
 \begin{align*}
@@ -2912,7 +2912,7 @@ $\Omega^1(M,\Ad(P))\cong \Omega^1_\hor(P,V)^{(G,\Ad)}$.\map
 
 \section{Das absolute Differential eines Zusammenhangs}
 
-Sei wieder $\pi: P\to M$ ein $G$-Hauptfaserbündel, $V$ ein Vektorraum, $\rho:
+Sei wieder $\pi\colon P\to M$ ein $G$-Hauptfaserbündel, $V$ ein Vektorraum, $\rho\colon
 G\to \GL(V)$ eine $G$-Darstellung und
 \begin{align*}
 E = P\times_\rho V.
@@ -2923,7 +2923,7 @@ E = P\times_\rho V.
 Eine \emph{kovariante Ableitung $\nabla$} auf dem Vektorbündel $\Gamma(E)$ ist
 eine Abbildung
 \begin{align*}
-\nabla : \Gamma(E)\to \Gamma(T^*M\otimes E),\qquad
+\nabla \colon \Gamma(E)\to \Gamma(T^*M\otimes E),\qquad
 e \mapsto \nabla e,
 \end{align*}
 so dass für $f\in\Cs^\infty(M)$ gilt
@@ -2940,12 +2940,12 @@ dann ist
 Mit den bisherigen Definitionen lässt sich $\nabla$ auf $E=P\times_\rho V$ auch
 schreiben als
 \begin{align*}
-\nabla: \Omega^0(M,E) \to \Omega^1(M,E).
+\nabla \colon \Omega^0(M,E) \to \Omega^1(M,E).
 \end{align*}
 Ziel dieses Abschnittes ist es, für einen Zusammenhang $A$ auf $P$ ein
 Differential
 \begin{align*}
-\ddd_A : \Omega^k(M,E)\to \Omega^{k+1}(M,E)
+\ddd_A \colon \Omega^k(M,E)\to \Omega^{k+1}(M,E)
 \end{align*}
 auf den $E$-wertigen Formen zu definieren, so dass $\nabla$ gerade die $0$-te
 Komponente von $\ddd_A$ wird. Dazu werden wir das Differential zunächst
@@ -2959,13 +2959,13 @@ TP = T^hP\oplus T^vP,\qquad T^vP = \ker(\dpi).
 \end{align*}
 Die Projektion auf die horizontale Komponente bezeichnen wir mit $\pr_h$
 \begin{align*}
-\pr_h : TP \to T^hP.
+\pr_h \colon TP \to T^hP.
 \end{align*}
 
 \begin{defn}
 \index{Differential!absolutes}
 Sei $A$ ein Zusammenhang auf $P$, dann heißt die lineare Abbildung 
-\[D_A :
+\[D_A \colon
 \Omega^k(P,V)\to \Omega^{k+1}(P,V),\]
 die für Vektorfelder $T_1,\ldots,T_k$ in $P$ gegeben ist durch
 \begin{align*}
@@ -2984,7 +2984,7 @@ $D_A$ auch den Typ $\rho$ erhält.
 \begin{propenum}
 \item Das absolute Differential erhält horizontale Formen vom Typ $\rho$, d.h.
 \begin{align*}
-D_A\big|_{\Omega_\hor^k(P,V)^{(G,\rho)}} : \Omega_\hor^k(P,V)^{(G,\rho)} \to
+D_A\big|_{\Omega_\hor^k(P,V)^{(G,\rho)}} \colon \Omega_\hor^k(P,V)^{(G,\rho)} \to
 \Omega_\hor^{k+1}(P,V)^{(G,\rho)}.
 \end{align*}
 \item Sei $\omega\in\Omega_\hor^k(P,V)^{(G,\rho)}$, dann gilt
@@ -3149,7 +3149,7 @@ Somit ist der Beweis vollständig.\qed
 Das absolute Differential ist also ein Differentialoperator 1. Ordnung auf
 horizontalen Formen vom Typ $\rho$,
 \begin{align*}
-D_A : \Omega_\hor^k(P,V)^{(G,\rho)}\to \Omega_\hor^{k+1}(P,V)^{(G,\rho)}.
+D_A \colon \Omega_\hor^k(P,V)^{(G,\rho)}\to \Omega_\hor^{k+1}(P,V)^{(G,\rho)}.
 \end{align*}
 Mit Hilfe des Isomorphismus $\Omega_\hor^k(P,V)^{(G,\rho)}\to \Omega^k(M,E)$,
 $\bar{\omega}\mapsto \omega$ können wir nun ein Differential für Formen
@@ -3160,7 +3160,7 @@ mit Werten in $E$ definieren.
 Sei $A$ ein Zusammenhang auf $P$, dann ist das \emph{Differential $\ddd_A$}
 ein Endormorphismus von $\Omega^*(M,E)$ definiert durch
 \begin{align*}
-\ddd_A : \Omega^k(M,E)\to\Omega^{k+1}(M,E),\qquad \bar{\ddd_A \omega} \defl
+\ddd_A \colon \Omega^k(M,E)\to\Omega^{k+1}(M,E),\qquad \bar{\ddd_A \omega} \defl
 D_A\bar{\omega},
 \end{align*}
 wobei $\bar{\omega}$ über den Isomorphismus aus Satz
@@ -3185,7 +3185,7 @@ im Punkt $x$ die Darstellung
 \end{align*}
 
 Alternativ kann man das Differential auch ohne horizontale Lifts beschreiben.
-Sei dazu $s: U\to P$ ein lokaler Schnitt, dann gilt
+Sei dazu $s\colon U\to P$ ein lokaler Schnitt, dann gilt
 \begin{align*}
 (\ddd_A\omega)_x(X_0,\ldots,X_k) = 
 [s(x),(D_A \bar{\omega})_p(\ds(X_0),\ldots,\ds(X_k))].
@@ -3256,7 +3256,7 @@ Für den Spezialfall, dass $\sigma\in\Omega^k(M)$ und $e\in\Gamma(E) =
 \index{kovariante Ableitung!induzierte}
 Man nennt die Abbildung
 \begin{align*}
-\nabla^A \defl \ddd_A : \Gamma(E)=\Omega^0(M,E)\to
+\nabla^A \defl \ddd_A \colon \Gamma(E)=\Omega^0(M,E)\to
 \Omega^1(M,E) = \Gamma(T^*M \otimes E),\quad e\mapsto \nabla^A e,
 \end{align*}
 die \emph{durch den Zusammenhang $A$ induzierte kovariante Ableitung} auf $E$.
@@ -3278,7 +3278,7 @@ Also definiert $\nabla^A$ tatsächlich eine kovariante Ableitung auf $E$.\qed
 
 \begin{prop}
 Seien $e\in\Gamma(E)$ und $X\in\chi(M)$. Dann existiert zu $x\in M$ eine
-Umgebung $U$ von $x$, ein glatter Schnitt $s: U\to P$ und eine glatte
+Umgebung $U$ von $x$, ein glatter Schnitt $s\colon U\to P$ und eine glatte
 Funktion $v\in \Cs^\infty(U,V)$, so dass für jedes $x\in U$,
 \begin{align*}
 (\nabla_X^A e)_x = [s(x),\dv(X(x))+\rho_*(A^s(X(x)))v(x)]].\fish
@@ -3289,7 +3289,7 @@ Sei $x\in M$, dann existiert eine Umgebung $U\subset M$ von $x$, so dass
 \begin{align*}
 e\big|_U = [s,v],
 \end{align*}
-mit einem glatten Schnitt $s: U\to P$ und einer glatten Funktion
+mit einem glatten Schnitt $s\colon U\to P$ und einer glatten Funktion
 $v\in\Cs^\infty(U,V)$. Andererseits existiert auch eine glatte Funktion
 $\bar{e}\in \Cs^\infty(P,V)^{(G,\rho)}$, so dass
 \begin{align*}
@@ -3311,7 +3311,7 @@ Sei $\lin{\cdot,\cdot}_V$ ein $G$-invariantes Skalarprodukt auf $V$, dann ist
 \lin{e,\tilde{e}}_E\defl  \lin{v,\tilde{v}}_V,
 \end{align*}
 für Schnitte $e = [p,v]$, und $\tilde{e}=[p,\tilde{v}]\in\Gamma(E)$
-eine Bündelmetrik auf $E$. Sei $U\subset M$ offen und $s: U\to P$ ein lokaler
+eine Bündelmetrik auf $E$. Sei $U\subset M$ offen und $s\colon U\to P$ ein lokaler
 Schnitt in $P$, dann schreibt sich
 \begin{align*}
 \nabla_X^A e = [s(x),\ddd v_x(X_x) + \rho_*(A^s(X_x))v(x)],
@@ -3402,7 +3402,7 @@ wobei $\omega_i\in\Omega^k(N)$ und $\tau^i\in\Omega^l(N)$. Dann ist der
 [\omega,\tau]\defl \sum_{i,j=1}^r \omega^i \wedge \tau^j [a_i,a_j]
 \in\Omega^{k+l}(N,\g),
 \end{align*}
-d.h. $[\cdot,\cdot]: \Omega^k(N,\g)\times\Omega^l(N,\g) \to
+d.h. $[\cdot,\cdot]\colon \Omega^k(N,\g)\times\Omega^l(N,\g) \to
 \Omega^{k+l}(N,\g)$.\fish
 \end{defn}
 \begin{proof}
@@ -3640,7 +3640,7 @@ beschreiben. Die Krümmung des Hauptfaserbündels spielt dabei die Rolle der
 wirkenden Kraft und die Strukturgruppe spiegelt die Symmetrie der Wechselwirkung
 wieder. Die Symmetrie der elektromagnetischen Wechselwirkung wird von der
 $\U(1)$ repräsentiert. Im Folgenden wollen wir $\U(1)$-Hauptfaserbündel
-$\pi: P\to M$ betrachten. Hier vereinfachen sich einige Konzepte, denn
+$\pi\colon P\to M$ betrachten. Hier vereinfachen sich einige Konzepte, denn
 \begin{align*}
 \U(1) \defl \setdef{z\in\C}{\abs{z}=1},\qquad \u(1) = \Lie(\U(1))= 
 \ii\R,
@@ -3724,7 +3724,7 @@ S^3\times \U(1)\to S^3,\qquad ((w_1,w_2),z)\mapsto (w_1 \cdot z,w_2\cdot z).
 \end{align*}
 Eine Projektion auf den $\CP$ ist nun durch die homogenen Koordinaten gegeben
 \begin{align*}
-\pi: S^3\to \CP^1,\qquad (w_1,w_1)\mapsto [w_1:w_2].
+\pi\colon S^3\to \CP^1,\qquad (w_1,w_1)\mapsto [w_1:w_2].
 \end{align*}
 Die Basismannigfaltigkeit $\CP^1$ ist 2-dimensional geschlossen,
 zusammenhängend und orientierbar, also gilt $H_{dR}^2(\CP^1,\R)\cong\R$. Der
@@ -3740,7 +3740,7 @@ A : TS^3\to \ii\R,\qquad (w_1,w_2) \mapsto
 \frac{1}{2}\left(\bar{\omega_1}\dom_1 - \omega_1\bar{\dom_1} +
 \bar{\omega_2}\dom_2 - \omega_2\bar{\dom_2} \right),
 \end{align*}
-mit Funktionen $\omega_i : S^3\to \C$, $(w_1,w_2)\mapsto w_i$.
+mit Funktionen $\omega_i \colon S^3\to \C$, $(w_1,w_2)\mapsto w_i$.
 Die Krümmung dieses Zusammenhangs ist nach der Strukturgleichung
 \begin{align*}
 F^A = \ddd A = -(\dom_1\wedge \bar{\dom_1} + \dom_2\wedge
@@ -3753,7 +3753,7 @@ c_1(H) = -\frac{1}{2\pi i} \int_{\CP^1} \hat{F}^A.
 Um das Integral zu berechnen definiere auf
 $U=\CP^1\setminus\setdef{[w_1:w_2]}{w_2=0}$ die Abbildung
 \begin{align*}
-\psi: U\to \C,\qquad [w_1:w_2]\mapsto \frac{w_1}{w_2}.
+\psi\colon U\to \C,\qquad [w_1:w_2]\mapsto \frac{w_1}{w_2}.
 \end{align*}
 Dann ist $\psi$ wohldefiniert und ein Diffeomorphismus. Weiterhin
 ist
@@ -3830,9 +3830,9 @@ Im Besonderen folgt, dass $\hat{F}^A$ nicht exakt ist.\boxc
 
 \section{Lokale Beschreibung der Krümmung und Transformationsverhalten}
 
-Sei $\pi: P\to M$ ein $G$-Hauptfaserbündel und $A$ ein Zusammenhang auf $P$.
+Sei $\pi\colon P\to M$ ein $G$-Hauptfaserbündel und $A$ ein Zusammenhang auf $P$.
 Weiterhin sei $\setd{U_i}$ eine offene Überdeckung von $M$. Zu einem lokalen
-Schnitt $s_i : U_i\to P$ in $P$ existiert eine lokale Zusammenhangsform
+Schnitt $s_i \colon U_i\to P$ in $P$ existiert eine lokale Zusammenhangsform
 \begin{align*}
 A^{s_i} \defl s_i^* A \in\Omega^1(U,\g).
 \end{align*}
@@ -3841,15 +3841,15 @@ den lokalen Beschreibungen der Krümmung die globale Krümmung zurückzuerhalten
 
 \begin{defn}
 \index{Krümmungsform!lokale}
-Die \emph{lokale Krümmungsform von $A$} zum lokalen Schnitt $s_i :U_i\to P$ ist
+Die \emph{lokale Krümmungsform von $A$} zum lokalen Schnitt $s_i \colon U_i\to P$ ist
 definiert durch,
 \begin{align*}
 F^{s_i} \defl s_i^* F^A \in \Omega^2(U_i,\g).\fish
 \end{align*}
 \end{defn}
 
-Sei nun $s_j :U_j\to P$ ein weiterer Schnitt, dann existiert auf dem Schnitt $U_i\cap U_j$ ein $G$-Kozyklus
-$g_{ij}: U_i\cap U_j\to G$, so dass
+Sei nun $s_j \colon U_j\to P$ ein weiterer Schnitt, dann existiert auf dem Schnitt $U_i\cap U_j$ ein $G$-Kozyklus
+$g_{ij}\colon U_i\cap U_j\to G$, so dass
 \begin{align*}
 s_j = s_i\cdot g_{ij},\qquad A^{s_j} = \Ad(g_{ij}^{-1})A^{s_i} + \mu_{ij}.
 \end{align*}
@@ -4027,7 +4027,7 @@ wenn $F^A \equiv 0$.\fish
 
 \section{Der klassische Krümmungstensor}
 
-Sei $\pi: P\to M$ ein $G$-Hauptfaserbündel und $E= P\times_\rho V$ ein
+Sei $\pi\colon P\to M$ ein $G$-Hauptfaserbündel und $E= P\times_\rho V$ ein
 Vektorbündel. Für eine kovariante Ableitung $\nabla$ auf $E$ kennen wir bereits
 aus dem vergangenen Semester den klassischen Krümmungsbegriff, nämlich den
 Krümmungstensor
@@ -4141,7 +4141,7 @@ rechte Ausdruck für alle Vektorfelder $X,Y$ und $Z$ verschwindet.\qed
 Sei $P=P_{\GL_n}$ das Rahmenbündel über einer Mannigfaltigkeit $M$. Das
 Tangentialbündel über $M$
 \begin{align*}
-TM = P\times_\rho \R^n,\qquad \rho: \GL_n\to \Aut(\R^n) \cong \GL_n
+TM = P\times_\rho \R^n,\qquad \rho\colon \GL_n\to \Aut(\R^n) \cong \GL_n
 \end{align*}
 lässt sich als zu $P$ assoziiertes Vektorbündel auffassen, wobei die Darstellung
 $\rho$ gerade der Identität entspricht. Eine 1-Form $\omega\in \Omega^1(M,TM)$
@@ -4155,7 +4155,7 @@ Die \emph{kanonische 1-Form $\theta\in\Omega^1(P,\R^n)$} ist definiert als
 \begin{align*}
 \theta_p(X) \defl [p]^{-1}(\dpi(X)),\qquad X\in T_pP,
 \end{align*}
-wobei $[p]: \R^n\to T_pP$ den Faserisomorphismus bezeichnet.\fish
+wobei $[p]\colon \R^n\to T_pP$ den Faserisomorphismus bezeichnet.\fish
 \end{defn}
 
 Die kanonische 1-Form entspricht im Wesentlichen der Identit\"at, modulo Identifikation.
@@ -4296,7 +4296,7 @@ Dies ist gerade die 2. Bianchi-Identität für $R$.\qed
 
 \section{Parallelverschiebung in Hauptfaserbündeln}
 
-Sei $\pi: P\to M$ ein $G$-Hauptfaserbündel. Ein Zusammenhang auf $P$ ist eine Zerlegung des Tangentialbündels
+Sei $\pi\colon P\to M$ ein $G$-Hauptfaserbündel. Ein Zusammenhang auf $P$ ist eine Zerlegung des Tangentialbündels
 \begin{align*}
 TP = T^hP\oplus T^vP
 \end{align*}
@@ -4474,7 +4474,7 @@ TP = T^hP \oplus T^vP.
 Die Projektion $\pi$ ist eine Submersion und, da $T^vP = \ker \dpi$ gilt, ist
 die Einschränkung ihres Differentials
 \begin{align*}
-\dpi: T^hP \to TM,
+\dpi\colon T^hP \to TM,
 \end{align*}
 ein Isomorphismus. Man definiert nun punktweise den horizontalen Lift als
 \begin{align*}
@@ -4485,7 +4485,7 @@ diese Formel eindeutig festgelegt. Um die Glattheit von $X^*$ zu zeigen,
 betrachtet man zu einer offenen Umgebung $U\subset M$ die lokale
 Trivialisierung
 \begin{align*}
-\phi: P_U\to U\times G.
+\phi\colon P_U\to U\times G.
 \end{align*}
 Da die lokale Trivialisierung ein Diffeomorphismus ist, ist ihr Differential ein
 Isomorphismus und man definiert lokal für $p\in P_U$,
@@ -4562,7 +4562,7 @@ wir das Liften von Kurven in $M$ betrachten.
 
 \begin{rem}[Bemerkung zur Notation.]
 Sofern nicht anders angegeben bezeichne $I=[a,b]$ ein nichtentartetes endliches
-Intervall und $\gamma: I\to M$ eine Kurve in $M$.
+Intervall und $\gamma\colon I\to M$ eine Kurve in $M$.
 
 Eine solche Kurve heißt \textit{glatt}, wenn sie stückweise stetig
 differenzierbar ist. Für eine solche Kurve existiert dann ohnehin eine
@@ -4573,7 +4573,7 @@ differenzierbar ist. Im Folgenden seien alle Kurven als glatt vorausgesetzt.
 
 \begin{defn}
 \index{horizontaler Lift!von Kurven}
-Sei $\gamma: I\to M$ eine Kurve in $M$. Eine Kurve $\gamma^* : I\to P$ heißt
+Sei $\gamma\colon I\to M$ eine Kurve in $M$. Eine Kurve $\gamma^* : I\to P$ heißt
 \emph{horizontaler Lift von $\gamma$}, falls
 \begin{defnenum}
 \item $\pi(\gamma^*) = \gamma$, und
@@ -4672,7 +4672,7 @@ Sei $\gamma: I\to M$ eine Kurve in $M$. Eine Kurve $\gamma^* : I\to P$ heißt
 
 
 \begin{prop}
-Sei $\gamma: I\to M$ eine Kurve in $M$, $t_0\in I$ und $u\in P_{\gamma(t_0)}$.
+Sei $\gamma\colon I\to M$ eine Kurve in $M$, $t_0\in I$ und $u\in P_{\gamma(t_0)}$.
 Dann existiert genau ein horizontaler Lift
 \begin{align*}
 \gamma_u^* : I\to P
@@ -4686,9 +4686,9 @@ Existenz- und Eindeutigkeitssatz anzuwenden.
 
 \begin{lem}[Allgemeiner \textsc{Ee}-Satz]
 \index{\textsc{Ee}-Satz}
-Sei $G$ eine Lie-Gruppe und $\g$ die zugehörige Lie-Algebra. Weiterhin sei $v:
+Sei $G$ eine Lie-Gruppe und $\g$ die zugehörige Lie-Algebra. Weiterhin sei $v\colon
 I \to \g$ eine stetige Kurve und $0\in I$. Dann existiert eine eindeutig
-bestimmte $C^1$-Kurve $g: I\to G$ mit
+bestimmte $C^1$-Kurve $g\colon I\to G$ mit
 \begin{align*}
 g(0) = e,\qquad \dot{g}(t) = \dR_{g(t)}(v(t)).\fish
 \end{align*} 
@@ -4790,11 +4790,11 @@ können wir die Kurve $\gamma$ lokal in $U_i$ zu einer Kurve auf $P$ liften und
 anschließend mit der $G$-Wirkung die einzelnen Lifts zu einer differenzierbaren
 Kurve
 \begin{align*}
-\delta: I\to P,\qquad \pi(\delta) = \gamma,
+\delta\colon I\to P,\qquad \pi(\delta) = \gamma,
 \end{align*}
 zusammensetzen, so dass $\delta(0) = u$ ist.
 
-Gesucht ist nun eine Kurve $g: I\to G$ so, dass
+Gesucht ist nun eine Kurve $g\colon I\to G$ so, dass
 \begin{align*}
 \gamma_u^*(t) = \delta(t)g(t)
 \end{align*} 
@@ -4814,7 +4814,7 @@ $A(\dot{\gamma}_u^*(t))$ genau dann, wenn
 0 = \dR_{g(t)}A(\dot{\delta}(t)) + \dot{g}(t).
 \end{align*}
 Setzen wir $v : I\to \g$ mit $v(t) = -A(\dot{\delta}(t))$, dann ist also eine
-Funktion $g: I\to G$ gesucht mit
+Funktion $g\colon I\to G$ gesucht mit
 \begin{align*}
 g(0) = e,\qquad \dot{g}(t) = \dR_{g(t)}(v(t)).
 \end{align*}
@@ -4823,7 +4823,7 @@ Diese existiert nach dem allgemeinen \textsc{Ee}-Satz.\qed
 
 \begin{defn}
 \index{Parallelverschiebung!im Hauptfaserbündel}
-Sei $\gamma: [a,b]\to M$ eine Kurve in $M$. Die Abbildung
+Sei $\gamma\colon [a,b]\to M$ eine Kurve in $M$. Die Abbildung
 \begin{align*}
 P_\gamma^A : P_{\gamma(a)}\to P_{\gamma(b)},\qquad u\mapsto \gamma_u^*(b),
 \end{align*}
@@ -4842,7 +4842,7 @@ $P^A$ ist unabhängig von der Parametrisierung von $\gamma$.
 \index{Inverse!von Kurven}
 \begin{defnenum}
 \item
-Seien $\alpha: [a,b]\to M$ und $\beta: [c,d]\to M$ zwei Kurven in $M$ mit
+Seien $\alpha\colon [a,b]\to M$ und $\beta\colon [c,d]\to M$ zwei Kurven in $M$ mit
 $\alpha(b) = \beta(c)$. Die \emph{Hintereinanderausführung} $\beta\star\alpha$
 von $\alpha$ und $\beta$ ist definiert durch
 \begin{align*}
@@ -4852,7 +4852,7 @@ von $\alpha$ und $\beta$ ist definiert durch
 \beta(c + (2t-1)(d-c)), & 1/2 < t \le 1.
 \end{cases}
 \end{align*}
-\item Die zu $\alpha: [a,b]\to M$ \emph{inverse} Kurve ist definiert durch,
+\item Die zu $\alpha\colon [a,b]\to M$ \emph{inverse} Kurve ist definiert durch,
 \begin{align*}
 \alpha^- : [0,1]\to M,\qquad t\mapsto \alpha(b-t(b-a)).\fish
 \end{align*} 
@@ -5004,7 +5004,7 @@ verbinden Kurven samt Lifts (rechts)}
 
 \item
 \label{ex:Parallelverschiebung-unabhängig-kanonisch-flach}
-Sei $\pi: P_0 = M\times G\to M$ das triviale $G$-Hauptfaserbündel versehen mit
+Sei $\pi\colon P_0 = M\times G\to M$ das triviale $G$-Hauptfaserbündel versehen mit
 dem kanonischen flachen Zusammenhang $A_0=\ddd \pr_2$. Dieser Zusammenhang ist
 äquivalent dazu, für einen Punkt $(x,g)$ in $P$ den horizontalen Tangentialraum
 als
@@ -5018,7 +5018,7 @@ Endpunkt $y$. Der horizontale Lift von $\gamma$ ist nun einfach gegeben durch
 \end{align*}
 Die Parallelverschiebung entlang $\gamma$ bezüglich $A_0$ hat somit die Form
 \begin{align*}
-P_\gamma^{A_0} : (P_0)_x = \setd{x}\times G\to \setd{y}\times G = (P_0)_y,\qquad
+P_\gamma^{A_0} \colon (P_0)_x = \setd{x}\times G\to \setd{y}\times G = (P_0)_y,\qquad
 (x,g) \mapsto (y,g).
 \end{align*}
 Sie hängt damit offenbar nicht von der Wahl des Weges $\gamma$ ab, der $x$ und
@@ -5038,7 +5038,7 @@ verschwindet.
 Sei die Parallelverschiebung auf $P$ bezüglich $A$ unabhängig von der Wahl des
 Weges. Dann existiert ein $G$-Hauptfaserbündelisomorphismus
 \begin{align*}
-\phi: P_0\to P,\qquad \text{mit}\qquad \phi^* A = A_0,
+\phi\colon P_0\to P,\qquad \text{mit}\qquad \phi^* A = A_0,
 \end{align*}
 wobei $P_0$ das triviale $G$-Hauptfaserbündel versehen mit dem kanonischen
 flachen Zusammenhang $A_0$ bezeichnet. Man schreibt dafür auch $(P,A)$ ist
@@ -5064,7 +5064,7 @@ s: M\to P,\qquad \ds(TM) = T^hP.\fish
 \end{align*}
 \end{lem}
 \begin{proof}
-$\Rightarrow$: Sei $\phi: P_0=M\times G\to P$ ein Isomorphismus mit $\phi^* A =
+$\Rightarrow$: Sei $\phi\colon P_0=M\times G\to P$ ein Isomorphismus mit $\phi^* A =
 A_0$. Dann gilt $\ker A = \dphi(\ker A_0)$ und somit gilt für jeden Punkt
 $(x,g)$ in $P$,
 \begin{align*}
@@ -5082,10 +5082,10 @@ T^h_{s(x)}P.
 \end{align*}
 Also ist der Schnitt $s$ auch horizontal.
 
-$\Leftarrow$: Sei $s: M\to P$ ein $A$-horizontaler Schnitt, d.h. $\ds(TM) =
+$\Leftarrow$: Sei $s\colon M\to P$ ein $A$-horizontaler Schnitt, d.h. $\ds(TM) =
 T^hP$. Als Trivialisierung von $P$ wählen wir
 \begin{align*}
-\phi: P_0\to P,\qquad (x,g) \mapsto s(x)\cdot g = R_g s(x).
+\phi\colon P_0\to P,\qquad (x,g) \mapsto s(x)\cdot g = R_g s(x).
 \end{align*}
 Dann ist $\phi$ ein Diffeomorphismus, denn $s$ ist ein globaler Schnitt und $G$
 wirkt einfach transitiv und frei auf $P$. Weiterhin gilt
@@ -5105,11 +5105,11 @@ $x_0\in M$ und $u_0\in P_{x_0}$, und definieren einen Schnitt durch
 \begin{align*}
 s: M\to P,\qquad x\mapsto s(x) \defl P_\gamma^A(u_0) = \gamma_{u_0}^*(1),
 \end{align*}
-wobei $\gamma: [0,1]\to M$ ein beliebiger Weg von $x_0$ nach $x$ sei. Aufgrund
+wobei $\gamma\colon [0,1]\to M$ ein beliebiger Weg von $x_0$ nach $x$ sei. Aufgrund
 der Unabhängigkeit der Parallelverschiebung von der Wahl des Weges ist $s$
 wohldefiniert. Weiterhin hängt $\gamma_{u_0}^*(1)$ als Lösung einer gewöhnlichen
 Differentialgleichung differenzierbar vom Anfangswert $x$ ab, also ist $s$
-differenzierbar. Sei nun $\alpha: [0,1]\to M$ eine Kurve durch $x$ mit
+differenzierbar. Sei nun $\alpha\colon [0,1]\to M$ eine Kurve durch $x$ mit
 $\dot{\alpha}(0) = X\in T_xM$, dann gilt
 \begin{align*}
 \ds(X) = \frac{\ddd}{\dt}\bigg|_{t=0} s\circ\alpha(t)
@@ -5167,11 +5167,11 @@ Somit entspricht der Tangentialraum an $N_p$ gerade dem horizontalen
 Tangentialraum an $P$, welcher wiederum zu $TM$ isomorph ist. Also haben $N_p$
 und $M$ dieselbe Dimension. Weiterhin ist die Projektion
 \begin{align*}
-\pi: P\to M
+\pi\colon P\to M
 \end{align*}
 eine Submersion und folglich ihre Einschränkung
 \begin{align*}
-\pi\big|_{N_p} : N_p\to M
+\pi\big|_{N_p} \colon N_p\to M
 \end{align*}
 eine Überlagerung, d.h. für eine hinreichend kleine Umgebung $U\subset M$ von
 $\pi(p)$ ist
@@ -5180,7 +5180,7 @@ $\pi(p)$ ist
 \end{align*}
 die disjunkte Vereinigung offener Mengen $N_i$ so, dass
 \begin{align*}
-\pi\big|_{N_i} : N_i\to M
+\pi\big|_{N_i} \colon N_i\to M
 \end{align*}
 ein Diffeomorphismus ist. Man kann somit eine Überdeckung von $M$ und  lokale
 horizontale Schnitte
@@ -5234,11 +5234,11 @@ somit identisch Null.\qed
 % Tangentialraum an $P$, welcher wiederum zu $TM$ isomorph ist. Also haben $N_p$
 % und $M$ dieselbe Dimension. Weiterhin ist die Projektion
 % \begin{align*}
-% \pi: P\to M
+% \pi\colon P\to M
 % \end{align*}
 % eine Submersion und folglich ihre Einschränkung
 % \begin{align*}
-% \pi\big|_{N_p} : N_p\to M
+% \pi\big|_{N_p} \colon N_p\to M
 % \end{align*}
 % eine Überlagerung, d.h. für eine hinreichend kleine Umgebung $U\subset M$ von
 % $\pi(p)$ ist
@@ -5247,7 +5247,7 @@ somit identisch Null.\qed
 % \end{align*}
 % die disjunkte Vereinigung offener Mengen $N_i$ so, dass
 % \begin{align*}
-% \pi\big|_{N_i} : N_i\to M
+% \pi\big|_{N_i} \colon N_i\to M
 % \end{align*}
 % ein Diffeomorphismus ist. Man kann somit eine Überdeckung von $M$ durch lokale
 % Schnitte
@@ -5389,7 +5389,7 @@ P_{\tau_2}\circ P_{\tau_1}\circ P_{\gamma_1}\\
 
 \section{Parallelverschiebung in Vektorbündeln}
 
-Sei $\pi: P\to M$ ein $G$-Hauptfaserbündel mit Zusammenhang $A$ und $G$ wirke
+Sei $\pi\colon P\to M$ ein $G$-Hauptfaserbündel mit Zusammenhang $A$ und $G$ wirke
 von links auf einer Mannigfaltigkeit $F$. Das assoziierte Faserbündel bezeichnen
 wir mit
 \begin{align*}
@@ -5398,7 +5398,7 @@ E = P\times_G F,\qquad [p,v] \sim [p\cdot g,g^{-1}v].
 
 \begin{defn}
 \index{Parallelverschiebung!im Vektorbündel}
-Sei $I=[a,b]$ ein Intervall und $\gamma: I\to M$ eine Kurve in $M$.
+Sei $I=[a,b]$ ein Intervall und $\gamma\colon I\to M$ eine Kurve in $M$.
 Die \emph{Parallelverschiebung in $E$ entlang $\gamma$} ist definiert durch
 \begin{align*}
 P_\gamma^E : E_{\gamma(a)} \to E_{\gamma(b)},\qquad
@@ -5423,7 +5423,7 @@ P_\gamma^E [p\cdot g,g^{-1}\cdot v]
 \begin{align*}
 P_\gamma^E = [\gamma^*(b)]\circ [\gamma^*(a)]^{-1},
 \end{align*}
-wobei $[p]:F\to E$, $v\mapsto [p,v]$.
+wobei $[p]\colon F\to E$, $v\mapsto [p,v]$.
 \begin{proof}
 Setze $p = \gamma^*(a)$, dann genügt es die Aussage für die Äquivalenzklasse
 $[p,v]$ zu zeigen. Dann ist
@@ -5449,7 +5449,7 @@ Tangentialvektor $v\in T_xM$ lässt sich schreiben als
 \begin{align*}
 v = \sum_{i=1}^r v_i e_i.
 \end{align*} 
-Zu einer Kurve $\gamma: I\to M$ mit $\gamma(a) = x$, ist die
+Zu einer Kurve $\gamma\colon I\to M$ mit $\gamma(a) = x$, ist die
 Parallelverschiebung
 \begin{align*}
 P_\gamma^A (p) = \gamma_p^*(t) = (e_1(t),\ldots,e_r(t))
@@ -5472,7 +5472,7 @@ Vektorfeld $X$ auf $M$ und jeden Schnitt $e$ in $E$
 \begin{align*}
 (\nabla_X^A e)_x = \frac{\ddd}{\dt}\bigg|_{t=0} P^E e(\gamma(t)),
 \end{align*}
-wobei $P^E: E_{\gamma(t)}\to E_{\gamma(0)}$ die Parallelverschiebung entlang
+wobei $P^E\colon E_{\gamma(t)}\to E_{\gamma(0)}$ die Parallelverschiebung entlang
 $\gamma$ beschreibt und $\gamma$ eine Kurve in $M$ ist mit $\gamma(0) = x$ und
 $\dot{\gamma}(0) = X_x$.\fish
 \end{prop}
@@ -5519,7 +5519,7 @@ Vorzüge, weshalb wir ihn auch präsentieren.
 
 \begin{defn}
 \index{Vektorfeld!entlang einer Kurve}
-Ein \emph{Vektorfeld entlang einer Kurve}  $\gamma: I\to M$ ist eine glatte
+Ein \emph{Vektorfeld entlang einer Kurve}  $\gamma\colon I\to M$ ist eine glatte
 Abbildung
 \begin{align*}
 X: I\to TM,
@@ -5530,7 +5530,7 @@ Vektorfelder entlang $\gamma$} bezeichnen wir mit $\chi(\gamma)$.\fish
 
 \begin{rem}
 Der Raum $\chi(\gamma)$ ist ein unendlichdimensionaler Vektorraum über $\R$. Für
-ein Vektorfeld $X$ entlang $\gamma$ und eine Funktion $f: I\to \R$ ist auch
+ein Vektorfeld $X$ entlang $\gamma$ und eine Funktion $f\colon I\to \R$ ist auch
 wiederum
 \begin{align*}
 fX : I\to TM,\qquad t\mapsto f(t)X(t)
@@ -5543,7 +5543,7 @@ $\Cs^\infty(I)$-Modul.\map
 \begin{exenum}
 \item Betrachten wir zu einer Kurve $\gamma$ in $M$ die erste Ableitung
 \begin{align*}
-\dot{\gamma}: I\to TM,
+\dot{\gamma}\colon I\to TM,
 \end{align*} 
 so ist dies offenbar ein Vektorfeld entlang $\gamma$.
 \item Schränken wir ein gegebenes Vektorfeld $X\in\chi(M)$ auf die Spur der
@@ -5559,7 +5559,7 @@ so ist die Einschränkung $X_\gamma$ ein Vektorfeld entlang $\gamma$.\boxc
 Sei $M$ eine Mannigfaltigkeit mit einer kovarianten Ableitung $\nabla$ auf $TM$.
 Dann existiert eine eindeutig bestimmte Abbildung
 \begin{align*}
-\frac{\nabla}{\dt} : \chi(\gamma)\to \chi(\gamma),
+\frac{\nabla}{\dt} \colon \chi(\gamma)\to \chi(\gamma),
 \end{align*}
 mit den folgenden Eigenschaften:
 \begin{propenum}
@@ -5583,7 +5583,7 @@ $\frac{\nabla}{\dt}$ mit Hilfe dieser Formel und zeigt wiederum, dass mit
 dieser Definition die Eigenschaften a)-c) erfüllt sind.
 
 \begin{proof}
-Sei $(U,x)$ eine Karte in $M$ und $\gamma: I\to M$ eine Kurve. Da die Spur
+Sei $(U,x)$ eine Karte in $M$ und $\gamma\colon I\to M$ eine Kurve. Da die Spur
 von $\gamma$ kompakt ist, können wir ohne Einschränkung annehmen, dass $\gamma$
 ganz in $U$ liegt. Wir schreiben dann
 \begin{align*}
@@ -5707,7 +5707,7 @@ entlang $\gamma$ seine Richtung nicht.\boxc
 \end{ex}
 
 \begin{lem}
-Sei $\gamma: I\to M$ eine glatte Kurve und $Z_0\in T_{\gamma(t_0)}M$ für ein
+Sei $\gamma\colon I\to M$ eine glatte Kurve und $Z_0\in T_{\gamma(t_0)}M$ für ein
 $t_0\in I$. Dann existiert genau ein paralleles Vektorfeld $Z\in\chi(\gamma)$
 mit
 \begin{align*}
@@ -5763,7 +5763,7 @@ Vektorfeld kann man $Z_0$ von $T_pM$ parallel nach $T_qM$ verschieben.
 \index{Parallelverschiebung!im Tangentialbündel}
 Sei $\gamma$ eine Kurve in $M$, dann heißt die Abbildung
 \begin{align*}
-\tau: T_{\gamma(t_0)}M \to T_{\gamma(t)}M,\qquad Z_0\mapsto Z(t),
+\tau\colon T_{\gamma(t_0)}M \to T_{\gamma(t)}M,\qquad Z_0\mapsto Z(t),
 \end{align*}
 mit $Z\in \chi(\gamma)$ parallel und $Z(t_0) = Z_0$, \emph{Parallelverschiebung
 entlang $\gamma$}.\fish
@@ -5784,7 +5784,7 @@ beschreiben.
 Sei $\gamma$ eine Kurve in $M$, die $x$ und $y$ verbindet, so bezeichnen wir die
 Parallelverschiebung entlang $\gamma$ auch mit
 \begin{align*}
-\tau \equiv \tau(\gamma) \equiv \tau_{xy} : T_xM\to T_yM.\map 
+\tau \equiv \tau(\gamma) \equiv \tau_{xy} \colon T_xM\to T_yM.\map 
 \end{align*}
 \end{rem}
 
@@ -5797,7 +5797,7 @@ der linearen Struktur sogar ein Isomorphismus ist.
 \begin{propenum}
 \item Die Parallelverschiebung ist ein linearer Isomorphismus
 \begin{align*}
-\tau_{xy}: T_xM\to T_yM,\qquad x,y\in M.
+\tau_{xy}\colon T_xM\to T_yM,\qquad x,y\in M.
 \end{align*}
 \item Sei $g$ eine Metrik auf $M$. Der Zusammenhang $\nabla$ ist genau dann
 metrisch, wenn $\tau_{xy}$ eine Isometrie ist.\fish
@@ -5880,16 +5880,16 @@ $P_{\GL_n}$ mit dem durch $\nabla$ induzierten Zusammenhang $A$. Dann verfügen
 wir über zwei Parallelverschiebungen, nämlich einerseits die induzierte
 Parallelverschiebung
 \begin{align*}
-P^E_\gamma: E_x\to E_y,\qquad [p,v]\mapsto [P_\gamma^A p,v], 
+P^E_\gamma\colon E_x\to E_y,\qquad [p,v]\mapsto [P_\gamma^A p,v], 
 \end{align*}
 und die soeben definierte Parallelverschiebung
 \begin{align*}
-\tau_{xy}: T_xM\to T_yM,\qquad Z_0\mapsto Z(b). 
+\tau_{xy}\colon T_xM\to T_yM,\qquad Z_0\mapsto Z(b). 
 \end{align*}
 Zum Abschluss zeigen wir, diese zwei Definitionen tatsächlich äquivalent sind.
 
 \begin{prop}
-Sei $\gamma: I\to M$ eine Kurve in $M$. Dann gilt
+Sei $\gamma\colon I\to M$ eine Kurve in $M$. Dann gilt
 \begin{align*}
 \tau_{\gamma} = P^E_{\gamma}.\fish
 \end{align*}
@@ -5923,7 +5923,7 @@ Vektorfeld mit $X(0) = X$ und somit ist $X(t) = \tau_{x\gamma(t)}(X)$.\qed
 
 \section{Parallele Schnitte und Parallelverschiebung}
 
-Sei $\pi: E\to M$ ein Vektorbündel mit einer kovarianten Ableitung $\nabla^E$.
+Sei $\pi\colon E\to M$ ein Vektorbündel mit einer kovarianten Ableitung $\nabla^E$.
 
 \begin{defn}
 \index{Schnitt!paralleler}
@@ -6068,7 +6068,7 @@ die >>Länge<<. Wie wir noch sehen werden, ist auch die Wahl eines Zusammenhangs
 
 \begin{defn}
 \index{Geodätische}
-Eine \emph{Geodätische} ist eine Kurve $\gamma: I\to M$ mit $\ddot{\gamma} = 0$,
+Eine \emph{Geodätische} ist eine Kurve $\gamma\colon I\to M$ mit $\ddot{\gamma} = 0$,
 d.h.
 \begin{align*}
 \frac{\nabla}{\dt}\dot{\gamma} = 0.\fish
@@ -6084,7 +6084,7 @@ verallgemeinern.
 
 \begin{rem}
 In lokalen Koordinaten $(U,x)$ schreibt sich für eine
-Kurve $\gamma:I\to M$ die Geodätengleichung $\ddot\gamma=0$  als
+Kurve $\gamma\colon I\to M$ die Geodätengleichung $\ddot\gamma=0$  als
 \begin{align*}
 \ddot{\gamma}_k(t) + \sum_{i,j=1}^n \Gamma_{ji}^k (\gamma(t))\,
 \dot{\gamma}_i(t)\, \dot{\gamma}_j(t) = 0,\qquad k=1,\ldots,n.
@@ -6139,7 +6139,7 @@ Eigenschaft >>geodätisch<< zu sein von der Parametrisierung der Kurve ab. Eine
 nichtgleichförmige Umparametrisierung wird diese Eigenschaft zerstören.
 
 \begin{lem}
-Sei $\gamma: I\to M$ eine nichtkonstante Geodätische. Eine Umparametrisierung $\gamma\circ h : J\to M$ ist genau dann eine Geodätische, wenn $h(t) = at + b$ gilt.\fish
+Sei $\gamma\colon I\to M$ eine nichtkonstante Geodätische. Eine Umparametrisierung $\gamma\circ h \colon J\to M$ ist genau dann eine Geodätische, wenn $h(t) = at + b$ gilt.\fish
 \end{lem}
 \begin{proof}
 Aus der Geodätengleichung in lokalen Koordinaten erhalten wir,
@@ -6158,7 +6158,7 @@ Wir wollen nun weiter untersuchen, inwiefern Geodätische >>kurz<< sind.
 \index{Energiefunktional}
 Der \emph{Wegeraum} der glatten Wege von $x$ nach $y$ in $M$ ist definiert als
 \begin{align*}
-\Omega_{xy}(M) \defl \setdef{\gamma:[0,1]\to M}{\gamma(0)=x,\quad \gamma(1)=y}.
+\Omega_{xy}(M) \defl \setdef{\gamma\colon[0,1]\to M}{\gamma(0)=x,\quad \gamma(1)=y}.
 \end{align*} 
 Das \emph{Energiefunktional} auf $\Omega_{xy}$ ist die Abbildung
 \begin{align*}
@@ -6200,7 +6200,7 @@ endlichdimensionalen Fall. Sei eine Abbildung
 f: N\to \R
 \end{align*}
 gegeben. Ein Punkt $z\in N$ ist ein kritischer Punkt von $f$ genau dann, wenn das Differential
-$\df_z$ verschwindet. Dies ist äquivalent dazu, dass für jede Kurve $\eta: I\to N$ mit
+$\df_z$ verschwindet. Dies ist äquivalent dazu, dass für jede Kurve $\eta\colon I\to N$ mit
 $\eta(0) = z$ gilt,
 \begin{align*}
 \frac{\ddd}{\dt} f\circ\eta(t) = 0.
@@ -6282,7 +6282,7 @@ Somit ist $\gamma$ ein kritischer Punkt genau dann, wenn $f\circ\gamma$ ein krit
 Für eine Lie-Gruppe $G$ mit zugehöriger Lie-Algebra $\g$ kennen wir bereits die
 Exponentialabbildung
 \begin{align*}
-\exp: \g \to G,\qquad X\mapsto \exp(X) = c_X(1),
+\exp\colon \g \to G,\qquad X\mapsto \exp(X) = c_X(1),
 \end{align*}
 die $X$ mit der entsprechenden Integralkurve existiert. Letztere existieren auf Lie-Gruppen für
 alle Zeiten und daher ist $\exp$ auf ganz $\g$ wohldefiniert. Die Exponentialabbildung ist
@@ -6372,7 +6372,7 @@ Sei $V\subset T_xM$ hinreichend klein, dann ist
 wohldefiniert und glatt. Das Differential der Exponentialabbildung ist eine
 Abbildung
 \begin{align*}
-\ddd \exp_p: T_0(T_xV)\cong T_xM \to T_xM,
+\ddd \exp_p\colon T_0(T_xV)\cong T_xM \to T_xM,
 \end{align*}
 und für $v\in T_xM$ gilt
 \begin{align*}
@@ -6436,7 +6436,7 @@ Ist die Urbildmenge $\hat{U}$ sternförmig, dann ist auch die Bildmenge $U$
 Sei $U\subset M$ eine normale Umgebung von $x\in M$. Dann existiert für jeden
 Punkt $y\in U$ eine eindeutig bestimmte Geodätische
 \begin{align*}
-\sigma: I\to M,\qquad \dot{\sigma}(0) = \exp_x^{-1}(y),
+\sigma\colon I\to M,\qquad \dot{\sigma}(0) = \exp_x^{-1}(y),
 \end{align*}
 die ganz in $U$ verläuft und $x$ und $y$ verbindet. Sie heißt \emph{radiale Geodätische}.\fish
 \end{lem}
@@ -6453,7 +6453,7 @@ setzen wir
 Dann ist $\sigma$ für $0\le t\le 1$ wohldefiniert und eine Geodätische, die ganz
 in $U$ verläuft, mit $\dot{\sigma}(0) = v$.
 
-Es verbleibt die \textit{Eindeutigkeit} zu zeigen. Sei $\tau: I\to M$ eine
+Es verbleibt die \textit{Eindeutigkeit} zu zeigen. Sei $\tau\colon I\to M$ eine
 weitere Geodätische, die $x$ und $y$ verbindet und sei $w = \dot{\tau}(0)$. Die
 Geodätische $t\mapsto \exp_x(tw)$ hat denselben Anfangsvektor wie $\tau$ und
 folglich gilt
@@ -6536,7 +6536,7 @@ Exponentialabbildung wollen wir nun spezielle Karten von $M$ definieren.
 Sei $x\in M$ und $U$ eine normale Umgebung von $x$. Wählen wir eine
 Orthonormalbasis $\setd{e_i}$ von $T_xM$, dann nennt man die Kartenabbildung
 \begin{align*}
-\ph: U\to \R^n,\qquad
+\ph\colon U\to \R^n,\qquad
 y \mapsto (y_1,\ldots,y_n),\quad \exp_x^{-1}(y) = \sum_{i=1}^n y_i e_i,
 \end{align*}
 \emph{Normalkoordinaten} auf $U$.\fish
@@ -6591,7 +6591,7 @@ n$.\qed
 
 \section{Der Geodätische Fluss}
 
-Eine Kurve $\gamma: I\to M$ ist eine Geodätische genau dann, wenn in jeder Karte $(U,x)$ die Geodätengleichungen erfüllt sind
+Eine Kurve $\gamma\colon I\to M$ ist eine Geodätische genau dann, wenn in jeder Karte $(U,x)$ die Geodätengleichungen erfüllt sind
 \begin{align*}
 \ddot\gamma_{k} + \sum_{i,j=1}^n \dot\gamma_{i}\dot\gamma_{j} \Gamma_{ij}^k = 0,\qquad k=1,\ldots,n.\tag{*}
 \end{align*}
@@ -6641,13 +6641,13 @@ Dieser Diffeomorphismus identifiziert $X_{H}$ mit $G$,
 
 Sei $G$ eine Lie-Gruppe mit Lie-Algebra $\g$. Im vergangenen Semester haben wir bereits eine Exponentialabbildung für Lie-Gruppen definiert,
 \begin{align*}
-\exp_{G}: \g\to G,\qquad X\mapsto \exp_{G}(X),
+\exp_{G}\colon \g\to G,\qquad X\mapsto \exp_{G}(X),
 \end{align*}
 die ein linksinvariantes Vektorfeld $X$ auf den Wert der zugehörigen Integralkurve zum Zeitpunkt $t=1$ abbildet. Für die Lie-Gruppen sind die Integralkurven für alle Zeiten definiert und somit ist auch die Exponentialabbildung auf ganz $\g$ wohldefiniert.
 Das Ziel dieses Abschnittes ist es zu untersuchen, wie diese Exponentialabbildung mit der Exponentialabbildung, die wir mittels Geodätischen definiert haben, zusammenhängt.
 
 \begin{defn}
-Eine stetige Abbildung $T: \R\to G$ heißt \emph{1-Parameter Untergruppe von $G$}, falls
+Eine stetige Abbildung $T\colon \R\to G$ heißt \emph{1-Parameter Untergruppe von $G$}, falls
 \begin{align*}
 T(t+s) = T(t)T(s)\quad\text{ für alle }t,s\in\R.\fish
 \end{align*}
@@ -6661,7 +6661,7 @@ wobei $\exp_{G}$ die klassische Exponentialabbildung bezeichnet. Die 1-Parameter
 
 \begin{lem}
 Seien $(M,g_{M})$ und $(N,g_{N})$ Riemannsche Mannigfaltigkeiten versehen mit dem Levi-Civita-Zusammenhang.
-Sei $\phi: M\to N$ eine Isometrie, dann gilt für Vektorfelder $X$ und $Y$ in $M$,
+Sei $\phi\colon M\to N$ eine Isometrie, dann gilt für Vektorfelder $X$ und $Y$ in $M$,
 \begin{align*}
 \dphi(\nabla_{X}^M Y) = \nabla_{\dphi(X)}^N(\dphi(Y)),
 \end{align*}
@@ -6725,7 +6725,7 @@ Der Levi-Civita Zusammenhang auf $M$ lässt sich mit Hilfe der 2. Fundamentalfor
 \end{align*}
 Dabei sind die Vektorfelder $X$ und $Y$ zunächst nur auf $M$ definiert, obiger Ausdruck hängt aber nicht von der Fortsetzung zu Vektorfeldern auf $\bar{M}$ ab und ist daher wohldefiniert.
 
-Sei $\gamma: I\to M$ eine Kurve in $M$ und $Y$ ein Vektorfeld entlang $\gamma$. Wir bezeichnen die kovarianten Ableitungen entlang $\gamma$ wie folgt,
+Sei $\gamma\colon I\to M$ eine Kurve in $M$ und $Y$ ein Vektorfeld entlang $\gamma$. Wir bezeichnen die kovarianten Ableitungen entlang $\gamma$ wie folgt,
 \begin{align*}
 \frac{\bar{\nabla}}{\dt} Y = \dot{Y},\qquad
 \frac{\nabla}{\dt} Y = Y'.
@@ -6764,7 +6764,7 @@ Y_{i} \nabla_{\dot{\gamma}}\right) + \II \left(\dot{\gamma},\sum_{i=1}^n Y_{i}\f
 \end{proof}
 
 \begin{cor}
-Sei $\gamma: I\to M$ eine Kurve in $M$, dann gilt
+Sei $\gamma\colon I\to M$ eine Kurve in $M$, dann gilt
 \begin{align*}
 \ddot{\gamma} = \gamma'' + \II(\dot{\gamma},\dot{\gamma}).
 \end{align*}
@@ -6802,7 +6802,7 @@ und $\gamma$ selbst ist ein Großkreis.\boxc
 \section{Die Holonomie-Gruppe}
 
 Sei $P\to M$ ein $G$-Hauptfaserbündel mit einem fixierten Zusammenhang $A$. Eine
-geschlossene Kurve  $\gamma: I\to M$ durch den Punkt $x\in M$ besitzt für jedes $p\in
+geschlossene Kurve  $\gamma\colon I\to M$ durch den Punkt $x\in M$ besitzt für jedes $p\in
 P_x$ einen eindeutigen horizontalen Lift $\gamma^*_p$ durch $p$. Mit diesem Lift haben wir die Parallelverschiebung in $P$ definiert,
 \begin{align*}
 P_{\gamma}^A : P\to P,\qquad p\mapsto \gamma_{p}^*(b).
@@ -6908,7 +6908,7 @@ Sei $E= P\times_\rho V$ ein zu $P$ assoziiertes Vektorbündel mit induzierter ko
 \begin{align*}
 \Hol_x(\nabla) = [p] \rho(\Hol_p(A))[p]^{-1},\qquad p\in P_x,
 \end{align*}
-wobei $[p]: V\to E_x$ den Faserisomorphismus und $\rho: G\to \GL(V)$ eine
+wobei $[p]\colon V\to E_x$ den Faserisomorphismus und $\rho\colon G\to \GL(V)$ eine
 $G$-Darstellung bezeichnet. Eine analoge Aussage gilt f\"ur $\Hol_{x}^{\o}(\nabla)$.\fish
 \end{prop}
 \begin{proof}
@@ -6993,7 +6993,7 @@ Sei $p$ ein Punkt in $P$. Dann gelten:
 \end{prop}
 
 \begin{proof}[Beweisskizze.] Ein vollständiger Beweis findet sich in \cite[Satz 4.3]{Baum:2009wk}.
-Wir zeigen zunächst, dass $\Hol_{p}^{\o}(A)$ eine Lie-Untergruppe ist. Sei dazu $g\in \Hol_{p}^{\o}(A)$, dann ist $P_{\gamma}^A(p) = p\cdot g$ für ein $\gamma\in \Omega_{\o}(x)$. Sei $F: I\times I\to M$ die Homotopie zwischen der Kurve $\gamma$ und der konstanten Kurve $\gamma_{\o}\equiv x$. Setzen wir $\gamma_{s} = F_{s} = F(\cdot,s)$, dann ist
+Wir zeigen zunächst, dass $\Hol_{p}^{\o}(A)$ eine Lie-Untergruppe ist. Sei dazu $g\in \Hol_{p}^{\o}(A)$, dann ist $P_{\gamma}^A(p) = p\cdot g$ für ein $\gamma\in \Omega_{\o}(x)$. Sei $F\colon I\times I\to M$ die Homotopie zwischen der Kurve $\gamma$ und der konstanten Kurve $\gamma_{\o}\equiv x$. Setzen wir $\gamma_{s} = F_{s} = F(\cdot,s)$, dann ist
 \begin{align*}
 P_{\gamma_{s}}^A(p) =p\cdot g_{s},
 \end{align*}
@@ -7033,7 +7033,7 @@ P^A(u) \defl \setdef{p\in P}{\text{es existiert eine horizontale Kurve in $P$ vo
 \begin{prop}[Reduktionssatz der Holonomietheorie]
 Für jedes $u\in P$ gelten:
 \begin{propenum}
-\item Durch $\pi: P^A(u)\to M$ ist ein $\Hol_{u}(A)$-Hauptfaserbündel gegeben.
+\item Durch $\pi\colon P^A(u)\to M$ ist ein $\Hol_{u}(A)$-Hauptfaserbündel gegeben.
 \item Der Zusammenhang $A$ reduziert sich auf $\Hol_{u}(A)$, d.h. $P^A(u)\subset P$ ist eine $\Hol_{u}(A)$-Reduktion und
 \begin{align*}
 T^hP^A(u) \subset T^hP.\fish
@@ -7102,7 +7102,7 @@ Wir können ohne Einschränkung annehmen, dass $G=\Hol_{u}(A)$ und $P=P^A(u)$. A
 
 Zu zeigen ist also, dass $\m = \g$. Seien dazu $p\in P$ sowie $X,Y\in T^h_{p}P$ und $W\in \g$. Wir betrachten die Kurve
 \begin{align*}
-\alpha: [0,1] \to \m,\qquad t\mapsto \alpha(t) \defl \left(R_{\exp(tW)}^* F^A\right)_{p}(X,Y).
+\alpha\colon [0,1] \to \m,\qquad t\mapsto \alpha(t) \defl \left(R_{\exp(tW)}^* F^A\right)_{p}(X,Y).
 \end{align*}
 Die Krümmung ist eine 2-Form vom Typ $\Ad$, d.h.
 \begin{align*}
@@ -7186,7 +7186,7 @@ Die Fundamentalgruppe von $M$ sei nicht trivial und die Krümmung verschwinde, a
 \end{align*}
 So ist $\Hol_{p}(A)$ im Allgemeinen nicht zusammenhängend und daher nur diskret aber nicht trivial. Somit ist $M^\star = P^A(u)\to M$ eine Überlagerung von $M$. Weiterhin ist $\Hol_{p}^\o(A)$ trivial und daher ist die Darstellung
 \begin{align*}
-\rho: \pi_{1}(M)\to \Hol_{u}(A)
+\rho\colon \pi_{1}(M)\to \Hol_{u}(A)
 \end{align*}
 ein surjektiver Gruppenhomomorphismus. Die Holonomiegruppe ist folglich eine Quotientengruppe der Fundamentalgruppe,
 \begin{align*}
@@ -7208,7 +7208,7 @@ P\defl \tilde M \times_{\rho}\Hol_{p}(A) \ .\map
 
 \section{Parallele Schnitte und Holonomie}
 
-Sei $\pi: E\to M$ ein assoziiertes Vektorbündel
+Sei $\pi\colon E\to M$ ein assoziiertes Vektorbündel
 \begin{align*}
 E = P\times_\rho V,
 \end{align*}
@@ -7310,7 +7310,7 @@ genau dann, wenn
 Sei $(M,g)$ eine Riemannsche Mannigfaltigkeit und $\nabla$ der Levi-Civita-Zusammenhang auf dem Tangentialbündel. Da der Levi-Civita-Zusammenhang der eindeutig bestimmte, metrische und torsionsfreie Zusammenhang auf $TM$ ist, ist durch $\nabla$ in kanonischer Weise eine Holonomiegruppe auf $M$ gegeben. Wir bezeichnen diese mit
 \begin{align*}
 \Hol_{x}(M,g) \defl \Hol_{x}(\nabla) = 
-\setdef{P_{\gamma} : T_{x}M\to T_{x}M}{\gamma\in\Omega(x)},\qquad x\in M.
+\setdef{P_{\gamma} \colon T_{x}M\to T_{x}M}{\gamma\in\Omega(x)},\qquad x\in M.
 \end{align*}
 
 Die Elemente der Holonomiegruppe können wir mit speziellen Automorphismen von $T_{x}M$ identifizieren. Dies liefert eine Darstellung der Holonomiegruppe auf den Automorphismen von $T_{x}M$,
@@ -7524,7 +7524,7 @@ P_{\gamma} H_{j} P_{\gamma}^{-1} \subset H_{j},\qquad j=1,2,
 \end{align*}
 also sind die $H_{j}$ tatsächlich Normalteiler von $\Hol_{x}(M,g)$. Nach Definition kommutieren Elemente von $H_{1}$ mit Elementen von $H_{2}$, d.h. $H_{1}\cap H_{2} = \setd{\Id_{T_{x}M}}$. Folglich ist
 \begin{align*}
-\psi: H_{1}\times H_{2}\to \Hol_{x}^\o(M,g),\qquad (a,b)\mapsto a\cdot b
+\psi\colon H_{1}\times H_{2}\to \Hol_{x}^\o(M,g),\qquad (a,b)\mapsto a\cdot b
 \end{align*}
 ein injektiver Gruppenhomomorphismus. Nun ist noch zu zeigen, dass $\psi$ auch surjektiv ist, d.h. dass sich jedes Element in $\Hol_{x}^\o(M,g)$ als Produkt aus Elementen von $H_{1}$ und $H_{2}$ schreiben lässt.
 
@@ -7648,7 +7648,7 @@ Mannigfaltigkeiten $(M_i,g_i)$ irreduzibel und nicht flach. Weiterhin gilt
 \begin{proof}[Beweisidee.]
 Für ein $x\in M$ fest betrachten wir die Holonomiedarstellung
 \begin{align*}
-\rho: \Hol_x(M,g)\to \Aut(T_xM).
+\rho\colon \Hol_x(M,g)\to \Aut(T_xM).
 \end{align*}
 Nach Voraussetzung zerfällt $T_xM$ in
 irreduzible, invariante Unterräume,
@@ -7699,7 +7699,7 @@ $n=8$ & $\Spin(7)$.\fish
 Für eine nicht einfach zusammenhängende Mannigfaltigkeit betrachte die
 universelle Überlagerung
 \begin{align*}
-\pi: \tilde M \overset{\pi_1 M}{\longrightarrow} M.
+\pi\colon \tilde M \overset{\pi_1 M}{\longrightarrow} M.
 \end{align*}
 Diese ist einfach zusammenhängend und es gilt $\Hol_x(\tilde{M})
 =\Hol_x^\o(\tilde{M}) = \Hol_x^\o(M)$. Somit ist im Klassifikationstheorem für
@@ -7766,7 +7766,7 @@ $\U(1)$-Theorie, Ladungen.\boxc
 \section{Konstruktion}
 
 Wir wollen nun einen allgemeinen Konstruktionsmechanismus für charakteristische
-Klassen erarbeiten. Sei dazu $\pi: P\to M$ ein $G$-Hauptfaserbündel und $\g$ die
+Klassen erarbeiten. Sei dazu $\pi\colon P\to M$ ein $G$-Hauptfaserbündel und $\g$ die
 Lie-Algebra der Lie-Gruppe $G$.
 
 \begin{defn}
@@ -7835,7 +7835,7 @@ Funktionen, die invariant unter der $\Ad$-Wirkung sind.
 
 \begin{defn}
 \index{Polynom!invariantes}
-Ein \emph{invariantes Polynom} ist eine polynomiale Funktion $p:\g\to \C$ mit
+Ein \emph{invariantes Polynom} ist eine polynomiale Funktion $p\colon\g\to \C$ mit
 \begin{align*}
 p(\Ad(g)X) = p(X)
 \end{align*}
@@ -7980,7 +7980,7 @@ auch alle $D_A F_{i_j}$.
 
 c): Seien $A_0$ und $A_1$ Zusammenhänge auf $P$. Setzen wir $X= M\times \R$ und
 bezeichnen die Projektion mit
-$\phi: X\to M$, $(x,t)\mapsto x$,
+$\phi\colon X\to M$, $(x,t)\mapsto x$,
 so ist das Pullback Bündel gegeben durch
 \begin{align*}
 \tilde{P} = \phi^*P = \setdef{(x,p)\in X\times P}{\phi(x)=\pi(p)},
@@ -8017,7 +8017,7 @@ dann ist auch $\tilde{A}$ ein Zusammenhang auf $\tilde{P}$. Die Krümmung
 identifizieren $F^{\tilde{A}}\in\Omega^2(X,\Ad(\tilde{P}))$. Schreiben wir für
 die Inklusion
 \begin{align*}
-i_\lambda: M\to X,\qquad m\mapsto (m,\lambda),
+i_\lambda\colon M\to X,\qquad m\mapsto (m,\lambda),
 \end{align*}
 dann gilt für Vektorfelder $X$ und $Y$ auf $M$,
 \begin{align*}
@@ -8071,7 +8071,7 @@ zusammen.
 
 \begin{prop}
 \begin{propenum}
-\item Sei $\phi: N\to M$ differenzierbar, dann gilt
+\item Sei $\phi\colon N\to M$ differenzierbar, dann gilt
 \begin{align*}
 \Ws_{\phi^* P} = \phi^*\Ws_P.
 \end{align*}
@@ -8134,7 +8134,7 @@ horizontalen Lifts gilt $\dpi(\ddd\pr_2(X^*)) = \dphi(\ddd\bar{\pr}(X^*)) =
 = \phi^* \Ws_{P}(f).
 \end{align*}
 
-b): Sei $\psi: P_1\to P_2$ ein Hauptfaserbündelisomorphismus und $A_2$ ein
+b): Sei $\psi\colon P_1\to P_2$ ein Hauptfaserbündelisomorphismus und $A_2$ ein
 Zusammenhang auf $P_2$, dann ist $A_1=\psi^* A_2$ ein Zusammenhang auf $P_1$.
 Für ein Vektorfeld $X$ auf $M$ mit $A_1$-horizontalem Lift $X^*$ auf $P_1$, ist
 $\dps(X^*)$ ein $A_2$-horizontaler Lift auf $P_2$. Somit gilt für Vektorfelder
@@ -8190,7 +8190,7 @@ von der Wahl der $s_i$.\fish
 \end{lem}
 
 \begin{proof}
-Sei $g: U\to \GL(n,\C)$ die Transformation, die $s_1,\ldots,s_n$ in
+Sei $g\colon U\to \GL(n,\C)$ die Transformation, die $s_1,\ldots,s_n$ in
 $s_1',\ldots,s_n'$ überführt. Dann schreibt sich
 \begin{align*}
 F'(X,Y) = gF(X,Y)g^{-1} = \Ad(g)F(X,Y).
@@ -8224,7 +8224,7 @@ der de-Rham Kohomologie von $M$ und es gilt
 Somit übertragen sich die Eigenschaften von $\Ws_p$ auch auf $[p(F^\nabla)]$.
 
 \begin{lem}
-Sei $E$ ein Vektorbündel über $M$ und $f: N\to M$ differenzierbar. Dann gelten
+Sei $E$ ein Vektorbündel über $M$ und $f\colon N\to M$ differenzierbar. Dann gelten
 \begin{propenum}
 \item $f^*[p(F^\nabla)] = [p(f^*F^\nabla)]$,
 \item Falls $E$ trivial ist, gilt $[p(F^\nabla)]\equiv 0$.
@@ -8311,7 +8311,7 @@ s_3 &= \sigma_1^3 - 3\sigma_1\sigma_2 + 3\sigma_3,\\
 s_i &= Q_i(\sigma_1,\ldots,\sigma_i),
 \end{align*}
 wobei $Q_i$ das $i$-te Newton-Polynom bezeichnet.
-\item Jedes Element $X\in\gl(n,\C)$ aufgefasst als Abbildung $X: \C^n\to \C^n$
+\item Jedes Element $X\in\gl(n,\C)$ aufgefasst als Abbildung $X\colon \C^n\to \C^n$
 induziert für jedes $k\ge 0$ eine Abbildung
 \begin{align*}
 \Lambda^k X : \Lambda^k \C^n\to \Lambda^k \C^n.
@@ -8394,7 +8394,7 @@ nicht ab.\map
 \end{rem}
 
 \begin{lem}
-Seien $f: N\to M$ eine differenzierbare Abbildung, sowie $E$, $E_1$ und $E_2$
+Seien $f\colon N\to M$ eine differenzierbare Abbildung, sowie $E$, $E_1$ und $E_2$
 Vektorbündel über $M$. Dann gelten:
 \begin{propenum}
 \item Die totale reelle Chern-Klasse ist natürlich und multiplikativ unter Whitneysummenbildung,
@@ -8652,7 +8652,7 @@ c(E) &= \prod_{i=1}^n c(E_{i}) =
 Es stellt sich nun heraus, dass man immer so verfahren kann.
 
 \begin{prop}[Zerf\"allungsprinzip]
-Zu jedem komplexen Vektorbündel $E\to M$ existiert eine Mannigfaltigkeit $X$ und eine Abbildung $f: X\to M$, so dass
+Zu jedem komplexen Vektorbündel $E\to M$ existiert eine Mannigfaltigkeit $X$ und eine Abbildung $f\colon X\to M$, so dass
 \begin{align*}
 f^*E = E_{1}\oplus \ldots \oplus E_{n},
 \end{align*}
@@ -8714,7 +8714,7 @@ Die Pontrjagin-Klassen haben analoge Eigenschaften zur den Chern-Klassen.
 \begin{align*}
 p(E_{1}) = p(E_{2}).
 \end{align*}
-\item Ist $\phi: N\to M$ eine glatte Abbildung und $E$ ein reelles Vektorbündel über $M$, dann gilt
+\item Ist $\phi\colon N\to M$ eine glatte Abbildung und $E$ ein reelles Vektorbündel über $M$, dann gilt
 \begin{align*}
 p(\phi^* E) = \phi^* p(E).
 \end{align*}
@@ -8856,7 +8856,7 @@ p_{n}(E) = (-1)^n c_{2n}(E) =
 
 b): Man betrachtet die Einbettung von $\u(n)$ in $\so(2n)$ gegeben durch
 \begin{align*}
-\phi: \diag(i\mu_{1},\ldots,i\mu_{n}) \mapsto
+\phi\colon \diag(i\mu_{1},\ldots,i\mu_{n}) \mapsto
 \diag
 \left(
 \begin{pmatrix}
@@ -8946,8 +8946,8 @@ D^2 = dd^*+d^*d = \D.
 \end{align*}
 Bezeichnen wir die Einschränkung auf gerade Formen mit $D_{+}$ und die auf ungerade Formen mit $D_{-}$, also
 \begin{align*}
-D_{+} : \Gamma(\Lambda^{even}TM)\to \Gamma(\Lambda^{odd}TM),\\
-D_{-} : \Gamma(\Lambda^{odd}TM)\to \Gamma(\Lambda^{even}TM),
+D_{+} \colon \Gamma(\Lambda^{even}TM)\to \Gamma(\Lambda^{odd}TM),\\
+D_{-} \colon \Gamma(\Lambda^{odd}TM)\to \Gamma(\Lambda^{even}TM),
 \end{align*}
 dann ist der \emph{Index} des Operators $D$ definiert als
 \begin{align*}
@@ -9008,7 +9008,7 @@ also wird $2$ von $(n-1)!$  geteilt, das heißt $n=1,2$ oder $3$.
 Wir müssen also noch den Fall der $S^4$ ausschließen. Dazu betrachten wir ganz allgemein
 die Signatur einer Mannigfaltigkeit $M$
 \begin{align*}
-\sigma: H^2(M)\times H^2(M)\to \R,\qquad ([\alpha],[\beta]) \mapsto \int \alpha\wedge \beta.
+\sigma\colon H^2(M)\times H^2(M)\to \R,\qquad ([\alpha],[\beta]) \mapsto \int \alpha\wedge \beta.
 \end{align*}
 Diese ist eine nichtausgeartete, symmetrische Bilinearform und es gilt
 \begin{align*}
@@ -9196,7 +9196,7 @@ Dieser Ausdruck für das Differential motiviert die Definition eines \textit{Kod
 
 \begin{defn}
 \index{Kodifferential}
-Das \emph{Kodifferential} $\ddd^*: \Omega^k(M)\to \Omega^{k-1}(M)$ ist ein Differentialoperator erster Ordnung definiert durch
+Das \emph{Kodifferential} $\ddd^*\colon \Omega^k(M)\to \Omega^{k-1}(M)$ ist ein Differentialoperator erster Ordnung definiert durch
 \begin{align*}
 \ddd^*\omega = - \sum_{i=1}^n e_{i}\,\ic \nabla_{e_{i}}\omega,
 \end{align*}
@@ -9407,7 +9407,7 @@ f(p)\frac{\partial^2 h}{\partial x_{i}^2}\bigg|_{m}\\
 Der Laplace-Operator ist definiert durch $\D =\div(\grad)$  und hängt somit von der Metrik ab. Abbildungen, die die Metrik erhalten erhalten auch den Laplace-Operator.
 
 \begin{prop}
-Sei $\ph: (M,g)\to (N,h)$ eine Isometrie. Dann gilt
+Sei $\ph\colon (M,g)\to (N,h)$ eine Isometrie. Dann gilt
 \begin{align*}
 \D^M(f\circ\ph) = (\D^Nf)\circ\ph.\fish
 \end{align*}
@@ -9429,7 +9429,7 @@ Sei $\eta\in\Cs^\infty(N)$, dann gilt
 \end{proof}
 
 \begin{prop}
-Sei $\pi: (M,g)\to (N,h)$ eine Riemannsche Submersion, d.h. der Tangentialraum an $M$ zerfällt in
+Sei $\pi\colon (M,g)\to (N,h)$ eine Riemannsche Submersion, d.h. der Tangentialraum an $M$ zerfällt in
 \begin{align*}
 TM = T^h\oplus T^v,\qquad T^h= \ker\dpi,
 \end{align*}
@@ -9462,8 +9462,8 @@ Da die Submersion total geodätisch ist, ist $\pi\circ\gamma_{i}$ eine Geodätis
 
 Seien nun $(M,g)$ und $(N,h)$ Riemannsche Mannigfaltigkeiten und $(M\times N,g\oplus h)$ bezeichne ihr Riemannsches Produkt. Dann sind die Projektionen
 \begin{align*}
-\pr_{M}: M\times N\to M,\quad (m,n)\mapsto m,\qquad
-\pr_{N}: M\times N\to N,\quad (m,n)\mapsto n,
+\pr_{M}\colon M\times N\to M,\quad (m,n)\mapsto m,\qquad
+\pr_{N}\colon M\times N\to N,\quad (m,n)\mapsto n,
 \end{align*}
 totalgeodätische Riemannsche Submersionen. 
 
@@ -9700,7 +9700,7 @@ Die Dimension der Eigenräume lässt sich nun wie folgt berechnen,
 
 Sei $M=G/K$ ein symmetrischer Raum. Dann ist $G\to G/K$ ein $K$-Hauptfaserbündel und wir betrachten das Vektorbündel
 \begin{align*}
-E = G\times_{\rho}V,\qquad \rho: K\to \Aut(V).
+E = G\times_{\rho}V,\qquad \rho\colon K\to \Aut(V).
 \end{align*}
 Auf $\Gamma(E)$ wirkt die Gruppe $G$ von links, indem man für einen Schnitt $e$ definiert
 \begin{align*}
@@ -9720,7 +9720,7 @@ Da $M$ symmetrisch ist, entspricht der Levi-Civita Zusammenhang auf $E$ der Rich
 \begin{align*}
 (\nabla^*\nabla)^E = \Cas_{V_{\lambda}}\otimes \Id,
 \end{align*}
-wobei für eine Darstellung $\rho: G\to V$ der Casimir-Operator definiert ist durch
+wobei für eine Darstellung $\rho\colon G\to V$ der Casimir-Operator definiert ist durch
 \begin{align*}
 \Cas_{\rho} \defl \sum_{i} \rho_{*}(x_{i})^2 \in \End(V),
 \end{align*}
@@ -9778,7 +9778,7 @@ Sei wieder $(M,g)$ eine Riemannsche Mannigfaltigkeit. Wir setzten nun den für F
 \index{Laplace-Operator!Hodge-}
 Der \emph{Hodge-Laplace-Operator} auf Formen
 \begin{align*}
-\D : \Omega^k(M)\to \Omega^k(M)
+\D \colon \Omega^k(M)\to \Omega^k(M)
 \end{align*}
 ist für $\omega\in\Omega^k(M)$ definiert durch
 \begin{align*}
@@ -9961,7 +9961,7 @@ ist nicht entartet, denn\begin{align*}
 \begin{defn}
 Der \emph{Bochner-Laplace-Operator (auch rough Laplacian)} ist definiert durch
 \begin{align*}
-\nabla^*\nabla : \Omega^k(M)\to \Omega^k(M),\qquad \nabla^*\nabla\omega = - \tr(\nabla^2\omega).\fish
+\nabla^*\nabla \colon \Omega^k(M)\to \Omega^k(M),\qquad \nabla^*\nabla\omega = - \tr(\nabla^2\omega).\fish
 \end{align*}
 \end{defn}
 
@@ -10279,7 +10279,7 @@ die Relation $\pr_{k-1}\circ i_{k-1} = \Id_{\Lambda^{k-1}}$. Schließlich ist de
 \begin{align*}
 \Lambda^{k,1}V^* = \ker(\pr_{k-1}\cap \pr_{k+1}) \subset V^*\otimes \Lambda^k V^*,
 \end{align*}
-und seine Projektion $\pr_{k,1} :   V^*\otimes \Lambda^{k}V^* \to \Lambda^{k,1}V^*$ ist definiert durch
+und seine Projektion $\pr_{k,1} \colon   V^*\otimes \Lambda^{k}V^* \to \Lambda^{k,1}V^*$ ist definiert durch
 \begin{align*}
 \pr_{k,1} (X^*\otimes \omega)v = 
 X^*(v)\omega - \frac{1}{k+1}v\ic (X^*\wedge\omega) - \frac{1}{n-k+1} v^* \wedge(X^* \ic \omega).\fish
@@ -10315,7 +10315,7 @@ Die Projektion der kovarianten Ableitung auf den Cartan-Summanden $\Lambda^{k,1}
 \index{Twistor-Operator}
 Der \emph{Twistor-Operator} ist definiert durch
 \begin{align*}
-P\defl \pr_{k,1}\circ \nabla : \Omega^k(M)\to \Gamma(T^*M\otimes \Lambda^k T^*M),
+P\defl \pr_{k,1}\circ \nabla \colon \Omega^k(M)\to \Gamma(T^*M\otimes \Lambda^k T^*M),
 \end{align*}
 d.h. für ein Vektorfeld $X$ auf $M$ und eine $k$-Form $\omega$ gilt
 \begin{align*}
