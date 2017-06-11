@@ -4,7 +4,7 @@ sudo: required
 before_install:
 - sudo add-apt-repository ppa:jonathonf/texlive-2016 -y
 - sudo apt-get update -q
-- sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended texlive-lang-german texlive-pstricks dvipng latexmk
+- sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended texlive-lang-german texlive-pstricks texlive-xetex dvipng latexmk
 
 script:
 - latexmk -xelatex -interaction=nonstopmode rgeom-skript.tex
