@@ -18,22 +18,25 @@
 	numbers=noendperiod]%
 	{scrbook}
 	
-\usepackage{vlskript}
+\usepackage{scrpage2}
+\usepackage[lc,color,lgerman]{jancommon}
+\usepackage{janmath,custom}
  
 \makeindex
 
 \begin{document}
 
-%Some content
-
+% titlepage
 \begin{titlepage}
+\bfseries\color{darkgray}
 \vspace*{2mm}
-\noindent\bf\color{gdarkgray}
+\noindent
 Prof. Dr. Uwe Semmelmann, Universität Stuttgart
 
 \begin{center}
 \vspace*{10mm}
-{\noindent\huge\bf\color{darkblue} Riemannsche Geometrie}
+\noindent
+{\huge\color{darkblue} Riemannsche Geometrie}
 
 \vspace*{4mm}
 
@@ -48,7 +51,7 @@ Version: \today\
 \vspace*{5mm}
 
 Für Hinweise auf Druckfehler und Kommentare jeder Art bin ich 
-dankbar.\footnote{\color{gdarkgray}
+dankbar.\footnote{\color{darkgray}
 Prof. Dr. Uwe Semmelmann, Universität Stuttgart,
 \href{mailto:uwe.semmelmann@mathematik.uni-stuttgart.de}{uwe.semmelmann@mathematik.uni-stuttgart.de};\\
 Jan-Cornelius Molnar,
@@ -61,17 +64,17 @@ Viel Spaß!
 % Inhaltsverzeichnis
 \tableofcontents
 
-\fancyhead[RO]{\footnotesize\color{gdarkgray}%
-	\marginnote{$\Big|$\;\textbf{\thesection}}\rightmark}
-\fancyhead[LE]{\footnotesize\color{gdarkgray}%
-	\marginnote{\;\textbf{\thechapter}$\Big|$}\leftmark}
-
-% Zweiseitig
-\fancyfoot[LE]{\footnotesize\color{gdarkgray}%
- 	\thepage}%
- \fancyfoot[RO]{\footnotesize\color{gdarkgray}%
- 	\thepage}%
- \fancyfoot[RE,LO]{\tiny\color{gdarkgray}\today}
+%\fancyhead[RO]{\footnotesize\color{gdarkgray}%
+%	\marginnote{$\Big|$\;\textbf{\thesection}}\rightmark}
+%\fancyhead[LE]{\footnotesize\color{gdarkgray}%
+%	\marginnote{\;\textbf{\thechapter}$\Big|$}\leftmark}
+%
+%% Zweiseitig
+%\fancyfoot[LE]{\footnotesize\color{gdarkgray}%
+% 	\thepage}%
+% \fancyfoot[RO]{\footnotesize\color{gdarkgray}%
+% 	\thepage}%
+% \fancyfoot[RE,LO]{\tiny\color{gdarkgray}\today}
 
 
 % Inhalt
@@ -169,7 +172,7 @@ diffeomorph.
 
 \begin{ex}
 Die triviale Faserung $E= M\times F$, wobei $\pi$ dann der Projektion auf den
-ersten Faktor entspricht.\bsp
+ersten Faktor entspricht.\boxc
 \end{ex}
 
 Analog zu Kartenwechseln auf Mannigfaltigkeiten, kann man nun
@@ -275,7 +278,7 @@ f^*E \defl \setdef{(y,e)\in N\times E}{f(y) = \pi(e)} \subset N\times E,
 \end{align*}
 mit Projektionsabbildung $\bar{\pi}(y,e) = y$.
 Für den Spezialfall einer Untermannigfaltigkeit $i: N\opento M$ ist gerade $i^*E
-= E\big|_N$.\bsp
+= E\big|_N$.\boxc
 \end{exenum}
 \end{ex}
 
@@ -524,7 +527,7 @@ S_{U_i} : \pi^{-1}(U_i) \to  \U(1),\qquad
 (z_0,\ldots,z_n)\mapsto \frac{z_i}{\abs{z_i}},\qquad 0\le i\le n.
 \end{align*}
 Diese spielen gerade die Rolle der $S_{U_i}=\pr_2\circ \phi_{U_i}$ in der Definition des
-Hauptfaserbündels.\bsp
+Hauptfaserbündels.\boxc
 \end{exenum}
 \end{ex}
 
@@ -691,7 +694,7 @@ das Tangentialbündel und das Formenbündel trivial. Die Trivialität des
 Rahmenbündels ist also eine sehr starke Forderung.
 
 Von den Sphären sind lediglich die zwei Lie-Gruppen $S^1$ und $S^3$, sowie die
-$S^7$ parallelisierbar. Außerdem ist jede Lie-Gruppe parallelisierbar.\bsp
+$S^7$ parallelisierbar. Außerdem ist jede Lie-Gruppe parallelisierbar.\boxc
 \end{ex}
 
 \section{Assoziierte Faserbündel}
@@ -789,7 +792,7 @@ Die Äquivalenzklassen sind bezüglich der Darstellung zu verstehen als
 \item
 Viele interessante Vektorbündel erhält man als assoziierte Faserbündel, indem
 man das $G$-Hauptfaserbündel $P\to M$ festhält und nur die Darstellung
-variiert.~\bsp
+variiert.~\boxc
 \end{exenum}
 \end{ex}
 
@@ -809,12 +812,12 @@ Sei $E = P\times_G F$ ein zum $G$-Hauptfaserbündel $P$ assoziiertes
 Faserbündel mit Fasertyp $F$, dann besteht eine bijektive Beziehung zwischen
 Schnitten in $E$ und $G$-äquivarianten Funktionen,
 \begin{align*}
-\Gamma(E) \cong \CC^\infty(P,F)^G \defl
+\Gamma(E) \cong \Cs^\infty(P,F)^G \defl
 \setdef{f : P\to F}{f(p\cdot g) = g^{-1}f(p)\text{ für }p\in P,g\in G}.\fish
 \end{align*}
 \end{lem}
 \begin{proof}
-$\supset$: Sei $\bar{s}\in \CC^\infty(P,F)^G$, dann definiert man für $x\in M$,
+$\supset$: Sei $\bar{s}\in \Cs^\infty(P,F)^G$, dann definiert man für $x\in M$,
 \begin{align*}
 s(x) \defl [p,\bar{s}(p)],\qquad \text{für ein }p\in P_x.
 \end{align*}
@@ -839,13 +842,13 @@ $g\in G$ ist
 \bar{s}(p\cdot g) = [p\cdot g]^{-1}(s\circ \pi(p\cdot g))
 = g^{-1}[p]^{-1}(s\circ \pi(p)) = g^{-1}\bar{s}(p).
 \end{align*} 
-Somit ist $\bar{s}\in \CC^\infty(P,F)^G$.\qed
+Somit ist $\bar{s}\in \Cs^\infty(P,F)^G$.\qed
 \end{proof}
 
 \begin{ex}
 Die Schnitte im Tangentialbündel sind gerade die Vektorfelder auf
 $M$. Nach dem vorigen Lemma gilt $\chi(M)\cong
-\CC^\infty(P_{\GL_n},\R^n)^{\GL_n}$. Um dies zu veranschaulichen, wähle Karten
+\Cs^\infty(P_{\GL_n},\R^n)^{\GL_n}$. Um dies zu veranschaulichen, wähle Karten
 $(U,x)$ und $(V,y)$ um $m \in M$, dann sind durch
 \begin{align*}
 p = \left(\frac{\partial}{\partial x_1},\ldots,\frac{\partial}{\partial x_n}
@@ -878,9 +881,9 @@ X\mapsto f,\qquad f(\tilde{p}) = (v_1,\ldots,v_n).
 \end{align*}
 Nach Gleichung (*) ist $f$ außerdem $G$-äquivariant, denn $f(p) = g\cdot
 f(\tilde{p})$. Somit ist
-$f\in\CC^\infty(P_{\GL_n}, \R^n)^{\GL_n}$. Die Funktion
+$f\in\Cs^\infty(P_{\GL_n}, \R^n)^{\GL_n}$. Die Funktion
 $f$ beschreibt das Vektorfeld $X$ eindeutig, indem es vorgibt, wie ein
-Basiswechsel, die Koeffizienten von $X$ verändert.\bsp
+Basiswechsel, die Koeffizienten von $X$ verändert.\boxc
 \end{ex}
 
 \begin{prop}
@@ -1006,8 +1009,8 @@ $\hat{f}$ eingeschränkt auf eine Faser linear, da $f$ linear.\qed
 
 \begin{rem}
 Der Raum der Schnitte 
-$\Gamma(E)$ wird ein $\CC^\infty(M)$-Modul, indem man für einen Schnitt $s$ in
-$E$ und eine glatte Funktion $f\in\CC^\infty(M)$ definiert,
+$\Gamma(E)$ wird ein $\Cs^\infty(M)$-Modul, indem man für einen Schnitt $s$ in
+$E$ und eine glatte Funktion $f\in\Cs^\infty(M)$ definiert,
 \begin{align*}
 (f\cdot s)(x) = f(x)\cdot s(x),\qquad x\in M.\map
 \end{align*}
@@ -1101,7 +1104,7 @@ Fasern. Die Übergangsfunktionen
 (L,z) \mapsto (L,g_{ij}(L)\cdot z)
 \end{align*}
 sind ebenfalls glatt und somit ist $\gamma_n$ assoziiert zu dem
-Hauptfaserbündel, das durch die $g_{ij}$ erzeugt wird.\bsp
+Hauptfaserbündel, das durch die $g_{ij}$ erzeugt wird.\boxc
 \end{exenum}
 
 \end{ex}
@@ -1235,7 +1238,7 @@ g\mapsto
 \begin{pmatrix}
 \rho(g)\\
 & \tilde{\rho}(g)
-\end{pmatrix}.\bsp
+\end{pmatrix}.\boxc
 \end{align*}
 \end{ex}
 
@@ -1298,7 +1301,7 @@ $h_i$ positiv definit sind.\qed
 Die Riemannsche Metrik ist eine Bündelmetrik auf dem Tangentialbündel. Während
 nach dem vorangegangenen Satz stets eine positiv definite Bündelmetrik
 gegeben ist, ist die Existenz von Bündelmetriken beliebiger Signatur an
-topologische Bedingungen an die Mannigfaltigkeit $M$ geknüpft.\bsp
+topologische Bedingungen an die Mannigfaltigkeit $M$ geknüpft.\boxc
 \end{ex}
 
 \begin{prop}
@@ -1365,7 +1368,7 @@ nun
 \end{align*}
 Somit ist $h$ wohldefiniert.
 \item Das vorangegangene Beispiel ist typisch: Ein unter der Darstellung
-invariantes Objekt auf dem Vektorraum induziert ein Objekt auf dem Bündel.\bsp  
+invariantes Objekt auf dem Vektorraum induziert ein Objekt auf dem Bündel.\boxc  
 \end{exenum}
 \end{ex}
 
@@ -1562,7 +1565,7 @@ eine $\setd{e}$-Reduktion von $P$, denn $\pi_P\circ f(x,e) = \pi_P\circ s(x) = x
 = \pi_Q(x,e)$.
 
 Somit ist $P$ genau dann trivial, wenn $P$ eine $\setd{e}$-Reduktion
-besitzt.\bsp
+besitzt.\boxc
 \end{exenum}
 \end{ex}
 
@@ -1613,7 +1616,7 @@ Reduktion $P_{\O_n}\opento P_{\GL_n}$ und es gilt
 \begin{align*}
 TM = P_{\GL_n}\times_\rho \R^n \cong P_{\O_n}\times_{\rho\circ\lambda}\R^n,
 \end{align*}
-mit $\rho = \id$ und $\lambda = i: \O_n\opento \GL_n$.\bsp
+mit $\rho = \id$ und $\lambda = i: \O_n\opento \GL_n$.\boxc
 \end{ex}
 
 \begin{proof}[Beweis des Satzes.]
@@ -1669,13 +1672,13 @@ was in lokalen Trivialisierungen nachzuweisen ist.
 
 \chapter{Zusammenhänge in Hauptfaserbündeln}
 
-Im vergangenen Semester haben wir für Funktionen $f\in\CC^\infty(M)$ auf einer
+Im vergangenen Semester haben wir für Funktionen $f\in\Cs^\infty(M)$ auf einer
 Mannigfaltigkeit $M$ den vom $\R^n$ wohlbekannten Begriff der Ableitung zum
 Differential $\df$ verallgemeinert. Anschließend haben wir
 Differentialformen $\omega\in\Omega^k(M)$ betrachtet und auch für diese ein
 Differential
 \begin{align*}
-\diffd : \Omega^k(M)\to \Omega^{k+1}(M)
+\ddd : \Omega^k(M)\to \Omega^{k+1}(M)
 \end{align*}
 gefunden, das für $k=0$ mit dem Differential von Funktionen übereinstimmt. Nun
 haben wir erkannt, dass $k$-Formen wiederum spezielle Schnitte in einem
@@ -1770,7 +1773,7 @@ Wirke eine Lie-Gruppe $G$ auf einer Mannigfaltigkeit $N$, und bezeichne $\g$ die
 Lie-Algebra von $G$. Dann ist das \emph{fundamentale
 Vektorfeld} zu $X\in\g$ definiert durch
 \begin{align*}
-\tilde{X}(u) \defl \left. \frac{\diffd}{\dt} u\cdot \exp(tX)\right|_{t=0},\qquad
+\tilde{X}(u) \defl \left. \frac{\ddd}{\dt} u\cdot \exp(tX)\right|_{t=0},\qquad
 u\in N,
 \end{align*}
 wobei $\exp: \g\to G$ die Exponentialabbildung bezeichnet.\fish
@@ -1792,7 +1795,7 @@ a): Sei $x\in M$ und $u\in P_x$. Zu $X\in T^v_uP$ betrachte eine Kurve
 $\gamma$ in $P_x$ durch $u$ mit $\dot{\gamma}(0) = X$, dann gilt
 $\pi\circ\gamma \equiv x$ und folglich
 \begin{align*}
-0 = \frac{\diffd}{\dt}\pi\circ\gamma(t) \bigg|_{t=0}
+0 = \frac{\ddd}{\dt}\pi\circ\gamma(t) \bigg|_{t=0}
 = \dpi_u(\dot{\gamma}(0)) = \dpi_u(X).
 \end{align*}
 Somit ist $T^v_uP \subset \ker \dpi_u$. Sei $U\subset M$ eine Umgebung von
@@ -1816,11 +1819,11 @@ f_u : \g\to T^v_uP,\qquad X\mapsto \tilde{X}(u)
 linear und da $\dim G = \dim T^v_uP$ genügt es zu zeigen, dass $f_u$
 injektiv ist. Sei also $f_u(X) = \tilde{X}(u) = 0$, dann ist für $t\in\R$
 \begin{align*}
-\frac{\diffd}{\dt} u\cdot \exp(tX)
+\frac{\ddd}{\dt} u\cdot \exp(tX)
 =
-\frac{\diffd}{\ds} u\cdot \exp((t+s)X)\bigg|_{s=0}
+\frac{\ddd}{\ds} u\cdot \exp((t+s)X)\bigg|_{s=0}
 =
-\diffd R_{\exp(tX)}(\tilde{X}(u)) = 0.
+\ddd R_{\exp(tX)}(\tilde{X}(u)) = 0.
 \end{align*}
 Folglich ist $u\cdot \exp(tX) \equiv u$ für alle $t\in\R$, jedoch ist die
 Exponentialabbildung ein lokaler Diffeomorphismus um $0$ und folglich $X=0$.
@@ -1844,18 +1847,18 @@ Aufspann von glatten Vektorfeldern darstellen. Weiter ist die Dimension von $\ke
 lokal konstant  und folglich ist $T^v_uP$ eine
 Distribution.
 
-Für die Rechtsinvarianz ist zu zeigen, dass $\diffd R_g T^v_u P = T^v_{ug}P$
+Für die Rechtsinvarianz ist zu zeigen, dass $\ddd R_g T^v_u P = T^v_{ug}P$
 für jedes $g\in G$. Sei also $X\in T^v_uP$ und betrachte eine
 Kurve $\gamma$ durch $u$, die ganz in $P_x$ verläuft mit $\dot{\gamma}(0) = X$. 
 Dann ist für $g\in G$,
 \begin{align*}
-\diffd R_g(X) = \left.\frac{\diffd}{\dt} \tilde{\gamma}(t)\right|_{t=0},\qquad
+\ddd R_g(X) = \left.\frac{\ddd}{\dt} \tilde{\gamma}(t)\right|_{t=0},\qquad
 \tilde{\gamma}(t) = R_g\circ\gamma(t),
 \end{align*}
 und $\tilde{\gamma}$ ist eine Kurve durch $u\cdot g$, die aufgrund der
 Fasertreue der $G$-Wirkung ebenfalls ganz in $P_x$ verläuft, mit
-$\dot{\tilde{\gamma}}(0) = \diffd R_g(X)$. Somit ist $\diffd R_g(X) \in
-T^v_{ug}P$ und da $\diffd R_g^{-1} = \diffd R_{g^{-1}}$ folgt die
+$\dot{\tilde{\gamma}}(0) = \ddd R_g(X)$. Somit ist $\ddd R_g(X) \in
+T^v_{ug}P$ und da $\ddd R_g^{-1} = \ddd R_{g^{-1}}$ folgt die
 Rechtsinvarianz von $T^vP$.\qed
 \end{proof}
 
@@ -1913,7 +1916,7 @@ rechtsinvariante Distribution bestehend aus horizontalen Tangentialräumen
 \begin{align*}
 T^hP: P\to TP,\qquad u\mapsto T^h_uP,
 \end{align*}
-d.h. $T^h_u$ ist komplementär zu $T^v_uP$ und $\diffd R_g(T^h_uP) =
+d.h. $T^h_u$ ist komplementär zu $T^v_uP$ und $\ddd R_g(T^h_uP) =
 T^h_{ug}P$ für alle $g\in G$ und $u\in P$. $T^hP$ nennt man \emph{horizontales
 Tangentialbündel}.\fish
 \end{defn}
@@ -1942,10 +1945,10 @@ die Konjugation mit einem Gruppenelement $g\in G$  bilden,
 \alpha_g = L_g\circ R_{g^{-1}},\qquad h\mapsto g\cdot h\cdot g^{-1}.
 \end{align*}
 Dann ist $\alpha_g(e) = e$ für jedes $g\in G$ und folglich ist das
-Differential $(\diffd \alpha_g)_e$ ein Isomorphismus. Das Differential heißt
+Differential $(\ddd \alpha_g)_e$ ein Isomorphismus. Das Differential heißt
 \emph{adjungierte Darstellung} von $G$ auf $\g$ und man schreibt
 \begin{align*}
-\Ad(g) \defl (\diffd\alpha_g)_e.
+\Ad(g) \defl (\ddd\alpha_g)_e.
 \end{align*}
 
 \begin{defn}
@@ -1966,20 +1969,20 @@ Zusammenhängen zu beschreiben. Dafür benötigen wir noch folgendes
 \label{lem:Rechts-Translation-Fundamentales-Vektorfeld}
 Sei $g\in G$ und $X\in \g$, dann gilt
 \begin{align*}
-\diffd R_g(\tilde{X}) = \widetilde{\Ad(g^{-1})X}.\fish
+\ddd R_g(\tilde{X}) = \widetilde{\Ad(g^{-1})X}.\fish
 \end{align*}
 \end{lem}
 \begin{proof}
 Sei $u\in P_x$ für $x\in M$, dann rechnet man direkt nach
 \begin{align*}
-\diffd R_g(\tilde{X})(u) &= 
-(\diffd R_{g})_{ug^{-1}}(\tilde{X}(ug^{-1})) = 
-(\diffd R_{g})_{ug^{-1}}\left(\frac{\diffd}{\dt}
+\ddd R_g(\tilde{X})(u) &= 
+(\ddd R_{g})_{ug^{-1}}(\tilde{X}(ug^{-1})) = 
+(\ddd R_{g})_{ug^{-1}}\left(\frac{\ddd}{\dt}
 ug^{-1}\cdot\exp(tX)\bigg|_{t=0} \right)\\
-&= \frac{\diffd}{\dt}
+&= \frac{\ddd}{\dt}
 ug^{-1}\cdot\exp(tX)\cdot g\bigg|_{t=0}
-= \frac{\diffd}{\dt} u\cdot \alpha_{g^{-1}}\circ\exp(tX)\bigg|_{t=0}\\
-&= \frac{\diffd}{\dt} u\cdot \exp(t\Ad(g^{-1})X) \bigg|_{t=0}
+= \frac{\ddd}{\dt} u\cdot \alpha_{g^{-1}}\circ\exp(tX)\bigg|_{t=0}\\
+&= \frac{\ddd}{\dt} u\cdot \exp(t\Ad(g^{-1})X) \bigg|_{t=0}
 = \widetilde{\Ad(g^{-1})X}(u).\qed
 \end{align*}
 \end{proof}
@@ -2011,12 +2014,12 @@ Definition
 A(\tilde{X}(u)) = A(\tilde{X}(u)+Y_h) = X,
 \end{align*}
 indem man $Y_h = 0$ setzt. Sei nun $Y_h$ horizontal in $u$, dann ist nach
-Voraussetzung für jedes $g\in G$, $\diffd R_g(Y_h)$ horizontal in $u\cdot g$.
+Voraussetzung für jedes $g\in G$, $\ddd R_g(Y_h)$ horizontal in $u\cdot g$.
 Somit ist nach dem vorigen Lemma,
 \begin{align*}
 R_g^* A(\tilde{X}(u)+Y_h) &= 
-A(\diffd R_g (\tilde{X}(u)) + \diffd R_g (Y_h))
-= A(\widetilde{\Ad(g^{-1})X}(u\cdot g) + \diffd R_g (Y_h))\\
+A(\ddd R_g (\tilde{X}(u)) + \ddd R_g (Y_h))
+= A(\widetilde{\Ad(g^{-1})X}(u\cdot g) + \ddd R_g (Y_h))\\
 &= \Ad(g^{-1})X
 = \Ad(g^{-1})A(\tilde{X}(u) + Y_h).
 \end{align*}
@@ -2039,16 +2042,16 @@ X$ surjektiv und folglich
 \end{align*}
 Also ist $T_uP = \ker A_u\oplus T^v_uP$ und $\ker_u$ ist horizontal.
 
-\textit{$\ker A$ ist rechtsinvariant}. Es ist zu zeigen, dass $\diffd R_g(\ker
+\textit{$\ker A$ ist rechtsinvariant}. Es ist zu zeigen, dass $\ddd R_g(\ker
 A_u) = \ker A_{u\cdot g}$ für jedes $g\in
 G$. Sei also $Y\in \ker A_u$, so verifiziert man sofort, dass
 \begin{align*}
-A_{ug}(\diffd R_g(Y)) = (R_g^* A)_u(Y)
+A_{ug}(\ddd R_g(Y)) = (R_g^* A)_u(Y)
 = \Ad(g^{-1})A_u(Y) = 0,
 \end{align*}
 also ist $\ker A_u \subset \ker A_{u\cdot g}$. Weiterhin ist $\ker A_u$
 horizontal, also folgt mit der Dimensionsformel, dass $\dim \ker A_u = \dim
-\ker A_{u\cdot g}$ und folglich gilt $\ker A_u = \ker A_{u\cdot g} = \diffd
+\ker A_{u\cdot g}$ und folglich gilt $\ker A_u = \ker A_{u\cdot g} = \ddd
 R_{g} \ker A_u$.
 
 \textit{$\ker A$ ist differenzierbar}. Sei $(W,x_1,\ldots,x_n)$ eine Karte um
@@ -2088,9 +2091,9 @@ Multiplikation in der zweiten Komponente gegeben,
 \end{align*}
 Somit berechnet sich das fundamentale Vektorfeld für ein $Y\in \g$ zu
 \begin{align*}
-\tilde{Y}(x,g) &= \frac{\diffd}{\dt} (x,g)\cdot \exp(tY)\bigg|_{t=0}
-= \frac{\diffd}{\dt} (x,g\cdot \exp(tY))\bigg|_{t=0}\\
-&= (0,\diffd L_g(Y)) \in T_{x}M\oplus T_gG \cong T_{(x,g)}P.
+\tilde{Y}(x,g) &= \frac{\ddd}{\dt} (x,g)\cdot \exp(tY)\bigg|_{t=0}
+= \frac{\ddd}{\dt} (x,g\cdot \exp(tY))\bigg|_{t=0}\\
+&= (0,\ddd L_g(Y)) \in T_{x}M\oplus T_gG \cong T_{(x,g)}P.
 \end{align*}
 Wählt man als horizontalen Tangentialraum den zu $T^v_{(x,g)}P =
 T_{(x,g)}(\setd{x}\times G)$ komplementären Tangentialraum
@@ -2098,7 +2101,7 @@ T_{(x,g)}(\setd{x}\times G)$ komplementären Tangentialraum
 T^h_{(x,g)}P \defl T_{(x,g)}(M\times \setd{g}) \cong T_xM,
 \end{align*}
 erhält man einen Zusammenhang auf $P$, den sogenannten \emph{kanonischen
-flachen Zusammenhang}.\bsp
+flachen Zusammenhang}.\boxc
 \end{ex}
 
 \begin{figure}[H]
@@ -2140,7 +2143,7 @@ genauer untersuchen.
 \index{Maurer-Cartan-Form}
 Sei $\mu_G \in \Omega^1(G,\g)$ die durch
 \begin{align*}
-(\mu_G)_g(X) \defl \diffd L_{g^{-1}}(X),\qquad g\in G,\quad X\in T_gG, 
+(\mu_G)_g(X) \defl \ddd L_{g^{-1}}(X),\qquad g\in G,\quad X\in T_gG, 
 \end{align*}
 definierte 1-Form auf $G$ mit Werten in $\g$. Sie heißt \emph{kanonische 1-Form}
 oder auch \emph{Maurer-Cartan-Form} von $G$.\fish
@@ -2163,9 +2166,9 @@ für alle $Z\in \g$ und $X_h\in T^h_{(x,g)}P \cong T_xM$.
 Für das fundamentale Vektorfeld berechnet sich zu gegebenem $X\in T_gG\cong
 T^v_{(x,g)}P$ eine Lösung der Gleichung
 \begin{align*}
-\tilde{Z}(x,g) = \diffd L_{g}(Z) \overset{!}{=} X
+\tilde{Z}(x,g) = \ddd L_{g}(Z) \overset{!}{=} X
 \end{align*}
-zu $Z = \diffd L_{g^{-1}}(X) \in \g$. Somit ist
+zu $Z = \ddd L_{g^{-1}}(X) \in \g$. Somit ist
 \begin{align*}
 A_{(x,g)}(X+Y_h) = 
 A_{(x,g)}(\tilde{Z}(x,g) + Y_h) = Z = \mu_G(X).\qed
@@ -2211,8 +2214,8 @@ A(\tilde{X}(p))
 denn $\sum_i f_i(\pi(p)) = 1$. Sei weiter $Y\in T_gP$ und $g\in G$, dann
 ist
 \begin{align*}
-(R_g^* A)_p (Y) &= A_{pg}(\diffd R_g(Y))
-= \sum_i f_i(\pi(p\cdot g)) A_{i,p\cdot g}(\diffd R_g(Y))\\
+(R_g^* A)_p (Y) &= A_{pg}(\ddd R_g(Y))
+= \sum_i f_i(\pi(p\cdot g)) A_{i,p\cdot g}(\ddd R_g(Y))\\
 &= \sum_i f_i(\pi(p\cdot g)) \Ad(g^{-1})A_{i,p}(Y)\\
 &= \Ad(g^{-1})\sum_i f_i(\pi(p)) A_{i,p}(Y)\\
 &= \Ad(g^{-1})A_p(Y),
@@ -2221,7 +2224,7 @@ denn $\pi(p\cdot g) = \pi(p)$. Somit ist $A$ eine Zusammenhangsform auf $P$.\qed
 \end{proof}
 
 \begin{ex}
-\newcommand{\dqomega}{\diffd \bar{\omega}}
+\newcommand{\dqomega}{\ddd \bar{\omega}}
 \textit{Ein Zusammenhang auf dem Hopfbündel}.
 Wir betrachten die Hopf-Faserung
 \begin{align*}
@@ -2236,14 +2239,14 @@ so dass ihr Tangentialraum im Punkt $p=(w_1,w_2)\in S^3$ beschrieben ist durch
 \begin{align*}
 T_{(w_1,w_2)}S^3\subset T_{(w_1,w_2)}\C^2 \cong \C^2.
 \end{align*}
-Seien nun $\domega_j$ und $\dqomega_j$ die durch
+Seien nun $\dom_j$ und $\dqomega_j$ die durch
 \begin{align*}
-\domega_j(X_1,X_2) = X_j,\qquad \dqomega_j(X_1,X_2) = \bar{X_j},
+\dom_j(X_1,X_2) = X_j,\qquad \dqomega_j(X_1,X_2) = \bar{X_j},
 \end{align*}
 definierten 1-Formen auf $S^3$ und $A: TS^3\to \ii\R$ die 1-Form
 \begin{align*}
-A_{(w_1,w_2)} \defl \frac{1}{2}\left(\bar{w}_1 \domega_1 - w_1\dqomega_1
-+ \bar{w}_2 \domega_2 - w_2\dqomega_2\right).
+A_{(w_1,w_2)} \defl \frac{1}{2}\left(\bar{w}_1 \dom_1 - w_1\dqomega_1
++ \bar{w}_2 \dom_2 - w_2\dqomega_2\right).
 \end{align*}
 Dann ist $\bar{A_{(w_1,w_2)}} = - A_{(w_1,w_2)}$ und folglich nimmt $A$ Werte in
 $\g = \ii\R$ an.
@@ -2257,17 +2260,17 @@ Sei nun $X\in T_{(w_1,w_2)}S^3$ und $\gamma_1$ und $\gamma_2$ Kurven in $\C$
 durch $w_1$ bzw. $w_2$ mit $\abs{\gamma_1}^2 + \abs{\gamma_2}^2
 = 1$ und
 \begin{align*}
-X = \frac{\diffd}{\dt} (\gamma_1(t),\gamma_2(t))\bigg|_{t=0}
+X = \frac{\ddd}{\dt} (\gamma_1(t),\gamma_2(t))\bigg|_{t=0}
 = (\dot{\gamma}_1(0),\dot{\gamma}_2(0)) = (X_1,X_2).
 \end{align*} 
 Für ein $z\in \U(1)$ gilt dann
 \begin{align*}
-\diffd R_z(X) = \frac{\diffd}{\dt} (\gamma_1(t)z,\gamma_2(t)z)\bigg|_{t=0}
+\ddd R_z(X) = \frac{\ddd}{\dt} (\gamma_1(t)z,\gamma_2(t)z)\bigg|_{t=0}
 = (\dot{\gamma}_1(0)z,\dot{\gamma}_2(0)z) = (X_1z,X_2z).
 \end{align*}
 Somit erhalten wir schließlich
 \begin{align*}
-(R_z^*A)_{(w_1,w_2)}(X) &= A_{(w_1z,w_2z)}(\diffd R_{z}(X))
+(R_z^*A)_{(w_1,w_2)}(X) &= A_{(w_1z,w_2z)}(\ddd R_{z}(X))
 = A_{(w_1z,w_2z)}(X_1z,X_2z)\\
 &= \frac{1}{2}
 \left(\bar{w_1z}X_1z - w_1z\bar{X_1z} + \bar{w_2z}X_2z - w_2z\bar{X_2z}
@@ -2291,7 +2294,7 @@ A_{(w_1,w_2)}(w_1\ii x,w_2\ii x) \\ &=
 \frac{1}{2}
 \ii \left((\abs{w_1}^2 + \abs{w_2}^2)x + (\abs{w_1}^2 + \abs{w_2}^2)x
 \right)\\
-&= \ii x.\bsp
+&= \ii x.\boxc
 \end{align*}
 \end{ex}
 
@@ -2336,21 +2339,21 @@ g\mapsto p\cdot g.
 \end{align*}
 Die Ableitung der Kurve $z$ berechnet sich nun zu
 \begin{align*}
-\dot{z}(0) &= \frac{\diffd}{\dt}\bigg|_{t=0} \phi(p(t),g(t))
+\dot{z}(0) &= \frac{\ddd}{\dt}\bigg|_{t=0} \phi(p(t),g(t))
 = \dphi_{(p,g)}(\dot{p}(0),\dot{g}(0))\\
 &= \dphi_{(p,g)}(\dot{p}(0),0) + \dphi_{(p,g)}(0,\dot{g}(0))\\
-&= \frac{\diffd}{\dt}\bigg|_{t=0} \phi(p(t),g)
-+ \frac{\diffd}{\dt}\bigg|_{t=0} \phi(p,g(t))\\
-&= \frac{\diffd}{\dt}\bigg|_{t=0} R_g(p(t))
-+ \frac{\diffd}{\dt}\bigg|_{t=0} \ph_p(g(t))\\
+&= \frac{\ddd}{\dt}\bigg|_{t=0} \phi(p(t),g)
++ \frac{\ddd}{\dt}\bigg|_{t=0} \phi(p,g(t))\\
+&= \frac{\ddd}{\dt}\bigg|_{t=0} R_g(p(t))
++ \frac{\ddd}{\dt}\bigg|_{t=0} \ph_p(g(t))\\
 &= \dR_g(\dot{p}(0)) + \dph_p(\dot{g}(0)). 
 \end{align*}
 Beachtet man, dass $\exp(\dL_{g^{-1}} \cdot ) = L_{g^{-1}}\circ \exp(\cdot)$,
 folgt schließlich
 \begin{align*}
 \widetilde{\mu_G(\dot g(0))}(p\cdot g) &= 
-\frac{\diffd}{\ds}\bigg|_{s=0} (p\cdot g) \exp(s \mu_G(\dot{g}(0)))\\
-&=\frac{\diffd}{\ds}\bigg|_{s=0} \ph_p(\exp(s \dot{g}(0)))\\
+\frac{\ddd}{\ds}\bigg|_{s=0} (p\cdot g) \exp(s \mu_G(\dot{g}(0)))\\
+&=\frac{\ddd}{\ds}\bigg|_{s=0} \ph_p(\exp(s \dot{g}(0)))\\
 &= \dph_p(\dot{g}(0)).\qed
 \end{align*}
 \end{proof}
@@ -2469,8 +2472,8 @@ Um $\ds_j$ über $\ds_i$ auszudrücken, betrachte eine Kurve $\gamma(t)$
 in $M$ mit $\gamma(0) = x$ und $\dot{\gamma}(0) = X$, dann ist nach dem
 Produktformel für Kurven
 \begin{align*}
-\ds_j(X) &=\frac{\diffd}{\dt}\bigg|_{t=0} s_j\circ\gamma(t)
-= \frac{\diffd}{\dt}\bigg|_{t=0} s_i\circ\gamma(t) \cdot
+\ds_j(X) &=\frac{\ddd}{\dt}\bigg|_{t=0} s_j\circ\gamma(t)
+= \frac{\ddd}{\dt}\bigg|_{t=0} s_i\circ\gamma(t) \cdot
 g_{ij}\circ\gamma(t)\\
 &=\dR_{g_{ij}(x)} \ds_i(X) + \widetilde{\mu_G(\dg_{ij}(X))}(s_i(x)\cdot
 g_{ij}(x))\\
@@ -2616,7 +2619,7 @@ Ableitung auf $TU$ durch
 \nabla_X s_k \defl \sum_{i=1}^n \omega_{ik}^s(X)s_i
 \defl \sum_{i=1}^n \omega_{ik}(\ds(X))s_i,\qquad 1\le k\le n,
 \end{align*}
-setzen diese linear auf ganz $TU$ fort und verlangen für $f\in\CC^\infty(M)$,
+setzen diese linear auf ganz $TU$ fort und verlangen für $f\in\Cs^\infty(M)$,
 dass
 \begin{align*}
 \nabla_X (f s_k) = \df(X) s_k + f\nabla_X s_k.
@@ -2715,7 +2718,7 @@ Sei nun $G/H$ reduktiv, also $T_eG = \g = \h\oplus \m$, dann ist $T_gG =
 Betrachte zu $X\in\h$ das fundamentale Vektorfeld $\tilde{X}$ auf $G$, dann ist
 für $g\in G$
 \begin{align*}
-\tilde{X}(g) = \frac{\diffd}{\dt}\bigg|_{t=0} g\cdot \exp(tX)
+\tilde{X}(g) = \frac{\ddd}{\dt}\bigg|_{t=0} g\cdot \exp(tX)
 = \dL_g(X).
 \end{align*}
 Also ist der vertikale Tangentialraum an einen Punkt $g\in G$ durch
@@ -2754,7 +2757,7 @@ Andererseits ist $\dL_{g^{-1}}(Y_h) \in \m$ und damit gilt auch
 \pr_{\h}(\mu_G(\dL_g(X)+Y_h))
 = \pr_{\h}(\dL_{g^{-1}}\dL_g(X) + \dL_{g^{-1}}(Y))\\
 &= \pr_{\h}(X) + \pr_{\h}(\dL_{g^{-1}}(Y))
-= X.\bsp
+= X.\boxc
 \end{align*}
 \end{ex}
 
@@ -2784,7 +2787,7 @@ bezeichnet man mit $\Omega^k(M,E)$.\fish
 \begin{rem}[Bemerkungen.]
 \begin{remenum}
 \item
-Alternativ ist eine $k$-Form mit Werten in $E$ eine $\CC^\infty(M)$
+Alternativ ist eine $k$-Form mit Werten in $E$ eine $\Cs^\infty(M)$
 multilineare, alternierende Abbildung
 \begin{align*}
 \omega: \underbrace{\chi(M)\times \cdots \times \chi(M)}_{k\text{-mal}}\to
@@ -2810,7 +2813,7 @@ E = P\times_\rho V
 gegeben. Wir haben bereits gesehen, dass sich Schnitte in $E$, also $0$-Formen
 mit Werten in $E$, gerade mit $G$-äquivarianten Funktionen identifizieren lassen
 \begin{align*}
-\Gamma(E) &\cong \CC^\infty(P,V)^{(G,\rho)}\\
+\Gamma(E) &\cong \Cs^\infty(P,V)^{(G,\rho)}\\
 &= \setdef{f: P\to V}{f(p\cdot g) = \rho(g)^{-1}f(p),\qquad p\in P,\; g\in G}.
 \end{align*}
 Man nennt diese Funktionen auch \emph{Schnitte vom Typ $\rho$}.
@@ -2834,7 +2837,7 @@ $\rho$} bezeichnet man mit $\Omega^k_\hor(P,V)^{(P,\rho)}$.\fish
 \end{defn}
 
 \begin{ex}
-Wir betrachten die Menge der Zusammenhänge $\CC(P)$ auf dem
+Wir betrachten die Menge der Zusammenhänge $\Cs(P)$ auf dem
 $G$"=Hauptfaserbündel $\pi: P\to M$. Sind nun $A_1$ und $A_2$
 Zusammenhangsformen, dann sind sie nach Voraussetzung vom Typ $\Ad$ aber
 \textit{nicht} horizontal. Jedoch ist ihre Differenz horizontal und daher
@@ -2845,13 +2848,13 @@ Umgekehrt sei $A$ eine Zusammenhangsform und
 $\omega\in\Omega_\hor^1(P,\g)^{(G,\Ad)}$, dann ist $A+\omega$ offenbar wiederum
 eine Zusammenhangsform.
 
-Somit bilden die Zusammenhänge $\CC(P)$ auf $P$ einen affinen Raum über dem
-Vektorraum $\Omega_\hor^1(P,\g)^{(G,\Ad)}$.\bsp
+Somit bilden die Zusammenhänge $\Cs(P)$ auf $P$ einen affinen Raum über dem
+Vektorraum $\Omega_\hor^1(P,\g)^{(G,\Ad)}$.\boxc
 \end{ex}
 
 Der folgende Satz verallgemeinert die Beziehung
 \begin{align*}
-\Omega^0(M,E) = \Gamma(E)\cong \CC^\infty(P,V)^{(G,\rho)} = \Omega_\hor^0(P,V)^{(G,\rho)}.
+\Omega^0(M,E) = \Gamma(E)\cong \Cs^\infty(P,V)^{(G,\rho)} = \Omega_\hor^0(P,V)^{(G,\rho)}.
 \end{align*}
 
 \begin{prop}
@@ -2903,7 +2906,7 @@ definiert als
 
 \begin{rem}
 Nach obiger Identifikation und der vorangegangen Bemerkung ist der Raum der
-Zusammenhänge $\CC(P)$ auf $P$ ein affiner Raum über dem Vektorraum
+Zusammenhänge $\Cs(P)$ auf $P$ ein affiner Raum über dem Vektorraum
 $\Omega^1(M,\Ad(P))\cong \Omega^1_\hor(P,V)^{(G,\Ad)}$.\map
 \end{rem}
 
@@ -2923,7 +2926,7 @@ eine Abbildung
 \nabla : \Gamma(E)\to \Gamma(T^*M\otimes E),\qquad
 e \mapsto \nabla e,
 \end{align*}
-so dass für $f\in\CC^\infty(M)$ gilt
+so dass für $f\in\Cs^\infty(M)$ gilt
 \begin{align*}
 \nabla (fe) = \df\otimes e + f\nabla e.
 \end{align*}
@@ -2942,10 +2945,10 @@ schreiben als
 Ziel dieses Abschnittes ist es, für einen Zusammenhang $A$ auf $P$ ein
 Differential
 \begin{align*}
-\diffd_A : \Omega^k(M,E)\to \Omega^{k+1}(M,E)
+\ddd_A : \Omega^k(M,E)\to \Omega^{k+1}(M,E)
 \end{align*}
 auf den $E$-wertigen Formen zu definieren, so dass $\nabla$ gerade die $0$-te
-Komponente von $\diffd_A$ wird. Dazu werden wir das Differential zunächst
+Komponente von $\ddd_A$ wird. Dazu werden wir das Differential zunächst
 auf $\Omega_\hor^k(M,V)^{(G,\rho)}$ definieren und anschließend mit Hilfe von
 Satz \ref{prop:Identifikation-E-Formen-auf-M} auf $\Omega^k(M,E)$ übersetzen.
 
@@ -2966,7 +2969,7 @@ Sei $A$ ein Zusammenhang auf $P$, dann heißt die lineare Abbildung
 \Omega^k(P,V)\to \Omega^{k+1}(P,V),\]
 die für Vektorfelder $T_1,\ldots,T_k$ in $P$ gegeben ist durch
 \begin{align*}
-(D_A\omega)(T_1,\ldots,T_k) \defl \domega(\pr_h(T_1),\ldots,\pr_h(T_k)),
+(D_A\omega)(T_1,\ldots,T_k) \defl \dom(\pr_h(T_1),\ldots,\pr_h(T_k)),
 \end{align*}
 \emph{absolutes Differential} von $A$ auf $P$.\fish
 \end{defn}
@@ -2986,7 +2989,7 @@ D_A\big|_{\Omega_\hor^k(P,V)^{(G,\rho)}} : \Omega_\hor^k(P,V)^{(G,\rho)} \to
 \end{align*}
 \item Sei $\omega\in\Omega_\hor^k(P,V)^{(G,\rho)}$, dann gilt
 \begin{align*}
-D_A\omega = \domega + \rho_*(A)\wedge \omega,
+D_A\omega = \dom + \rho_*(A)\wedge \omega,
 \end{align*}
 wobei für Vektorfelder $T_0,\ldots,T_k$ in $P$ der letztere Term gegeben ist
 durch
@@ -3033,7 +3036,7 @@ a): Das Bild von $D_A$ liegt in den horizontalen Formen, denn sei
 $\omega\in\Omega^k(P,V)$ und $T_0,\ldots,T_k\in T_pP$ mit einem $T_i$ vertikal,
 dann ist $\pr_h(T_i) = 0$ und folglich
 \begin{align*}
-(D_A\omega)(T_0,\ldots,T_k) = \domega(\pr_h(T_0),\ldots,\pr_h(T_k)) = 0.
+(D_A\omega)(T_0,\ldots,T_k) = \dom(\pr_h(T_0),\ldots,\pr_h(T_k)) = 0.
 \end{align*}
 
 Es verbleibt zu zeigen, dass $D_A$ auch den Typ erhält. Sei dazu
@@ -3043,11 +3046,11 @@ Tangentialraum eine rechtsinvariante Distribution ist, gilt $\pr_h\circ \dR_g =
 \dR_g\circ \pr_h$ und folglich
 \begin{align*}
 (R_g^* D_A \omega) &
-= \domega(\pr_h\circ \dR_g)
-= \domega(\dR_g\circ \pr_h)\\
-&= (R_g^*\domega)\circ\pr_h
-= (\diffd (R_g^*\omega))\circ\pr_h\\
-&= \rho(g)^{-1} \domega\circ\pr_h
+= \dom(\pr_h\circ \dR_g)
+= \dom(\dR_g\circ \pr_h)\\
+&= (R_g^*\dom)\circ\pr_h
+= (\ddd (R_g^*\omega))\circ\pr_h\\
+&= \rho(g)^{-1} \dom\circ\pr_h
 =\rho(g)^{-1} D_A\omega.
 \end{align*}
 Somit erhält $D_A$ horizontale Formen vom Typ $\rho$.
@@ -3055,7 +3058,7 @@ Somit erhält $D_A$ horizontale Formen vom Typ $\rho$.
 b): Seien $T_0,\ldots,T_k\in T_pP$, dann ist zu zeigen, dass
 \begin{align*}
 (D_A\omega)(T_0,\ldots,T_k) = 
-\domega(T_0,\ldots,T_k) + (\rho_*(A)\wedge \omega)(T_0,\ldots,T_k).
+\dom(T_0,\ldots,T_k) + (\rho_*(A)\wedge \omega)(T_0,\ldots,T_k).
 \end{align*}
 Aufgrund der Multilinearität genügt es $T_i$ zu betrachten die
 entweder vertikal oder horizontal sind.
@@ -3063,7 +3066,7 @@ entweder vertikal oder horizontal sind.
 \textit{1. Fall, alle $T_i$ sind horizontal}. Dann ist $\pr_h(T_i) = T_i$ und
 das absolute Differential entspricht dem gewöhnlichen,
 \begin{align*}
-D_A\omega(T_0,\ldots,T_k) = \domega(T_0,\ldots,T_k).
+D_A\omega(T_0,\ldots,T_k) = \dom(T_0,\ldots,T_k).
 \end{align*}
 Andererseits ist $A(T_i) = 0$ für alle $T_i$, und somit ist $(\rho_*(A)\wedge
 \omega)(T_0,\ldots,T_k) = 0$. Also gilt die Formel.
@@ -3075,10 +3078,10 @@ $D_A\omega(T_0,\ldots,T_k) = 0$. Auch $\omega$ ist horizontal, also
 \omega(\ldots,\hat{T}_i,\ldots) = 0,\qquad 0\le i\le k.
 \end{align*}
 Somit ist $(\rho_*(A)\wedge\omega)(T_0,\ldots,T_k) = 0$ und es verbleibt zu
-zeigen, dass $\domega(T_0,\ldots,T_k) =0$. Dazu verwenden wir
+zeigen, dass $\dom(T_0,\ldots,T_k) =0$. Dazu verwenden wir
 folgende wichtige Formel für das gewöhnliche Differential
 \begin{align*}
-\domega(T_0,\ldots,T_k) &= 
+\dom(T_0,\ldots,T_k) &= 
 \sum_{i=0}^k (-1)^i T_i(\omega(\ldots,\hat{T}_i,\ldots))\\
 &+
 \sum_{i<j} (-1)^{i+j}
@@ -3088,7 +3091,7 @@ In der vorderen Summe sind alle Terme Null, denn $\omega$ ist horizontal.
 Weiterhin sind in der hinteren Summe alle Terme Null bis auf eventuell den Term,
 für den beide vertikalen Vektoren im Kommutator stehen, d.h.
 \begin{align*}
-\domega(T_0,\ldots,T_k) = (-1)^{i+j}
+\dom(T_0,\ldots,T_k) = (-1)^{i+j}
 \omega([T_i,T_j],\ldots,\hat{T}_i,\ldots,\hat{T}_j,\ldots),\qquad
 T_i,T_j\text{ vertikal}.
 \end{align*}
@@ -3107,12 +3110,12 @@ und somit
 (\rho_*(A)\wedge\omega)(T_0,\ldots,T_k) = 
 \rho_*(X)\omega(T_1,\ldots,T_k).
 \end{align*}
-Zu zeigen ist nun, dass $\domega(T_0,\ldots,T_k) =
+Zu zeigen ist nun, dass $\dom(T_0,\ldots,T_k) =
 -\rho_*(X)\omega(T_1,\ldots,T_k)$. Dazu bezeichne $X_1^*$,\ldots $X_k^*$ die
 horizontalen Lifts zu $T_1,\ldots,T_k$, dann ergibt die Formel für das
 gewöhnliche Differential und die Horizontalität von $\omega$, dass
 \begin{align*}
-\domega(T_0,\ldots,T_k) &= 
+\dom(T_0,\ldots,T_k) &= 
 \tilde{X}(\omega(X_1^*,\ldots,X_k^*))
 + \sum_{i=1}^k
 (-1)^{i} 
@@ -3124,18 +3127,18 @@ gewöhnliche Differential und die Horizontalität von $\omega$, dass
 denn $[\tilde{X},X_i^*] = 0$. Weiterhin ist nach Definition der Lie-Ableitung,
 \begin{align*}
 \tilde{X}(\omega(X_1^*,\ldots,X_k^*))\bigg|_{p} &= 
-\frac{\diffd}{\dt}\bigg|_0
+\frac{\ddd}{\dt}\bigg|_0
 \omega(X_1^*(p\cdot \exp(tX)),\ldots,X_k^*(p\cdot \exp(tX)))\\
 &=
-\frac{\diffd}{\dt}\bigg|_0
+\frac{\ddd}{\dt}\bigg|_0
 \omega(\dR_{\exp(tX)}X_1^*,\ldots,\dR_{\exp(tX)}X_k^*)\\
-&= \frac{\diffd}{\dt}\bigg|_0
+&= \frac{\ddd}{\dt}\bigg|_0
 (R_{\exp(tX)}^*\omega)(X_1^*,\ldots,X_k^*)\\
-&= \frac{\diffd}{\dt}\bigg|_0
+&= \frac{\ddd}{\dt}\bigg|_0
 \rho(\exp(-tX))\omega(X_1^*,\ldots,X_k^*)\\
-&= \frac{\diffd}{\dt}\bigg|_0
-\e^{-t\diffd\rho(X)}\omega(X_1^*,\ldots,X_k^*)\\
-&= -\diffd\rho(X)\omega(X_1^*,\ldots,X_k^*)\\
+&= \frac{\ddd}{\dt}\bigg|_0
+\e^{-t\ddd\rho(X)}\omega(X_1^*,\ldots,X_k^*)\\
+&= -\ddd\rho(X)\omega(X_1^*,\ldots,X_k^*)\\
 &= -\rho_*(X)\omega(X_1^*,\ldots,X_k^*).
 \end{align*}
 Somit ist der Beweis vollständig.\qed
@@ -3154,19 +3157,19 @@ mit Werten in $E$ definieren.
 
 \begin{defn}
 \index{Differential}
-Sei $A$ ein Zusammenhang auf $P$, dann ist das \emph{Differential $\diffd_A$}
+Sei $A$ ein Zusammenhang auf $P$, dann ist das \emph{Differential $\ddd_A$}
 ein Endormorphismus von $\Omega^*(M,E)$ definiert durch
 \begin{align*}
-\diffd_A : \Omega^k(M,E)\to\Omega^{k+1}(M,E),\qquad \bar{\diffd_A \omega} \defl
+\ddd_A : \Omega^k(M,E)\to\Omega^{k+1}(M,E),\qquad \bar{\ddd_A \omega} \defl
 D_A\bar{\omega},
 \end{align*}
 wobei $\bar{\omega}$ über den Isomorphismus aus Satz
 \ref{prop:Identifikation-E-Formen-auf-M} gegeben ist.\fish
 \end{defn}
 
-Das Differential $\diffd$ auf den gewöhnlichen Formen $\Omega^*(M)$ hat die
-Eigenschaft, dass $\diffd^2 = 0$. Unser Ziel ist es nun, $\diffd_A^2$ zu
-berechnen. Wir werden feststellen, dass $\diffd_A^2$ im Allgemeinen nicht
+Das Differential $\ddd$ auf den gewöhnlichen Formen $\Omega^*(M)$ hat die
+Eigenschaft, dass $\ddd^2 = 0$. Unser Ziel ist es nun, $\ddd_A^2$ zu
+berechnen. Wir werden feststellen, dass $\ddd_A^2$ im Allgemeinen nicht
 verschwindet.
 
 \begin{rem}[Bemerkungen.]
@@ -3176,15 +3179,15 @@ Tangentialvektoren in $T_xM$ mit horizontalen Lifts $X_0^*,\ldots,X_k^*$.
 Weiterhin sei $\omega\in\Omega^k(M,E)$, dann hat das Differential von $\omega$
 im Punkt $x$ die Darstellung
 \begin{align*}
-(\diffd_A\omega)_x(X_0,\ldots,X_k) = 
+(\ddd_A\omega)_x(X_0,\ldots,X_k) = 
 [p,D_A\bar{\omega}_p(X_0^*,\ldots,X_k^*)]= 
-[p,\diffd \bar{\omega}_p(X_0^*,\ldots,X_k^*)].
+[p,\ddd \bar{\omega}_p(X_0^*,\ldots,X_k^*)].
 \end{align*}
 
 Alternativ kann man das Differential auch ohne horizontale Lifts beschreiben.
 Sei dazu $s: U\to P$ ein lokaler Schnitt, dann gilt
 \begin{align*}
-(\diffd_A\omega)_x(X_0,\ldots,X_k) = 
+(\ddd_A\omega)_x(X_0,\ldots,X_k) = 
 [s(x),(D_A \bar{\omega})_p(\ds(X_0),\ldots,\ds(X_k))].
 \end{align*}
 \item Für gewöhnliche Differentialformen $\sigma,\omega\in\Omega^*(M)$ kennen
@@ -3212,8 +3215,8 @@ für $x\in M$ und $X_1,\ldots,X_{k+l}\in T_xM$. Für dieses Dachprodukt gelten d
 Sei $A$ ein Zusammenhang auf $P$ und seien $\sigma\in\Omega^k(M)$ und
 $\omega\in \Omega^*(M,E)$. Dann gilt
 \begin{align*}
-\diffd_A(\sigma\wedge \omega) = \diffd\sigma\wedge \omega + (-1)^k\sigma \wedge
-\diffd_A\omega.
+\ddd_A(\sigma\wedge \omega) = \ddd\sigma\wedge \omega + (-1)^k\sigma \wedge
+\ddd_A\omega.
 \end{align*}
 \end{lem}
 \begin{proof}
@@ -3222,20 +3225,20 @@ anhand der expliziten Formel für das Dachprodukt und für den Isomorphismus
 $\bar{\omega}\mapsto \omega$, dass $\bar{\sigma\wedge\omega} =
 (\pi^*\sigma)\wedge\bar{\omega}$ und für diese gewöhnlichen Differentialformen gilt bei komponentenweiser Anwendung des Differentials,
 \begin{align*}
-\diffd((\pi^*\sigma)\wedge \bar{\omega}) = 
-(\pi^* \diffd\sigma) \wedge\bar{\omega}
-+(-1)^k (\pi^* \sigma) \wedge \diffd\bar{\omega}. 
+\ddd((\pi^*\sigma)\wedge \bar{\omega}) = 
+(\pi^* \ddd\sigma) \wedge\bar{\omega}
++(-1)^k (\pi^* \sigma) \wedge \ddd\bar{\omega}. 
 \end{align*}
 Seien nun $X_1,\ldots,X_{k+l}$ Vektorfelder auf $M$, dann gilt 
 \begin{align*}
-&\diffd_A (\sigma\wedge \omega)(X_1,\ldots,X_{k+l})\\
-&\qquad= [p,\diffd \bar{\sigma\wedge \omega}(X_1^*,\ldots,X_{k+l}^*)]\\
-&\qquad= [p,((\pi^*\dsigma)\wedge \bar{\omega} +
-(-1)^k(\pi^*\sigma)\wedge\diffd\bar{\omega})(X_1^*,\ldots,X_{k+l}^*)]\\
-&\qquad=[p,(\bar{\dsigma\wedge \omega} +
-(-1)^k\bar{\sigma\wedge\diffd\omega})(X_1^*,\ldots,X_{k+l}^*)]\\
-&\qquad=(\diffd\sigma\wedge \omega +
-(-1)^k\sigma\wedge\domega)(X_1,\ldots,X_{k+l}).\qed
+&\ddd_A (\sigma\wedge \omega)(X_1,\ldots,X_{k+l})\\
+&\qquad= [p,\ddd \bar{\sigma\wedge \omega}(X_1^*,\ldots,X_{k+l}^*)]\\
+&\qquad= [p,((\pi^*\dsg)\wedge \bar{\omega} +
+(-1)^k(\pi^*\sigma)\wedge\ddd\bar{\omega})(X_1^*,\ldots,X_{k+l}^*)]\\
+&\qquad=[p,(\bar{\dsg\wedge \omega} +
+(-1)^k\bar{\sigma\wedge\ddd\omega})(X_1^*,\ldots,X_{k+l}^*)]\\
+&\qquad=(\ddd\sigma\wedge \omega +
+(-1)^k\sigma\wedge\dom)(X_1,\ldots,X_{k+l}).\qed
 \end{align*}
 \end{proof}
 
@@ -3244,8 +3247,8 @@ Für den Spezialfall, dass $\sigma\in\Omega^k(M)$ und $e\in\Gamma(E) =
 \Omega^0(M,E)$ ist $\sigma\wedge\omega\in \Gamma(T^*M\times \ldots
 \times T^*M \otimes E)$ und man schreibt auch
 \begin{align*}
-\diffd_A(\sigma\otimes e) = 
-\dsigma\otimes e + (-1)^k \sigma\wedge \nabla^A e.\map
+\ddd_A(\sigma\otimes e) = 
+\dsg\otimes e + (-1)^k \sigma\wedge \nabla^A e.\map
 \end{align*}
 \end{rem}
 
@@ -3253,7 +3256,7 @@ Für den Spezialfall, dass $\sigma\in\Omega^k(M)$ und $e\in\Gamma(E) =
 \index{kovariante Ableitung!induzierte}
 Man nennt die Abbildung
 \begin{align*}
-\nabla^A \defl \diffd_A : \Gamma(E)=\Omega^0(M,E)\to
+\nabla^A \defl \ddd_A : \Gamma(E)=\Omega^0(M,E)\to
 \Omega^1(M,E) = \Gamma(T^*M \otimes E),\quad e\mapsto \nabla^A e,
 \end{align*}
 die \emph{durch den Zusammenhang $A$ induzierte kovariante Ableitung} auf $E$.
@@ -3263,11 +3266,11 @@ Für ein Vektorfeld $X\in \chi(M)$ schreibt man auch kurz $\nabla^A_Xe \defl
 \begin{proof}
 Zu zeigen ist, dass $\nabla^A$ tatsächlich eine kovariante Ableitung auf $E$
 ist. Sei $e\in\Gamma(E)$, dann ist $\nabla^A e\in\Omega^1(M,E)$ ein 1-Form und
-folglich $\nabla^A_X e = \diffd_A e$ in natürlicher Weise $\CC^\infty(M)$ linear
-in $X$. Sei nun $f\in\CC^\infty(M)$, dann gilt
+folglich $\nabla^A_X e = \ddd_A e$ in natürlicher Weise $\Cs^\infty(M)$ linear
+in $X$. Sei nun $f\in\Cs^\infty(M)$, dann gilt
 \begin{align*}
-\nabla_X^A (fe) = \diffd_A (fe)(X)
-= \diffd f(X)e + f\diffd_A e(X)
+\nabla_X^A (fe) = \ddd_A (fe)(X)
+= \ddd f(X)e + f\ddd_A e(X)
 = X(f)e + f\nabla_X^A e.
 \end{align*}
 Also definiert $\nabla^A$ tatsächlich eine kovariante Ableitung auf $E$.\qed
@@ -3276,7 +3279,7 @@ Also definiert $\nabla^A$ tatsächlich eine kovariante Ableitung auf $E$.\qed
 \begin{prop}
 Seien $e\in\Gamma(E)$ und $X\in\chi(M)$. Dann existiert zu $x\in M$ eine
 Umgebung $U$ von $x$, ein glatter Schnitt $s: U\to P$ und eine glatte
-Funktion $v\in \CC^\infty(U,V)$, so dass für jedes $x\in U$,
+Funktion $v\in \Cs^\infty(U,V)$, so dass für jedes $x\in U$,
 \begin{align*}
 (\nabla_X^A e)_x = [s(x),\dv(X(x))+\rho_*(A^s(X(x)))v(x)]].\fish
 \end{align*}
@@ -3287,18 +3290,18 @@ Sei $x\in M$, dann existiert eine Umgebung $U\subset M$ von $x$, so dass
 e\big|_U = [s,v],
 \end{align*}
 mit einem glatten Schnitt $s: U\to P$ und einer glatten Funktion
-$v\in\CC^\infty(U,V)$. Andererseits existiert auch eine glatte Funktion
-$\bar{e}\in \CC^\infty(P,V)^{(G,\rho)}$, so dass
+$v\in\Cs^\infty(U,V)$. Andererseits existiert auch eine glatte Funktion
+$\bar{e}\in \Cs^\infty(P,V)^{(G,\rho)}$, so dass
 \begin{align*}
 e(x) = [p,\bar{e}(p)],
 \end{align*}
 für jedes $p\in P_x$. Folglich ist $v(x) = \bar{e}(s(x))$ und man rechnet nach,
 dass
 \begin{align*}
-(\nabla_X^A e)_x &= (\diffd_A e)_x(X_x)
+(\nabla_X^A e)_x &= (\ddd_A e)_x(X_x)
 = [s(x),(D_A \bar{e})_x(\ds(X_x))]\\
-&= [s(x),\diffd \bar{e}_x(\ds(X_x)) + \rho_*(A_x(\ds(X_x)))\bar{e}(s(x))]\\
-&= [s(x),\diffd v(X_x) + \rho_*(A^s(X_x))v(x)].\qed
+&= [s(x),\ddd \bar{e}_x(\ds(X_x)) + \rho_*(A_x(\ds(X_x)))\bar{e}(s(x))]\\
+&= [s(x),\ddd v(X_x) + \rho_*(A^s(X_x))v(x)].\qed
 \end{align*}
 \end{proof}
 
@@ -3311,17 +3314,17 @@ für Schnitte $e = [p,v]$, und $\tilde{e}=[p,\tilde{v}]\in\Gamma(E)$
 eine Bündelmetrik auf $E$. Sei $U\subset M$ offen und $s: U\to P$ ein lokaler
 Schnitt in $P$, dann schreibt sich
 \begin{align*}
-\nabla_X^A e = [s(x),\diffd v_x(X_x) + \rho_*(A^s(X_x))v(x)],
+\nabla_X^A e = [s(x),\ddd v_x(X_x) + \rho_*(A^s(X_x))v(x)],
 \end{align*}
 so dass man direkt verifiziert
 \begin{align*}
 &\lin{\nabla_X^A e,\tilde{e}}_E + \lin{e,\nabla_X^A \tilde{e}}_E \\ 
 &\qquad = 
-\lin{\diffd v(X) + \rho_*(A^s(X))v,\tilde{v}}_V + \lin{v,\diffd\tilde{v}(X) +
+\lin{\ddd v(X) + \rho_*(A^s(X))v,\tilde{v}}_V + \lin{v,\ddd\tilde{v}(X) +
 \rho_*(A^s(X))\tilde{v}}_V\\
 &\qquad=
-\lin{\diffd v(X),\tilde{v}}_V + 
-\lin{v,\diffd \tilde{v}(X)}_V +
+\lin{\ddd v(X),\tilde{v}}_V + 
+\lin{v,\ddd \tilde{v}(X)}_V +
 \lin{\rho_*(A^s(X))v,\tilde{v}}_V + \lin{v,\rho_*(A^s(X))\tilde{v}}_V\\
 &\qquad=
 X(\lin{v,\tilde{v}}) + \lin{\rho_*(A^s(X))v,\tilde{v}}_V +
@@ -3329,12 +3332,12 @@ X(\lin{v,\tilde{v}}) + \lin{\rho_*(A^s(X))v,\tilde{v}}_V +
 \end{align*}
 Nun ist $A^s(X_x)\in \g$, wobei allgemein für $a\in\g$ gilt
 \begin{align*}
-\lin{\diffd\rho(a)v,\tilde{v}}_V &= 
-\frac{\diffd}{\dt}\bigg|_{t=0} \lin{\rho(\exp(ta))v,\tilde{v}}_V
+\lin{\ddd\rho(a)v,\tilde{v}}_V &= 
+\frac{\ddd}{\dt}\bigg|_{t=0} \lin{\rho(\exp(ta))v,\tilde{v}}_V
 =
-\frac{\diffd}{\dt}\bigg|_{t=0} \lin{v,\rho(\exp(-ta))\tilde{v}}_V\\
+\frac{\ddd}{\dt}\bigg|_{t=0} \lin{v,\rho(\exp(-ta))\tilde{v}}_V\\
 &=
--\lin{v,\diffd\rho(a)\tilde{v}}_V,
+-\lin{v,\ddd\rho(a)\tilde{v}}_V,
 \end{align*}
 denn $\lin{\cdot,\cdot}_V$ ist $G$-invariant. Somit gilt
 \begin{align*}
@@ -3356,10 +3359,10 @@ jedes $p\in P_x$
 \begin{proof}
 Man rechnet ohne Umwege nach, dass
 \begin{align*}
-(\nabla_X^A e)_x = \diffd_A e_x(X_x) = 
+(\nabla_X^A e)_x = \ddd_A e_x(X_x) = 
 [p,D_A \bar{e}(X^*)_p]
 =
-[p,\diffd \bar{e}(X^*)_p]
+[p,\ddd \bar{e}(X^*)_p]
 = [p,X^*(\bar{e})_p].\qed
 \end{align*}
 \end{proof}
@@ -3411,7 +3414,7 @@ der Basis ist.\qed
 Seien $\omega\in\Omega^k(N,\g)$ und $\tau\in\Omega^l(N,\g)$. Dann gelten:
 \begin{propenum}
 \item $[\omega,\tau] = (-1)^{kl+1} [\tau,\omega]$.
-\item $\diffd[\omega,\tau] = [\domega,\tau] + (-1)^k [\omega,\dtau]$.
+\item $\ddd[\omega,\tau] = [\dom,\tau] + (-1)^k [\omega,\dtau]$.
 \item Für $\omega \in\Omega^1(N,\g)$ und $X,Y\in\chi(N)$ gilt
 \begin{align*}
 [\omega,\omega](X,Y) = 2[\omega(X),\omega(Y)].\fish
@@ -3432,13 +3435,13 @@ $[a_i,a_j] = -[a_j,a_i]$, also
 \end{align*}
 
 b): Weiterhin gilt
-$\diffd(\omega^i\wedge \tau^j) = \domega^i \wedge \tau^j + (-1)^k \omega^i
-\wedge \diffd\tau^j$ und folglich,
+$\ddd(\omega^i\wedge \tau^j) = \dom^i \wedge \tau^j + (-1)^k \omega^i
+\wedge \ddd\tau^j$ und folglich,
 \begin{align*}
-\diffd[\omega,\tau] &= \sum_{i,j=1}^r \diffd(\omega^i \wedge \tau^j) [a_i,a_j]
-= \sum_{i,j=1}^r \left(\domega^i \wedge \tau^j + (-1)^k \omega^i
-\wedge \diffd\tau^j\right) [a_i,a_j]\\
-&= [\domega,\tau] + (-1)^k [\omega,\diffd\tau].
+\ddd[\omega,\tau] &= \sum_{i,j=1}^r \ddd(\omega^i \wedge \tau^j) [a_i,a_j]
+= \sum_{i,j=1}^r \left(\dom^i \wedge \tau^j + (-1)^k \omega^i
+\wedge \ddd\tau^j\right) [a_i,a_j]\\
+&= [\dom,\tau] + (-1)^k [\omega,\ddd\tau].
 \end{align*}
 
 c): Seien $X,Y\in\chi(N)$, dann verifiziert man direkt, dass
@@ -3460,7 +3463,7 @@ c): Seien $X,Y\in\chi(N)$, dann verifiziert man direkt, dass
 \index{Strukturgleichung}
 Sei $A$ ein Zusammenhang auf $P$, dann gilt
 \begin{align*}
-F^A = \diffd A + \frac{1}{2}[A,A].\fish
+F^A = \ddd A + \frac{1}{2}[A,A].\fish
 \end{align*}
 \end{prop}
 
@@ -3469,7 +3472,7 @@ F^A = \diffd A + \frac{1}{2}[A,A].\fish
 \item Ist die Lie-Algebra $\g$ von $G$ abelsch, dann ist $[A,A] = 0$ und die
 Strukturgleichung nimmt eine einfachere Form an,
 \begin{align*}
-F^A = \diffd A.
+F^A = \ddd A.
 \end{align*}
 Insbesondere ist $F^A$ dann exakt. In der Physik spielt die $\U(1)$-Theorie eine
 fundamentale Rolle. Hier ist $G=\U(1)$ also $P$ ein $\U(1)$-Hauptfaserbündel
@@ -3486,7 +3489,7 @@ $X,Y\in\chi(P)$, dann schreibt sich der Kommutator als
 \end{align*}
 Dadurch hat die Strukturgleichung die Form
 \begin{align*}
-F^A = \diffd A + A\wedge A.
+F^A = \ddd A + A\wedge A.
 \end{align*}
 In den allermeisten Anwendungen ist $G$ eine Matrizengruppe und dieser
 Zusammenhang gilt.\map
@@ -3499,20 +3502,20 @@ zu zeigen, die horizontal bzw. vertikal sind.
 
 a): Seien $X,Y$ horizontal, dann gilt $A(X) = A(Y) = 0$,
 \begin{align*}
-F^A(X,Y) = \diffd A(\pr_h(X),\pr_h(Y)) = \diffd
+F^A(X,Y) = \ddd A(\pr_h(X),\pr_h(Y)) = \ddd
 A(X,Y)
 \end{align*}
 und $[A,A](X,Y) = 2[A(X),A(Y)] =  0$.
 
 b): Sei $X$ horizontal und $Y$ vertikal. Dann ist
 \begin{align*}
-F^A(X,Y) = \diffd A(\pr_h(X),\pr_h(Y)) = 0,
+F^A(X,Y) = \ddd A(\pr_h(X),\pr_h(Y)) = 0,
 \end{align*}
 und ebenso $[A,A](X,Y) = 2[A(X),A(Y)] = 0$.
 Sei $V^*$ ein horizontaler Lift von $X$ und $\tilde{Z}_p = Y$ für ein $p\in P$
 und $Z\in\g$. Dann ist $A(X) = 0$ und $A(Y) = Z$ und es gilt
 \begin{align*}
-\diffd A(X,Y) = V^*(A(\tilde{Z})) - \tilde{Z}(A(V^*)) - A([\tilde{Z},V^*])
+\ddd A(X,Y) = V^*(A(\tilde{Z})) - \tilde{Z}(A(V^*)) - A([\tilde{Z},V^*])
 = V^*(Z) = 0, 
 \end{align*}
 denn $Z$ ist ein konstanter Vektor, also verschwindet die Lie-Ableitung nach
@@ -3525,7 +3528,7 @@ und $\tilde{W}_p = Y$ für ein $p\in P$ und $X,W\in\g$. Dann ist
 \end{align*}
 Andererseits ist
 \begin{align*}
-\diffd A(X,Y) &= \tilde{V}(A(\tilde{W})) - \tilde{W}(A(\tilde{V})) -
+\ddd A(X,Y) &= \tilde{V}(A(\tilde{W})) - \tilde{W}(A(\tilde{V})) -
 A([\tilde{V},\tilde{W}])\\
 &= \tilde{V}(W) - \tilde{W}(V)
 - A(\widetilde{[V,W]})
@@ -3546,13 +3549,13 @@ D_A F^A = 0.\fish
 \begin{proof}
 Aus der Strukturgleichung erhalten wir für das Differential der Krümmung,
 \begin{align*}
-\diffd F^A = \diffd\left(\diffd A + \frac{1}{2}[A,A]\right)
-= \frac{1}{2}\left([\diffd A,A] - [A,\diffd A] \right)
-= [\diffd A,A].
+\ddd F^A = \ddd\left(\ddd A + \frac{1}{2}[A,A]\right)
+= \frac{1}{2}\left([\ddd A,A] - [A,\ddd A] \right)
+= [\ddd A,A].
 \end{align*}
 Somit gilt für das absolute Differential,
 \begin{align*}
-D_A F^A = \diffd F^A\circ\pr_h = [\diffd A,A]\circ\pr_h = 0, 
+D_A F^A = \ddd F^A\circ\pr_h = [\ddd A,A]\circ\pr_h = 0, 
 \end{align*}
 denn $A$ verschwindet auf horizontalen Vektorfeldern.\qed
 \end{proof}
@@ -3560,15 +3563,15 @@ denn $A$ verschwindet auf horizontalen Vektorfeldern.\qed
 \begin{rem}
 Im Beweis der Bianchi Identität haben wir ganz allgemein gezeigt, dass
 \begin{align*}
-\diffd F^A = [\diffd A,A].
+\ddd F^A = [\ddd A,A].
 \end{align*}
 Für Matrizengruppe geht dies über in
 \begin{align*}
-\diffd F^A = F^A\wedge A - A\wedge F^A.
+\ddd F^A = F^A\wedge A - A\wedge F^A.
 \end{align*}
 Um das einzusehen, betrachte
 \begin{align*}
-\diffd F^A = [\diffd A ,A] = [F^A - \frac{1}{2}[A,A],A]
+\ddd F^A = [\ddd A ,A] = [F^A - \frac{1}{2}[A,A],A]
 = [F^A,A] - \frac{1}{2}[[A,A],A].
 \end{align*}
 Wähle nun eine Basis $(e_1,\ldots,e_r)$ von $\g$, dann ist 
@@ -3602,29 +3605,29 @@ D_A^2 \omega = \rho_*(F^A)\wedge \omega.\fish
 \end{align*}
 \end{prop}
 
-Während das Quadrat des gewöhnlichen Differentials immer verschwindet $\diffd^2
+Während das Quadrat des gewöhnlichen Differentials immer verschwindet $\ddd^2
 = 0$, involviert das Quadrat des absoluten Differentials $D_A^2$ die Krümmung
 des Zusammenhangs $A$.
 
 \begin{proof}
 Nach Satz \ref{prop:Absolutes-Differential} gilt
 \begin{align*}
-\diffd (D_A \omega) &=
-\diffd(\domega + \rho_*(A)\wedge \omega)
-= \diffd^2\omega + \diffd(\rho_*(A)\wedge \omega)\\
-&= (\diffd\rho_*(A))\wedge \omega -1 \rho_*(A)\wedge \domega. 
+\ddd (D_A \omega) &=
+\ddd(\dom + \rho_*(A)\wedge \omega)
+= \ddd^2\omega + \ddd(\rho_*(A)\wedge \omega)\\
+&= (\ddd\rho_*(A))\wedge \omega -1 \rho_*(A)\wedge \dom. 
 \end{align*}
-Nach Definition des absoluten Differentials ist $D_A^2 \omega = (\diffd(
+Nach Definition des absoluten Differentials ist $D_A^2 \omega = (\ddd(
 D_A\omega))\circ\pr_h$, wobei der Zusammenhang  auf horizontalen
 Formen verschwindet, d.h. $A\circ\pr_h = 0$. Folglich gilt
 \begin{align*}
-D_A^2\omega &= [(\diffd\rho_*(A))\wedge \omega]\circ\pr_h
-= (\rho_*(\diffd A)\wedge \omega)\circ\pr_h\\
+D_A^2\omega &= [(\ddd\rho_*(A))\wedge \omega]\circ\pr_h
+= (\rho_*(\ddd A)\wedge \omega)\circ\pr_h\\
 &= \rho_*(D_A A)\wedge \omega
 = \rho_*(F^A)\wedge \omega,
 \end{align*}
 denn der Push-forward vertauscht mit dem gewöhnlichen Differential, $\omega$ ist
-horizontal und $(\diffd A)\circ\pr_h = D_A A$.\qed
+horizontal und $(\ddd A)\circ\pr_h = D_A A$.\qed
 \end{proof}
 
 
@@ -3645,9 +3648,9 @@ $\pi: P\to M$ betrachten. Hier vereinfachen sich einige Konzepte, denn
 sind abelsch. Insbesondere sind die Konjugation und die adjungierte Darstellung trivial,
 d.h. $\alpha_g = \id_{\U(1)}$ und $\Ad(g) = \id_{\u(1)}$ für jedes $g\in \U(1)$.
 
-Wie bereits festgestellt, ist der Raum der Zusammenhänge $\CC(P)$ über $P$ ein
+Wie bereits festgestellt, ist der Raum der Zusammenhänge $\Cs(P)$ über $P$ ein
 affiner Raum über dem Vektorraum $\Omega^1_\hor(P,\ii\R)^{(\U(1),\Ad)}$. Gegeben
-zwei Zusammenhangsformen $A_1,A_2\in\CC(P)$ ist $\eta =
+zwei Zusammenhangsformen $A_1,A_2\in\Cs(P)$ ist $\eta =
 A_1-A_2\in\Omega^1_\hor(P,\ii\R)^{(\U(1),\Ad)}$ eine horizontale Form vom Typ
 $\Ad$, d.h. für jedes $a\in\U(1)$ ist
 \begin{align*}
@@ -3672,14 +3675,14 @@ F^A = \pi^*\hat{F}^A,\qquad \hat{F}^A\in\Omega^2(M,\ii\R).
 \end{align*}
 Da $\u(1)$ abelsch ist, vereinfacht sich die Strukturgleichung zu
 \begin{align*}
-F^A = \diffd A + \frac{1}{2}[A,A] = \diffd A,
+F^A = \ddd A + \frac{1}{2}[A,A] = \ddd A,
 \end{align*}
 also ist $F^A$ exakt. Im Gegensatz dazu ist
 $\hat{F}^A$ allerdings im Allgemeinen \textit{nicht} exakt. Aber geschlossen, denn
 \begin{align*}
-\pi^*\diffd \hat{F}^A = \diffd\pi^* \hat{F}^A = \diffd F^A = 0,
+\pi^*\ddd \hat{F}^A = \ddd\pi^* \hat{F}^A = \ddd F^A = 0,
 \end{align*}
-und folglich ist ebenfalls $\diffd \hat{F}^A = 0$, denn die Projektion
+und folglich ist ebenfalls $\ddd \hat{F}^A = 0$, denn die Projektion
 $\pi$ ist eine Submersion. Somit ist auch $\ii\hat{F}^A$ geschlossen und
 außerdem reellwertig, also
 \begin{align*}
@@ -3689,7 +3692,7 @@ außerdem reellwertig, also
 \begin{defn}[Definition und Satz]
 \label{defn:Erste-Chern-Klasse}
 \index{Chern-Klasse}
-Sei $A\in\CC(P)$ ein Zusammenhang auf $P$, dann definiert man die
+Sei $A\in\Cs(P)$ ein Zusammenhang auf $P$, dann definiert man die
 \emph{erste reelle Chern-Klasse von $P$} als
 \begin{align*}
 c_1(P)\defl \left[\frac{-1}{2\pi i} \hat{F}^A \right] \in H^2_{dR}(M,\R),
@@ -3698,11 +3701,11 @@ und diese Definition ist unabhängig vom gewählten Zusammenhang.\fish
 \end{defn}
 
 \begin{proof}
-Sei $A'\in\CC(P)$ ein weiterer Zusammenhang auf $P$, dann ist
+Sei $A'\in\Cs(P)$ ein weiterer Zusammenhang auf $P$, dann ist
 $A-A'=\pi^*\hat{\eta}$ für ein $\eta\in\Omega^1(M,\ii\R)$. Somit erhalten wir
 \begin{align*}
-\pi^*(\hat F^{A'}-\hat F^A) = F^{A'}-F^A = \diffd A' - \diffd A = \diffd
-\pi^*\hat{\eta} = \pi^*\diffd\hat{\eta},
+\pi^*(\hat F^{A'}-\hat F^A) = F^{A'}-F^A = \ddd A' - \ddd A = \ddd
+\pi^*\hat{\eta} = \pi^*\ddd\hat{\eta},
 \end{align*}
 und folglich ist $\hat F^{A'}-\hat F^A$ exakt. Daher stimmen ihre entsprechenden de-Rham
 Kohomologieklassen überein. Es gilt also
@@ -3734,14 +3737,14 @@ Isomorphismus berechnen. Wir haben bereits explizit eine Zusammenhangsform für
 das Hopfbündel berechnet
 \begin{align*}
 A : TS^3\to \ii\R,\qquad (w_1,w_2) \mapsto 
-\frac{1}{2}\left(\bar{\omega_1}\domega_1 - \omega_1\bar{\domega_1} +
-\bar{\omega_2}\domega_2 - \omega_2\bar{\domega_2} \right),
+\frac{1}{2}\left(\bar{\omega_1}\dom_1 - \omega_1\bar{\dom_1} +
+\bar{\omega_2}\dom_2 - \omega_2\bar{\dom_2} \right),
 \end{align*}
 mit Funktionen $\omega_i : S^3\to \C$, $(w_1,w_2)\mapsto w_i$.
 Die Krümmung dieses Zusammenhangs ist nach der Strukturgleichung
 \begin{align*}
-F^A = \diffd A = -(\domega_1\wedge \bar{\domega_1} + \domega_2\wedge
-\bar{\domega_2}),
+F^A = \ddd A = -(\dom_1\wedge \bar{\dom_1} + \dom_2\wedge
+\bar{\dom_2}),
 \end{align*}
 und der Wert der ersten reellen Chern Klasse ist gegeben durch
 \begin{align*}
@@ -3759,48 +3762,48 @@ ist
 \end{align*}
 ein einziger Punkt. Setzt man für $z\in \C$
 \begin{align*}
-\tilde{F}_z \defl -\frac{\dz\wedge \diffd\bar{z}}{(1+\abs{z})^2},
+\tilde{F}_z \defl -\frac{\dz\wedge \ddd\bar{z}}{(1+\abs{z})^2},
 \end{align*}
 dann ist $\tilde{F}_z$ eine 2-Form auf $\C$. Auf $S^3$ gilt $\abs{w_1}^2 +
 \abs{w_2}^2 = 1$ und folglich ist
-\newcommand{\dbomega}{\diffd\bar{\omega}}
+\newcommand{\dbomega}{\ddd\bar{\omega}}
 \begin{align*}
 \pi^*\psi^*\tilde{F} &=
--\frac{\diffd\left(\frac{w_1}{w_2} \right)\wedge
-\diffd\left(\frac{\bar{w_1}}{\bar{w_2}}\right)}
+-\frac{\ddd\left(\frac{w_1}{w_2} \right)\wedge
+\ddd\left(\frac{\bar{w_1}}{\bar{w_2}}\right)}
 {\left(1+\abs{\frac{w_1}{w_2}}^2\right)^2}\\
 &=
 -w_2^{-2}\bar{w_2}^{-2}\frac{
-\left(w_2\domega_1 - w_1\domega_2\right)
+\left(w_2\dom_1 - w_1\dom_2\right)
 \wedge
 \left(\bar{w}_2\dbomega_1 - \bar{w}_1
 \dbomega_2\right)}
 {\left(1+\abs{\frac{w_1}{w_2}}^2\right)^2}\\
-&= -\left(w_2\domega_1 - w_1\domega_2\right)
+&= -\left(w_2\dom_1 - w_1\dom_2\right)
 \wedge
 \left(\bar{w}_2\dbomega_1 - \bar{w}_1
 \dbomega_2\right)\\
 &= 
- -\biggl(\abs{w_2}^2 \domega_1\wedge \diffd\bar{\omega}_1
- +\abs{w_1}^2 \domega_2\wedge \diffd\bar{\omega}_2\biggr)\\
+ -\biggl(\abs{w_2}^2 \dom_1\wedge \ddd\bar{\omega}_1
+ +\abs{w_1}^2 \dom_2\wedge \ddd\bar{\omega}_2\biggr)\\
  &\quad\;
-+ w_2\bar{w_1}\domega_1\wedge\dbomega_2
-+ w_1\bar{w_2}\domega_2\wedge\dbomega_1\\
++ w_2\bar{w_1}\dom_1\wedge\dbomega_2
++ w_1\bar{w_2}\dom_2\wedge\dbomega_1\\
 &= F_A  + 
-w_1\bar{w_1}\domega_1\wedge\dbomega_1
-+w_2\bar{w_2}\domega_2\wedge\dbomega_2 
+w_1\bar{w_1}\dom_1\wedge\dbomega_1
++w_2\bar{w_2}\dom_2\wedge\dbomega_2 
 \\
 &\quad\;
-+ w_2\bar{w_1}\domega_1\wedge\dbomega_2
-+ w_1\bar{w_2}\domega_2\wedge\dbomega_1\\
++ w_2\bar{w_1}\dom_1\wedge\dbomega_2
++ w_1\bar{w_2}\dom_2\wedge\dbomega_1\\
 &= F_A + 
-\left(\bar{w}_1\domega_1 + \bar{w}_2\domega_2 \right)
+\left(\bar{w}_1\dom_1 + \bar{w}_2\dom_2 \right)
 \wedge
 \left(w_1\dbomega_1 + w_2\dbomega_2\right)\\
 &= F_A + 
-\left(\bar{w}_1\domega_1 + \bar{w}_2\domega_2 \right)
+\left(\bar{w}_1\dom_1 + \bar{w}_2\dom_2 \right)
 \wedge
-\bar{\left(\bar{w}_1\domega_1 + \bar{w}_2\domega_2 \right)}\\
+\bar{\left(\bar{w}_1\dom_1 + \bar{w}_2\dom_2 \right)}\\
 &= F_A.
 \end{align*}
 Damit berechnet man schließlich
@@ -3809,7 +3812,7 @@ c_1(H) &= -\frac{1}{2\pi i} \int_{\CP^1} \hat{F}^A
  = -\frac{1}{2\pi i} \int_{U} \bar{F^A}\\
   &= -\frac{1}{2\pi i} \int_{U} \psi^* \tilde{F}
   = -\frac{1}{2\pi i} \int_{\C} \tilde{F}\\
-  &= \frac{1}{2\pi i} \int_{\C} \frac{\dz\wedge \diffd\bar{z}}{(1+\abs{z})^2}
+  &= \frac{1}{2\pi i} \int_{\C} \frac{\dz\wedge \ddd\bar{z}}{(1+\abs{z})^2}
   = \frac{1}{2\pi} \int_{\R^2} \frac{-\dx\wedge \dy + \dy\wedge \dx 
   }{(1+x^2+y^2)^2}\\
   &= \frac{-1}{\pi} \int_{\R^2} \frac{\dx\wedge \dy  
@@ -3821,7 +3824,7 @@ c_1(H) &= -\frac{1}{2\pi i} \int_{\CP^1} \hat{F}^A
   \frac{1}{1+r^2} \bigg|_{r=0}^\infty \\ 
   &= - 1.
 \end{align*} 
-Im Besonderen folgt, dass $\hat{F}^A$ nicht exakt ist.\bsp
+Im Besonderen folgt, dass $\hat{F}^A$ nicht exakt ist.\boxc
 \end{ex}
 
 
@@ -3865,7 +3868,7 @@ F^{s_j} = g_{ij}^{-1}F^{s_i}g_{ij}.\fish
 a): Es gilt $s_j = s_i\cdot g_{ij}$ und somit erhalten wir mit der Produktformel
 \ref{prop:Produktformel}
 \begin{align*}
-\ds_j(X) = \dR_{g_{ij}}(\ds_i(X)) + \widetilde{\dL_{g_{ij}^{-1}}(\diffd
+\ds_j(X) = \dR_{g_{ij}}(\ds_i(X)) + \widetilde{\dL_{g_{ij}^{-1}}(\ddd
 g_{ij}(X))},\qquad X\in\chi(M).
 \end{align*}
 Seien nun $X,Y$ Vektorfelder in $M$, dann gilt
@@ -3881,24 +3884,24 @@ F^{s_j}(X,Y) &= F^A(\ds_j(X),\ds_j(Y))
 Für Matrizengruppen übertragen sich die Darstellungen der globalen Krümmung auf
 die lokalen Krümmungsformen,
 \begin{align*}
-&F^s = \diffd A^s + A^s\wedge A^s,\\
-&\diffd F^s = F^s\wedge A^s - A^s \wedge F^s.\map
+&F^s = \ddd A^s + A^s\wedge A^s,\\
+&\ddd F^s = F^s\wedge A^s - A^s \wedge F^s.\map
 \end{align*}
 \end{rem}
 
 \begin{ex}
 Sei $P$ ein $\U(1)$-Hauptfaserbündel, dann gilt aufgrund der Kommutativität
 \begin{align*}
-F^s = \diffd A^s,\qquad
+F^s = \ddd A^s,\qquad
 F^{s_i} = g_{ji}^{-1}F^{s_j}g_{ji} = F^{s_j}.
 \end{align*}
 Somit stimmen alle lokalen Krümmungsformen auf den Durchschnitten überein. Das
 System $\setd{F^i}$ definiert somit wieder eine globale Krümmungsform auf $M$
 mit Werten in $i\R$.
 
-Außerdem gilt aufgrund der Kommutativität, dass $\diffd F^s = 0$, weshalb die
+Außerdem gilt aufgrund der Kommutativität, dass $\ddd F^s = 0$, weshalb die
 Bianchi Identität in der Physik auch homogene Feldgleichung genannt wird. Sie
-entspricht gerade dem ersten Teil der Maxwell Gleichungen.\bsp
+entspricht gerade dem ersten Teil der Maxwell Gleichungen.\boxc
 \end{ex}
 
 
@@ -3915,7 +3918,7 @@ Seien $X,Y$ horizontale Vektorfelder auf $P$. Dann gelten
 \begin{proof}
 a): Da $X,Y$ horizontal sind, ist $[A,A](X,Y) = 0$ und daher
 \begin{align*}
-F^A(X,Y) = \diffd A(X,Y) = X(A(Y)) - Y(A(X)) - A([X,Y])
+F^A(X,Y) = \ddd A(X,Y) = X(A(Y)) - Y(A(X)) - A([X,Y])
 = -A([X,Y]),
 \end{align*}
 da die Zusammenhangsform auf horizontalen Vektorfeldern verschwindet.
@@ -3974,7 +3977,7 @@ Ein Zusammenhang $A$ auf $P$ heißt \emph{flach}, falls $F^A\equiv 0$.\fish
 
 \begin{ex}
 Der kanonische flache Zusammenhang auf dem trivialen $G$"=Hauptfaserbündel
-ist tatsächlich flach.\bsp
+ist tatsächlich flach.\boxc
 \end{ex}
 
 \begin{prop}
@@ -4044,7 +4047,7 @@ wobei $X^*$ und $Y^*$ horizontale Lifts von $X$ und $Y$ sind.\fish
 \end{prop}
 \begin{proof}
 Es gilt $e=[p,\bar{e}]$ mit einer Funktion $\bar{e}\in
-\CC^\infty(P,V)^{(G,\rho)}$. Somit berechnet sich
+\Cs^\infty(P,V)^{(G,\rho)}$. Somit berechnet sich
 \begin{align*}
 R_{X,Y}^{\nabla^A}e &=
 [p,X^*(Y^*(\bar{e}))-Y^*(X^*(\bar{e}))-[X,Y]^*(\bar{e})]\\ &= [p,[X^*,Y^*](\bar{e})-[X,Y]^*(\bar{e})]
@@ -4055,12 +4058,12 @@ nach Satz \ref{prop:Krümmung-v-Projektion}. Nun gilt nach Definition des fundam
 der $G$-äquivarianz von $\bar{e}$,
 \begin{align*}
 \widetilde{F^A(X^*,Y^*)}(\bar{e}) &= 
-\frac{\diffd}{\dt}\bigg|_{t=0}\bar{e}\left(p\cdot \exp(t\, F^A(X^*,Y^*))
+\frac{\ddd}{\dt}\bigg|_{t=0}\bar{e}\left(p\cdot \exp(t\, F^A(X^*,Y^*))
 \right)\\
-&=\frac{\diffd}{\dt}\bigg|_{t=0}
+&=\frac{\ddd}{\dt}\bigg|_{t=0}
 \rho\left(\exp(-t\, F^A(X^*,Y^*)\right)
 \bar{e}(p) )\\
-&=-\diffd\rho(F^A(X^*,Y^*))(\bar{e}(p)). 
+&=-\ddd\rho(F^A(X^*,Y^*))(\bar{e}(p)). 
 \end{align*}
 Mit $\bar{e}(p) = v$ folgt somit die Behauptung.\qed
 \end{proof}
@@ -4088,7 +4091,7 @@ für Vektorfelder $X,Y,Z$ in $M$.\fish
 Seien also Vektorfelder $X,Y,Z$ in $M$ gegeben, dann gilt
 \begin{align*}
 &D_A F^A(X^*,Y^*,Z^*)\\
-&\qquad= \diffd F^A(X^*,Y^*,Z^*)\\
+&\qquad= \ddd F^A(X^*,Y^*,Z^*)\\
 &\qquad= X^* (F^A(Y^*,Z^*))
 + Y^* (F^A(Z^*,X^*))
 + Z^* (F^A(X^*,Y^*))\\
@@ -4164,7 +4167,7 @@ Die kanonische 1-Form entspricht im Wesentlichen der Identit\"at, modulo Identif
 \theta\in \Omega^1_\hor(P,\R^n)^{\GL_n}\cong \Omega^1(M,TM) =
 \Gamma(T^*M\otimes TM) = \Gamma(\End TM).
 \end{align*}
-\item Sei $X$ ein Vektorfeld in $M$ und $\bar{X}\in \CC^\infty(P,\R^n)^{\GL_n}$
+\item Sei $X$ ein Vektorfeld in $M$ und $\bar{X}\in \Cs^\infty(P,\R^n)^{\GL_n}$
 die zugehörige Funktion über $\R^n$, dann gilt
 \begin{align*}
 \theta(X^*) = \bar{X}.
@@ -4216,7 +4219,7 @@ Verallgemeinerung der Torsion $T$ auf $TM$ gegeben.
 \begin{propenum}
 \item Seien $X$ und $Y$ Vektorfelder in $P$, dann gilt
 \begin{align*}
-\Theta(X,Y) = \diffd\theta(X,Y) + A(X)\theta(Y) - \theta(Y)A(X).\fish
+\Theta(X,Y) = \ddd\theta(X,Y) + A(X)\theta(Y) - \theta(Y)A(X).\fish
 \end{align*}
 \item Für Vektorfelder $X$ und $Y$ in $M$ und $m\in M$ gilt
 \begin{align*}
@@ -4228,28 +4231,28 @@ T_x(X,Y) = [p](\Theta_p(X^*,Y^*)),\qquad p\in P_x.\fish
 a): Dies folgt direkt aus der Formel für das absolute Differential
 \begin{align*}
 \Theta(X,Y) &= D_A \theta(X,Y) = 
-\diffd \theta(X,Y) + \rho_*(A)\wedge \theta(X,Y)\\
-&= \diffd \theta(X,Y) + A(X)\theta(Y) - A(Y)\theta(X), 
+\ddd \theta(X,Y) + \rho_*(A)\wedge \theta(X,Y)\\
+&= \ddd \theta(X,Y) + A(X)\theta(Y) - A(Y)\theta(X), 
 \end{align*}
 denn die Darstellung $\rho$ entspricht der Identität.
 
 b): Seien $X,Y\in\Gamma(TM)$ mit zugehörigen Funktionen $\bar{X},\bar{Y}\in
-\CC^\infty(P,\R^n)^{\GL_n}$. Die kovariante Ableitung lässt sich dann schreiben
+\Cs^\infty(P,\R^n)^{\GL_n}$. Die kovariante Ableitung lässt sich dann schreiben
 als
 \begin{align*}
-(\nabla_X Y)_x = [p,\diffd \bar{Y}_p(X^*)] = [p,X^*(\bar{Y})_p]
+(\nabla_X Y)_x = [p,\ddd \bar{Y}_p(X^*)] = [p,X^*(\bar{Y})_p]
 = [p,X^*(\theta(Y))_p].
 \end{align*}
 Da $\theta$ horizontal ist, folgt $\theta([X^*,Y^*]) = \theta([X,Y]^*)$ und
 somit ist
 \begin{align*}
-[p](\Theta_p(X^*,Y^*)) &= [p,\diffd\theta_p(X^*,Y^*)]\\
+[p](\Theta_p(X^*,Y^*)) &= [p,\ddd\theta_p(X^*,Y^*)]\\
 &= [p,X^*\theta(Y^*)-Y^*\theta(X^*)-\theta([X,Y]^*)]\\
 &= (\nabla_X Y - \nabla_Y X - [X,Y])_x.\qed
 \end{align*}
 \end{proof}
 
-Während das Quadrat des gewöhnlichen Differentials verschwindet $\diffd^2 = 0$,
+Während das Quadrat des gewöhnlichen Differentials verschwindet $\ddd^2 = 0$,
 involviert das Quadrat des absoluten Differentials die Krümmung, so dass
 \begin{align*}
 D_A \Theta = D_A^2 \theta = F^A\wedge \theta.
@@ -4443,7 +4446,7 @@ horizontalen Lift $X^*$.
 \end{align*}
 \item Sei $Z$ ein horizontales und rechtsinvariantes Vektorfeld auf  $P$. Dann
 existiert ein Vektorfeld $X$ auf $M$, so dass $X^* = Z$.
-\item Seien $X$ und $Y$ Vektorfelder auf $M$ und $f\in\CC^\infty(M)$, dann gelten
+\item Seien $X$ und $Y$ Vektorfelder auf $M$ und $f\in\Cs^\infty(M)$, dann gelten
 \begin{align*}
 &(X+Y)^* = X^* + Y^*,\\
 &(fX)^*_p = f(\pi(p)) \,  X^*,\\
@@ -4503,7 +4506,7 @@ Weiterhin wirkt $G$ fasertreu, d.h. $\pi\circ R_g = \pi$. Damit gilt
 \begin{align*}
 \dpi( \dR_g (X_p^*)) = \dpi(X_p^*) = X_{\pi(p)} = X_{\pi(p\cdot g)} = \dpi(X^*_{p\cdot g}).
 \end{align*}
-Aus der Eindeutigkeit von $X^*$ folgt nun, dass $\diffd R_g(X^*_p) = X_{pg}^*$
+Aus der Eindeutigkeit von $X^*$ folgt nun, dass $\ddd R_g(X^*_p) = X_{pg}^*$
 und somit ist $X^*$ rechtsinvariant.
 
 c): Sei $Z$ ein horizontales und rechtsinvariantes Vektorfeld auf $P$. Dann
@@ -4537,9 +4540,9 @@ fundamentalen Vektorfeldes $\tilde{B}$ ist gegeben durch
 \end{align*}
 d.h. $\ph_t = R_{\exp(tB)}$. Somit gilt für den Kommutator
 \begin{align*}
-[\tilde{B},Z]_p  &= \frac{\diffd}{\dt}\bigg|_{t=0} \ph_t^*(Z_{\ph(t)})\\
-&= \frac{\diffd}{\dt}\bigg|_{t=0} \dR_{\exp(-tB)}(Z_{p\exp(tB)})\\
-&= \frac{\diffd}{\dt}\bigg|_{t=0} \gamma(t).
+[\tilde{B},Z]_p  &= \frac{\ddd}{\dt}\bigg|_{t=0} \ph_t^*(Z_{\ph(t)})\\
+&= \frac{\ddd}{\dt}\bigg|_{t=0} \dR_{\exp(-tB)}(Z_{p\exp(tB)})\\
+&= \frac{\ddd}{\dt}\bigg|_{t=0} \gamma(t).
 \end{align*}
 Nach Voraussetzung ist das Vektorfeld $Z$ horizontal und der horizontale Tangentialraum ist
 rechtsinvariant. Also ist $\gamma$ ist eine Kurve in $T^h_pP$ und daher ist
@@ -5002,7 +5005,7 @@ verbinden Kurven samt Lifts (rechts)}
 \item
 \label{ex:Parallelverschiebung-unabhängig-kanonisch-flach}
 Sei $\pi: P_0 = M\times G\to M$ das triviale $G$-Hauptfaserbündel versehen mit
-dem kanonischen flachen Zusammenhang $A_0=\diffd \pr_2$. Dieser Zusammenhang ist
+dem kanonischen flachen Zusammenhang $A_0=\ddd \pr_2$. Dieser Zusammenhang ist
 äquivalent dazu, für einen Punkt $(x,g)$ in $P$ den horizontalen Tangentialraum
 als
 \begin{align*}
@@ -5019,7 +5022,7 @@ P_\gamma^{A_0} : (P_0)_x = \setd{x}\times G\to \setd{y}\times G = (P_0)_y,\qquad
 (x,g) \mapsto (y,g).
 \end{align*}
 Sie hängt damit offenbar nicht von der Wahl des Weges $\gamma$ ab, der $x$ und
-$y$ verbindet.\bsp
+$y$ verbindet.\boxc
 \end{exenum}
 \end{ex}
 
@@ -5109,9 +5112,9 @@ Differentialgleichung differenzierbar vom Anfangswert $x$ ab, also ist $s$
 differenzierbar. Sei nun $\alpha: [0,1]\to M$ eine Kurve durch $x$ mit
 $\dot{\alpha}(0) = X\in T_xM$, dann gilt
 \begin{align*}
-\ds(X) = \frac{\diffd}{\dt}\bigg|_{t=0} s\circ\alpha(t)
-= \frac{\diffd}{\dt}\bigg|_{t=0} P_{\gamma\star\alpha(t)}^A(u_0)
-= \frac{\diffd}{\dt}\bigg|_{t=0} (\gamma\star\alpha)^*_{u_0}(t) \in T^hP,
+\ds(X) = \frac{\ddd}{\dt}\bigg|_{t=0} s\circ\alpha(t)
+= \frac{\ddd}{\dt}\bigg|_{t=0} P_{\gamma\star\alpha(t)}^A(u_0)
+= \frac{\ddd}{\dt}\bigg|_{t=0} (\gamma\star\alpha)^*_{u_0}(t) \in T^hP,
 \end{align*}
 wobei $\gamma$ eine Kurve von $x_0$ nach $x$ bezeichnet. Somit ist $s$ ein
 horizontaler, globaler Schnitt in $P$ und nach dem vorangegangen Lemma ist daher
@@ -5454,7 +5457,7 @@ P_\gamma^A (p) = \gamma_p^*(t) = (e_1(t),\ldots,e_r(t))
 eine Kurve im Rahmenbündel. Die Parallelverschiebung in $TM$ ist nun gegeben
 durch
 \begin{align*}
-P^{TM}_\gamma : T_xM\to T_{\gamma(t)}M,\qquad v\mapsto \sum_{i=1}^r v_i e_i(t).\bsp
+P^{TM}_\gamma : T_xM\to T_{\gamma(t)}M,\qquad v\mapsto \sum_{i=1}^r v_i e_i(t).\boxc
 \end{align*}
 \end{ex}
 
@@ -5467,7 +5470,7 @@ Sei $E$ ein zu $P$ assoziiertes Vektorbündel versehen mit der von $A$ induziert
 Dann gilt für jedes
 Vektorfeld $X$ auf $M$ und jeden Schnitt $e$ in $E$ 
 \begin{align*}
-(\nabla_X^A e)_x = \frac{\diffd}{\dt}\bigg|_{t=0} P^E e(\gamma(t)),
+(\nabla_X^A e)_x = \frac{\ddd}{\dt}\bigg|_{t=0} P^E e(\gamma(t)),
 \end{align*}
 wobei $P^E: E_{\gamma(t)}\to E_{\gamma(0)}$ die Parallelverschiebung entlang
 $\gamma$ beschreibt und $\gamma$ eine Kurve in $M$ ist mit $\gamma(0) = x$ und
@@ -5482,13 +5485,13 @@ P^E = [\gamma^*(0)]\circ [\gamma^*(t)]^{-1},
 und $\dot{\gamma}^*(0) = X_p^*$. Weiterhin gilt $e(\pi(p)) = [p,\bar{e}(p)]$,
 also ist $e(\gamma(t)) = [\gamma^*(t),\bar{e}(\gamma^*(t))]$ und folglich
 \begin{align*}
-\frac{\diffd}{\dt}\bigg|_{t=0} P^E e(\gamma(t)) &= 
-[\gamma^*(0)] \left(\frac{\diffd}{\dt}\bigg|_{t=0}
+\frac{\ddd}{\dt}\bigg|_{t=0} P^E e(\gamma(t)) &= 
+[\gamma^*(0)] \left(\frac{\ddd}{\dt}\bigg|_{t=0}
 [\gamma^*(t)]^{-1}(e(\gamma(t)) \right)\\
 &= [\gamma^*(0)] \left(
-\diffd\bar{e}(\dot{\gamma}^*(0)) \right)\\
-&= [p,\diffd \bar{e}(X_p^*)]
-= (\diffd_A e)(X_x) \\
+\ddd\bar{e}(\dot{\gamma}^*(0)) \right)\\
+&= [p,\ddd \bar{e}(X_p^*)]
+= (\ddd_A e)(X_x) \\
 &= (\nabla^A_X e)_x.\qed
 \end{align*}
 \end{proof}
@@ -5533,7 +5536,7 @@ wiederum
 fX : I\to TM,\qquad t\mapsto f(t)X(t)
 \end{align*}
 ein Vektorfeld entlang $\gamma$. Somit ist $\chi(\gamma)$ außerdem ein
-$\CC^\infty(I)$-Modul.\map
+$\Cs^\infty(I)$-Modul.\map
 \end{rem}
 
 \begin{ex}
@@ -5548,7 +5551,7 @@ Kurve $\gamma$ ein,
 \begin{align*}
 X_\gamma \defl X\circ \gamma 
 \end{align*}
-so ist die Einschränkung $X_\gamma$ ein Vektorfeld entlang $\gamma$.\bsp
+so ist die Einschränkung $X_\gamma$ ein Vektorfeld entlang $\gamma$.\boxc
 \end{exenum}
 \end{ex}
 
@@ -5561,9 +5564,9 @@ Dann existiert eine eindeutig bestimmte Abbildung
 mit den folgenden Eigenschaften:
 \begin{propenum}
 \item $\frac{\nabla}{\dt}$ ist $\R$-linear.
-\item Für alle Vektorfelder $X\in\chi(\gamma)$ und $f\in\CC^\infty(I)$ gilt
+\item Für alle Vektorfelder $X\in\chi(\gamma)$ und $f\in\Cs^\infty(I)$ gilt
 \begin{align*}
-\frac{\nabla}{\dt}(f\cdot X) = \frac{\diffd f}{\dt}X + f \frac{\nabla}{\dt}X.
+\frac{\nabla}{\dt}(f\cdot X) = \frac{\ddd f}{\dt}X + f \frac{\nabla}{\dt}X.
 \end{align*}
 \item Falls $X_\gamma = X\circ \gamma$ für ein Vektorfeld $X\in\chi(M)$, dann
 gilt
@@ -5596,7 +5599,7 @@ für $X$ mit Hilfe der $\R$-Linearität (a) und der Derivationsregel (b),
 \begin{align*}
 \frac{\nabla}{\dt} X(t) &= \sum_{i=1}^n \frac{\nabla}{\dt}\left(f_i
 \frac{\partial}{\partial x_i}\bigg|_{\gamma(t)}\right)\\
-&= \sum_{i=1}^n  \frac{\diffd f_i }{\diffd t} \frac{\partial}{\partial
+&= \sum_{i=1}^n  \frac{\ddd f_i }{\ddd t} \frac{\partial}{\partial
 x_i}\bigg|_{\gamma(t)} + f_i \frac{\nabla}{\dt}\left(\frac{\partial}{\partial
 x_i}\bigg|_{\gamma(t)} \right).
 \end{align*}
@@ -5619,7 +5622,7 @@ wobei $\Gamma_{ji}^k$ die Christoffelsymbole der kovarianten Ableitung $\nabla$
 bezeichnen. Somit erhalten wir für $\frac{\nabla}{\dt}$ die lokale Darstellung
 \begin{align*}
 \frac{\nabla}{\dt} X = 
-\sum_{i=1}^n \left(\frac{\diffd f_i}{\dt}\frac{\partial}{\partial x_i} + f_i
+\sum_{i=1}^n \left(\frac{\ddd f_i}{\dt}\frac{\partial}{\partial x_i} + f_i
 \sum_{j,k=1}^n \dot{\gamma}_j\, \Gamma_{ji}^k \frac{\partial}{\partial x_k}
 \right).\tag{*}
 \end{align*}
@@ -5666,7 +5669,7 @@ Eine analoge Aussage gilt auch für die Abbildung $\frac{\nabla}{\dt}$.
 Sei $(M,g)$ eine Riemannsche Mannigfaltigkeit und $\nabla$ ein metrischer
 Zusammenhang auf $TM$. Für Vektorfelder $X_1,X_2\in\chi(\gamma)$ gilt dann
 \begin{align*}
-\frac{\diffd}{\dt} g(X_1,X_2) = g(\dot{X}_1,X_2) + g(X_1,\dot{X}_2).\fish
+\frac{\ddd}{\dt} g(X_1,X_2) = g(\dot{X}_1,X_2) + g(X_1,\dot{X}_2).\fish
 \end{align*} 
 \end{cor}
 
@@ -5695,12 +5698,12 @@ X = \sum_{i=1}^n f_i \frac{\partial}{\partial x_i},
 \end{align*}
 nimmt die Formel (*) die besonders einfache Form
 \begin{align*}
-\dot{X} = \sum_{i=1}^n \frac{\diffd f_i}{\dt} \frac{\partial}{\partial x_i}
+\dot{X} = \sum_{i=1}^n \frac{\ddd f_i}{\dt} \frac{\partial}{\partial x_i}
 \end{align*}
 an. Somit ist $X$ genau dann parallel, also $\dot{X}  =0$, wenn die
 Koeffizientenfunktionen konstant sind, d.h. $\dot{f}_i \equiv 0$. Dies
 entspricht auch der Vorstellung, denn das Vektorfeld $X$ ändert beim Verlauf
-entlang $\gamma$ seine Richtung nicht.\bsp
+entlang $\gamma$ seine Richtung nicht.\boxc
 \end{ex}
 
 \begin{lem}
@@ -5769,7 +5772,7 @@ entlang $\gamma$}.\fish
 \begin{ex}
 Betrachten wir wieder $M=\R^n$ mit der Standardmetrik und dem flachen
 Zusammenhang. Dann ist die Parallelverschiebung gerade durch die gewöhnliche
-Translation von Vektoren gegeben.\bsp
+Translation von Vektoren gegeben.\boxc
 \end{ex}
 
 Im Allgemeinen hängt die Parallelverschiebung vom Zusammenhang ab und kann
@@ -5811,7 +5814,7 @@ Isomorphismus zwischen den Tangentialräumen an $x$ und $y$.
 b): $\Rightarrow$: Sei $\nabla$ ein metrischer Zusammenhang auf $TM$, dann gilt
 für Vektorfelder $X$ und $Y$ entlang $\gamma$, dass
 \begin{align*}
-\frac{\diffd}{\dt} g(X,Y) = g(\dot{X},Y) + g(X,\dot{Y}).
+\frac{\ddd}{\dt} g(X,Y) = g(\dot{X},Y) + g(X,\dot{Y}).
 \end{align*}
 Sind nun $X$ und $Y$ parallel, so verschwindet die rechte Seite und $g(X,Y)$ ist
 konstant. Wähle also $X_0,Y_0\in T_xM$, so gilt
@@ -5845,8 +5848,8 @@ Y(t) = \sum_{j=1}^n b_j(t) \partial_j(t),
 \end{align*}
 dann gilt für die Metrik
 \begin{align*}
-\frac{\diffd}{\dt}\, g(X(t),Y(t)) &= 
- \frac{\diffd}{\dt} \sum_{i,j=1}^n a_i(t) b_j(t)\,
+\frac{\ddd}{\dt}\, g(X(t),Y(t)) &= 
+ \frac{\ddd}{\dt} \sum_{i,j=1}^n a_i(t) b_j(t)\,
  g(\partial_i(t),\partial_j(t))\\ 
  &= \sum_{i,j=1}^n \left(\dot{f}_i(t)g_j(t) + f_i(t)\dot
  g_j(t)\right)\,\delta_{ij}\\ 
@@ -5856,8 +5859,8 @@ Seien nun $Z\in T_xM$ und $X,Y$ Vektorfelder auf $M$. Weiterhin sei $\gamma
 : I\to M$ eine Kurve durch $x$ mit $\dot{\gamma}(0) = Z$. Dann gilt nach dem
 bisher gezeigten,
 \begin{align*}
-Z g(X,Y) &= \frac{\diffd}{\dt}\bigg|_{t=0} g(X,Y)\circ \gamma(t)\\
-&= \frac{\diffd}{\dt}\bigg|_{t=0} g_{\gamma(t)}(X_\gamma(t),
+Z g(X,Y) &= \frac{\ddd}{\dt}\bigg|_{t=0} g(X,Y)\circ \gamma(t)\\
+&= \frac{\ddd}{\dt}\bigg|_{t=0} g_{\gamma(t)}(X_\gamma(t),
 Y_\gamma(t))\\
 &= g(\dot{X}_\gamma(0),Y_p) + 
 g(X_p,\dot{Y}_\gamma(0))\\
@@ -5901,7 +5904,7 @@ X(t) = P^E_{\gamma(t)}X = [\gamma^*(0)]\circ [\gamma^*(t)]^{-1}X,
 wobei $\gamma^*$ den horizontalen Lift von $\gamma$ nach $P$ bezeichnet.
 Offenbar ist $X(t)$ ein Vektorfeld entlang $\gamma$. Weiterhin gilt die Formel
 \begin{align*}
-\frac{\nabla}{\dt} X(t) = \frac{\diffd}{\ds}
+\frac{\nabla}{\dt} X(t) = \frac{\ddd}{\ds}
 \left(P_{\gamma|_{[t,t+s]}}^E\right)^{-1}(X(t+s)).
 \end{align*}
 Nun gilt jedoch
@@ -5983,13 +5986,13 @@ nicht vom gewählten Weg ab und der Schnitt $f_i$ ist wohldefiniert. Schließlic
 Sei dazu $y\in M$ und $X$ ein Vektorfeld auf $M$. Dann gilt
 \begin{align*}
 (\nabla_X^F f_i)_y  &= 
-\frac{\diffd}{\dt}\bigg|_{t=0} P_{\gamma(t)y}^{\nabla^F}(f_i(\gamma(t)))
+\frac{\ddd}{\dt}\bigg|_{t=0} P_{\gamma(t)y}^{\nabla^F}(f_i(\gamma(t)))
 = 
-\frac{\diffd}{\dt}\bigg|_{t=0}
+\frac{\ddd}{\dt}\bigg|_{t=0}
 P_{\gamma(t)y}^{\nabla^F}P_{x\gamma(t)}^{\nabla^F}(v_i)\\
 &
 = 
-\frac{\diffd}{\dt}\bigg|_{t=0}
+\frac{\ddd}{\dt}\bigg|_{t=0}
 P_{xy}^{\nabla^F}(v_i) = 0,
 \end{align*}
 denn $P^{\nabla^F}$ hängt nicht vom gewählten Weg ab.\qed 
@@ -6104,7 +6107,7 @@ für $p\in \R^n$ und $v\in T_{p}\R^n \cong \R^n$.
 \item Sei $M=S^n\subset\R^{n+1}$ die $n$-dimensionale Sphäre versehen mit der
 von $\R^{n+1}$ induzierten Metrik und dem induzierten Zusammenhang. Dann liegen
 die Geodätischen von $S^n$ auf Großkreisen. Zu zwei Punkten $x$, $y$ gibt es hier
-also zwei verschiedene Geodätische eine >>kürzere<< und eine >>längere<<.\bsp
+also zwei verschiedene Geodätische eine >>kürzere<< und eine >>längere<<.\boxc
 \end{exenum}
 \end{ex}
 
@@ -6141,9 +6144,9 @@ Sei $\gamma: I\to M$ eine nichtkonstante Geodätische. Eine Umparametrisierung $
 \begin{proof}
 Aus der Geodätengleichung in lokalen Koordinaten erhalten wir,
 \begin{align*}
-\ddot{\gamma\circ h} &= \frac{\diffd^2 h}{\dt^2} \dot{\gamma}\circ h + 
-\left( \frac{\diffd h}{\dt}\right)^2 \ddot{\gamma}\circ h\\
-&=\frac{\diffd^2 h}{\dt^2} \dot{\gamma}\circ h,
+\ddot{\gamma\circ h} &= \frac{\ddd^2 h}{\dt^2} \dot{\gamma}\circ h + 
+\left( \frac{\ddd h}{\dt}\right)^2 \ddot{\gamma}\circ h\\
+&=\frac{\ddd^2 h}{\dt^2} \dot{\gamma}\circ h,
 \end{align*}
 denn $\gamma$ ist geodätisch. Ist nun auch $\gamma\circ h$ eine Geodäte, dann verschwindet die linke Seite und da $\abs{\dot\gamma}\neq 0$ ist folglich $h(t) = at+b$. Umgekehrt folgt aus dieser Gestalt von $h$, dass die rechte Seite verschwindet und somit $\gamma\circ h$ eine Geodäte ist.\qed
 \end{proof}
@@ -6200,7 +6203,7 @@ gegeben. Ein Punkt $z\in N$ ist ein kritischer Punkt von $f$ genau dann, wenn da
 $\df_z$ verschwindet. Dies ist äquivalent dazu, dass für jede Kurve $\eta: I\to N$ mit
 $\eta(0) = z$ gilt,
 \begin{align*}
-\frac{\diffd}{\dt} f\circ\eta(t) = 0.
+\frac{\ddd}{\dt} f\circ\eta(t) = 0.
 \end{align*}
 
 In unseren Fall ist nun $N=\Omega_{xy}(M)$ und ein Punkt $z\in N$ entspricht
@@ -6212,7 +6215,7 @@ von $\gamma$, das sind Abbildungen
 mit $\gamma_0\equiv \gamma$ und $\gamma_s\in\Omega_{xy}$. So ist $\gamma$ genau dann
 ein kritischer Punkt von $E$, wenn
 \begin{align*}
-\frac{\diffd}{\ds} E[\gamma_s] = 0
+\frac{\ddd}{\ds} E[\gamma_s] = 0
 \end{align*}
 für alle Variationen $\gamma_s$ gilt.
 \item 
@@ -6349,7 +6352,7 @@ Die Exponentialabbildung hat daher die Form
 \end{align*}
 Somit ist $\exp_p$ ein Diffeomorphismus von
 \begin{align*}
-\setdef{v\in T_pS^n}{\abs{v}< \pi} \to S^n\setminus\setd{-p}.\bsp
+\setdef{v\in T_pS^n}{\abs{v}< \pi} \to S^n\setminus\setd{-p}.\boxc
 \end{align*}
 \end{ex}
 
@@ -6369,12 +6372,12 @@ Sei $V\subset T_xM$ hinreichend klein, dann ist
 wohldefiniert und glatt. Das Differential der Exponentialabbildung ist eine
 Abbildung
 \begin{align*}
-\diffd \exp_p: T_0(T_xV)\cong T_xM \to T_xM,
+\ddd \exp_p: T_0(T_xV)\cong T_xM \to T_xM,
 \end{align*}
 und für $v\in T_xM$ gilt
 \begin{align*}
-\diffd \exp_x(v) = \frac{\diffd}{\dt}\bigg|_0 \exp_x(tv)
-= \frac{\diffd}{\dt}\bigg|_0 \gamma_v(t)
+\ddd \exp_x(v) = \frac{\ddd}{\dt}\bigg|_0 \exp_x(tv)
+= \frac{\ddd}{\dt}\bigg|_0 \gamma_v(t)
 = v.
 \end{align*}
 Somit ist das Differential ein Isomorphismus und $\exp_x$ nach dem Umkehrsatz
@@ -6489,10 +6492,10 @@ Sei $(M,g)$ eine zusammenhängende Riemannsche Mannigfaltigkeit. Dann können je
 \begin{proof}
 Zu einem beliebigen Punkt $x\in M$ setzen wir
 \begin{align*}
-\CC \defl \setdef{y\in M}{\text{es existiert eine gebrochene Geodätische }\gamma_{{xy}}}.
+\Cs \defl \setdef{y\in M}{\text{es existiert eine gebrochene Geodätische }\gamma_{{xy}}}.
 \end{align*}
-Dann ist $\CC$ offen, denn falls $z\in \CC$, dann lassen sich $x$ und $z$ durch eine gebrochene Geodätische verbinden. Sei $U(z)$ eine normale Umgebung von $z$, dann lässt sich diese gebrochene Geodätische zu jedem Punkt in $U(z)$ fortsetzen.
-Umgekehrt ist aus genau demselben Argument auch das Komplement von $\CC$ offen. Aber $\CC$ ist nichtleer und $M$ zusammenhängend, also gilt $\CC = M$.\qed
+Dann ist $\Cs$ offen, denn falls $z\in \Cs$, dann lassen sich $x$ und $z$ durch eine gebrochene Geodätische verbinden. Sei $U(z)$ eine normale Umgebung von $z$, dann lässt sich diese gebrochene Geodätische zu jedem Punkt in $U(z)$ fortsetzen.
+Umgekehrt ist aus genau demselben Argument auch das Komplement von $\Cs$ offen. Aber $\Cs$ ist nichtleer und $M$ zusammenhängend, also gilt $\Cs = M$.\qed
 \end{proof}
 
 Die Aussage ist natürlich höchst unbefriedigend, denn schon im $\R^n$ können gebrochene Geodätische komplizierte Gebilde werden, obwohl wir im $\R^n$ die kürzesten Verbindungen genau kennen, es sind gerade Strecken. Ist die Exponentialabbildung jedoch an einem Punkt global definiert, dann lässt sich die Aussage erheblich verbessern.
@@ -6558,7 +6561,7 @@ x_i}\bigg|_p,\frac{\partial}{\partial x_j}\bigg|_x \right).
 \end{align*}
 Weiterhin berechnet man die Koordinatenvektorfelder zu
 \begin{align*}
-\frac{\partial}{\partial x_i}\bigg|_x = \frac{\diffd}{\dt}\bigg|_0 \ph^{-1}(t e_i)
+\frac{\partial}{\partial x_i}\bigg|_x = \frac{\ddd}{\dt}\bigg|_0 \ph^{-1}(t e_i)
 = \frac{\partial}{\partial x_i}\bigg|_0 \exp_x(t e_i) = e_i.
 \end{align*}
 Somit ist $g_{ij}(p) = g_x(e_i,e_j) = \delta_{ij}$, denn $\setd{e_i}$ ist
@@ -6716,8 +6719,6 @@ Sei $(M,g)$ eine Riemannsche Untermannigfaltigkeit von $(\bar{M},\bar{g})$, d.h.
 T\bar{M} = TM\oplus NM,\qquad g = \bar{g}\bigg|_{TM\times TM}.
 \end{align*}
 
-\renewcommand{\II}{\mathrm{II}}
-
 Der Levi-Civita Zusammenhang auf $M$ lässt sich mit Hilfe der 2. Fundamentalform über den Levi-Civita Zusammenhang auf $\bar{M}$ beschreiben,
 \begin{align*}
 \bar{\nabla}_{X}Y = \nabla_{X}Y + \II(X,Y),\qquad X,Y\in \chi(M).\tag{*}
@@ -6793,7 +6794,7 @@ verläuft ganz in $E$, ist also ein Großkreis. Weiterhin ist $\sigma(0) = \gamm
 \begin{align*}
 \gamma = \sigma,
 \end{align*}
-und $\gamma$ selbst ist ein Großkreis.\bsp
+und $\gamma$ selbst ist ein Großkreis.\boxc
 \end{ex}
 
 \chapter{Holonomietheorie}
@@ -7105,8 +7106,8 @@ Zu zeigen ist also, dass $\m = \g$. Seien dazu $p\in P$ sowie $X,Y\in T^h_{p}P$ 
 \end{align*}
 Die Krümmung ist eine 2-Form vom Typ $\Ad$, d.h.
 \begin{align*}
-\dot{\alpha}(0) &=  \frac{\diffd}{\dt}\bigg|_{0} F_{\exp(tW)}(\dR_{\exp(tW)}(X),\dR_{\exp(tW)}(Y))\\
-&= \frac{\diffd}{\dt}\bigg|_{0} \Ad(\exp(-tW))F_{p}(X,Y)\\
+\dot{\alpha}(0) &=  \frac{\ddd}{\dt}\bigg|_{0} F_{\exp(tW)}(\dR_{\exp(tW)}(X),\dR_{\exp(tW)}(Y))\\
+&= \frac{\ddd}{\dt}\bigg|_{0} \Ad(\exp(-tW))F_{p}(X,Y)\\
 &= -\ad(W) F_{p}(X,Y)\\
 &= [F_{p}^A(X,Y),W].
 \end{align*}
@@ -7259,9 +7260,9 @@ Also ist $\ph_{v}$ wohldefiniert. Aufgrund der differenzierbaren Abhängigkeit d
 
 Weiterhin gilt für ein Vektorfeld $X$ auf $M$, dass
 \begin{align*}
-(\nabla_{X}\ph_{v})(y) &= \frac{\diffd}{\dt}\bigg|_{0} P_{\alpha(t)y}^E\ph_{v}(\alpha(t))
-= \frac{\diffd}{\dt}\bigg|_{0} [P_{\alpha(t)y}^AP^A_{x\alpha(t)}(p),v]\\
-&= \frac{\diffd}{\dt}\bigg|_{0} [P_{xy}(p),v] = 0,
+(\nabla_{X}\ph_{v})(y) &= \frac{\ddd}{\dt}\bigg|_{0} P_{\alpha(t)y}^E\ph_{v}(\alpha(t))
+= \frac{\ddd}{\dt}\bigg|_{0} [P_{\alpha(t)y}^AP^A_{x\alpha(t)}(p),v]\\
+&= \frac{\ddd}{\dt}\bigg|_{0} [P_{xy}(p),v] = 0,
 \end{align*}
 denn die Parallelverschiebung hängt nicht vom Weg ab.
 Somit ist $\ph_{v}$ tatsächlich parallel.
@@ -7270,7 +7271,7 @@ $\subset$: Sei $\ph$ ein glatter, paralleler Schnitt in $E$. Schreiben wir das V
 \begin{align*}
 E = P\times_{G} V = P^A(u) \times_{\Hol_{u}(A)}V,
 \end{align*}
-so entspricht $\ph$ einerseits einer Funktion $\bar{\ph} \in\CC^\infty(P,V)^G$ und andererseits einer Funktion $\bar{\psi}\in \CC^\infty(P(u)^A,V)^{\Hol_{u}(A)}$, wobei $\bar{\psi} = \bar{\ph}\big|_{P^A(u)}$. Nach Voraussetzung ist $\ph$ parallel, also gilt
+so entspricht $\ph$ einerseits einer Funktion $\bar{\ph} \in\Cs^\infty(P,V)^G$ und andererseits einer Funktion $\bar{\psi}\in \Cs^\infty(P(u)^A,V)^{\Hol_{u}(A)}$, wobei $\bar{\psi} = \bar{\ph}\big|_{P^A(u)}$. Nach Voraussetzung ist $\ph$ parallel, also gilt
 \begin{align*}
 0 = \bar{\nabla_{X}\ph} = X^*(\bar{\ph}),
 \end{align*}
@@ -7334,7 +7335,7 @@ wobei $\sigma$ einen Weg bezeichnet, der $x$ und $y$ verbindet.\map
 \item In Kapitel 1-G haben wir festgestellt, dass auf einer Mannigfaltigkeit genau dann eine Riemannsche Metrik existiert, wenn das Rahmenbündel eine $\O(n)$-Reduktion besitzt, d.h. wenn sich die Strukturgruppe $\GL_{n}$ auf $\O_{n}$ reduzieren lässt. Analog dazu existiert auf einer Mannigfaltigkeiten genau dann eine Riemannsche Metrik, wenn die Holonomiegruppe eine Untergruppe der orthogonalen Gruppe ist, $\Hol_{x}(M) \subset \O_{n}$.
 
 Für orientierbare Riemannsche Mannigfaltigkeiten lässt sich die Strukturgruppe sogar auf $\SO_{n}$ reduzieren. Außerdem ist $(M,g)$ genau dann orientierbar, wenn $\Hol_{x}(M)\subset \SO_{n}$.
-\item Die $n$-dimensionale Sphäre $S^n$ ist eine orientierbare Riemannsche Mannigfaltigkeit und es gilt $\Hol_{x}(S^n) = \SO_{n}$.\bsp
+\item Die $n$-dimensionale Sphäre $S^n$ ist eine orientierbare Riemannsche Mannigfaltigkeit und es gilt $\Hol_{x}(S^n) = \SO_{n}$.\boxc
 \end{exenum}
 \end{ex}
 
@@ -7360,13 +7361,13 @@ R_{x}\in \Sym^2(\Lie(\Hol_{x}(M,g))).
 
 
 \begin{prop}[Holonomie-Prinzip]
-Sei $\TT\to M$ ein Tensorbündel auf $M$. Dann gelten:
+Sei $\Tc\to M$ ein Tensorbündel auf $M$. Dann gelten:
 \begin{propenum}
-\item Sei $T\in \Gamma(\TT)$ mit $\nabla T \equiv 0$. Dann ist $T(x) \in\TT_{x}$ invariant unter $\Hol_{x}(M,g)$, d.h.
+\item Sei $T\in \Gamma(\Tc)$ mit $\nabla T \equiv 0$. Dann ist $T(x) \in\Tc_{x}$ invariant unter $\Hol_{x}(M,g)$, d.h.
 \begin{align*}
 g T(x) = T(x),\quad \text{für alle }g\in \Hol_{x}(M,g).
 \end{align*}
-\item Sei $T_{x}\in\TT_{x}$ ein $\Hol_{x}(M,g)$-invarianter Tensor. Dann existiert genau ein Schnitt $T\in \Gamma(\TT)$ mit $\nabla T \equiv 0$ und $T(x) = T_x$.\fish
+\item Sei $T_{x}\in\Tc_{x}$ ein $\Hol_{x}(M,g)$-invarianter Tensor. Dann existiert genau ein Schnitt $T\in \Gamma(\Tc)$ mit $\nabla T \equiv 0$ und $T(x) = T_x$.\fish
 \end{propenum}
 \end{prop}
 
@@ -7392,7 +7393,7 @@ $\Leftarrow$: Sei $\Hol_{x}(M,g) \subset \SO(T_{x}M) = \setdef{A \in \O(T_{x}M)}
 \begin{align*}
 \Hol_{x}(M,g) \subset \O_{n-1}\subset \O_{n}.
 \end{align*}
-\item Sei $M$ eine $2n$-dimensionale Riemmannsche Mannigfaltigkeit und $\TT = \End(TM)$ das Endomorphismenbündel. Reduziert sich die Holonomiegruppe wie folgt,
+\item Sei $M$ eine $2n$-dimensionale Riemmannsche Mannigfaltigkeit und $\Tc = \End(TM)$ das Endomorphismenbündel. Reduziert sich die Holonomiegruppe wie folgt,
 \begin{align*}
 \Hol_{x}(M^{2n},g) \subset U(T_{x}M,g_{x},J_{x}) = \setdef{A\in \SO(T_{x}M,g)}{AJ_{x} = J_{x}A},
 \end{align*}
@@ -7400,7 +7401,7 @@ wobei $J_{x}\in \End(T_{x}M)$ mit $J_{x}^*g_{x} = g_{x}$ und $J_{x}^2 = -\Id$ ei
 \begin{align*}
 J^*g = g,\qquad J^2 = -\Id,\qquad \nabla J = 0.
 \end{align*}
-Existiert umgekehrt eine fastkomplexe Struktur $J\in \End(TM)$, so reduziert sich die Strukturgruppe auf $\U_{n}$. Ist $J$ außerdem parallel, also $\nabla J \equiv 0$, so reduziert sich sogar die Holonomiegruppe auf $U_{n}$.\bsp
+Existiert umgekehrt eine fastkomplexe Struktur $J\in \End(TM)$, so reduziert sich die Strukturgruppe auf $\U_{n}$. Ist $J$ außerdem parallel, also $\nabla J \equiv 0$, so reduziert sich sogar die Holonomiegruppe auf $U_{n}$.\boxc
 \end{exenum}
 \end{ex}
 
@@ -7753,13 +7754,13 @@ die \emph{Chern Zahl} als
 \begin{align*}
 \lin{c_{i_1}(E)\cdot \ldots \cdot c_{i_k}(E),[M]}
 \defl
-\int_M \alpha_{i_1}\wedge \ldots \wedge \alpha_{i_k}\, \diffd M,
+\int_M \alpha_{i_1}\wedge \ldots \wedge \alpha_{i_k}\, \ddd M,
 \end{align*}
 wobei $\alpha_{i_r}$ eine geschlossene $2i_r$-Form auf $M$ bezeichnet mit
 $[\alpha_{i_r}] = c_{i_r}$.
 
 Die Chern Zahlen nennt man auch topologische Quantenzahlen oder, in der
-$\U(1)$-Theorie, Ladungen.\bsp
+$\U(1)$-Theorie, Ladungen.\boxc
 \end{ex}
 
 \section{Konstruktion}
@@ -7867,7 +7868,7 @@ Sei $G=\GL_n^\C$ und $\g = \gl_n$, der Matrizenring.  Der maximale Torus zu $t$ 
 t = \setdef{\diag(\lambda_{1},\ldots,\lambda_{n})}{\lambda_{i}\in \C},
 \end{align*}
 die wir mit ihren Eigenwerten, also $\C^n$, identifizieren können. Die Weyl-Gruppe, also die Gruppe, die $t$ erhält, sind gerade die Permutationen. Die invarianten Polynome sind also symmetrische polynomiale Funktionen, die nur von den
-Eigenwerten abhängen.~\bsp
+Eigenwerten abhängen.~\boxc
 \end{ex}
 
 \begin{prop}
@@ -7925,7 +7926,7 @@ Definition unabhängig von den gewählten Koordinaten und daher ist $p(F^A)
 Ist zum Beispiel $\g = \gl_n$, der Matrizenring, dann ist eine Basis durch die
 Standardeinheitsmatrizen $E_{ij}$ gegeben, so dass
 \begin{align*}
-F^A = \sum_{i,j=1}^n F_{ij}E_{ij},\qquad \tr(F^A) = \sum_{i=1}^n F_{ii}.\bsp
+F^A = \sum_{i,j=1}^n F_{ij}E_{ij},\qquad \tr(F^A) = \sum_{i=1}^n F_{ii}.\boxc
 \end{align*}
 \end{ex}
 
@@ -7937,7 +7938,7 @@ Sei $f\in \Sym^k(\g)^G$ und $A$ ein Zusammenhang auf $P$. Dann gelten:
 \item Seien $A_0$ und $A_1$ Zusammenhänge auf $P$, dann ist die
 Differenz $f(F^{A_0})-f(F^{A_1})$ exakt. Genauer gilt
 \begin{align*}
-f(F^{A_0}) = f(F^{A_1}) + \domega,
+f(F^{A_0}) = f(F^{A_1}) + \dom,
 \end{align*}
 wobei $\omega$ eine horizontale $(2k-1)$-Form auf $P$ vom Typ $\Ad$
 bezeichnet.~\fish
@@ -7966,7 +7967,7 @@ F^A = \sum_{i=1}^r F_i e_i,\qquad F_i\in \Omega_\hor^2(P,\C)^{\Ad},
 \end{align*}
 und somit gilt
 \begin{align*}
-\diffd f(F^A) &= D_A f(F^A)
+\ddd f(F^A) &= D_A f(F^A)
 =  \sum_{1\le i_1,\ldots,i_k \le r} D_A(F_{i_1}\wedge \ldots \wedge F_{i_k})\;
 f(e_{i_1},\ldots,e_{i_k})\\
 &= 
@@ -8021,14 +8022,14 @@ i_\lambda: M\to X,\qquad m\mapsto (m,\lambda),
 dann gilt für Vektorfelder $X$ und $Y$ auf $M$,
 \begin{align*}
 (i_\lambda^* F^{\tilde{A}})(X,Y) &= 
-F^{\tilde{A}}(\diffd i_\lambda(X),\diffd i_\lambda(Y))\\
+F^{\tilde{A}}(\ddd i_\lambda(X),\ddd i_\lambda(Y))\\
 &= 
-[(p,x),\bar{F}^{\tilde{A}}(\diffd i_\lambda(\tilde{X}),\diffd
+[(p,x),\bar{F}^{\tilde{A}}(\ddd i_\lambda(\tilde{X}),\ddd
 i_\lambda(\tilde{Y}))]\\
 &= 
-[(p,x),(1-\lambda)\bar{F}^A_0(\diffd i_\lambda(\tilde{X}),\diffd
+[(p,x),(1-\lambda)\bar{F}^A_0(\ddd i_\lambda(\tilde{X}),\ddd
 i_\lambda(\tilde{Y})) + 
-\lambda \bar{F}^A_1(\diffd i_\lambda(\tilde{X}),\diffd i_\lambda(\tilde{Y}))
+\lambda \bar{F}^A_1(\ddd i_\lambda(\tilde{X}),\ddd i_\lambda(\tilde{Y}))
 ]\\
 &=
 (1-\lambda)[p,\bar{F}^A_0(\tilde{X},\tilde{Y})] +
@@ -8060,7 +8061,7 @@ $\Ad$ auf $P$.
 \begin{defn}
 Die Abbildung
 \begin{align*}
-\WW_P : \Sym(\g)^G \to H_{\dR}(M,\C),\qquad f \mapsto [f(F^A)]
+\Ws_P : \Sym(\g)^G \to H_{\dR}(M,\C),\qquad f \mapsto [f(F^A)]
 \end{align*}
 heißt \emph{Weil-Homomorphismus} des $G$-Hauptfaserbündels $P$.\fish
 \end{defn}
@@ -8072,11 +8073,11 @@ zusammen.
 \begin{propenum}
 \item Sei $\phi: N\to M$ differenzierbar, dann gilt
 \begin{align*}
-\WW_{\phi^* P} = \phi^*\WW_P.
+\Ws_{\phi^* P} = \phi^*\Ws_P.
 \end{align*}
-\item Sind $P_1$ und $P_2$ isomorphe Hauptfaserbündel, so gilt $\WW_{P_1} =
-\WW_{P_2}$.
-\item Ist $P$ isomorph zum trivialen Bündel, dann gilt $\WW_P\equiv 0$.\fish
+\item Sind $P_1$ und $P_2$ isomorphe Hauptfaserbündel, so gilt $\Ws_{P_1} =
+\Ws_{P_2}$.
+\item Ist $P$ isomorph zum trivialen Bündel, dann gilt $\Ws_P\equiv 0$.\fish
 \end{propenum}
 
 
@@ -8109,7 +8110,7 @@ N &  & M \\ };
 
 Sei $A$ ein Zusammenhang auf $P$, dann ist $\pr_2^*A$ ein
 Zusammenhang auf $\phi^*P$ und für ein horizontales Vektorfeld $X^*$ auf $P$
-ist auch $\diffd \pr_2(X^*)$ ein horizontales Vektorfeld auf $\phi^*P$. Die
+ist auch $\ddd \pr_2(X^*)$ ein horizontales Vektorfeld auf $\phi^*P$. Die
 Krümmung auf $\phi^*P$ ist gegeben durch $F^{\pr_2^* A} = \pr_2^*
 F^A$. Somit gilt für Vektorfelder $X_1,\ldots,X_{2k}$ auf $N$ und ein
 $f\in \Sym^k(\g)^G$,
@@ -8119,29 +8120,29 @@ f(F^{\pr_2^*A})_x(X_1,\ldots,X_{2k})
 f(\pr_2^* F^A \wedge \ldots\wedge \pr_2^* F^A)_{(x,p)}(X_1^*,\ldots,X_{2k}^*)\\
 &= 
 f(F^A \wedge \ldots\wedge
-F^A)_{p}(\diffd\pr_2(X_1^*),\ldots,\diffd\pr_2(X_{2k}^*)) \\
+F^A)_{p}(\ddd\pr_2(X_1^*),\ldots,\ddd\pr_2(X_{2k}^*)) \\
 &= f(F^A \wedge
 \ldots\wedge F^A)_{p}(\dphi(X_1^*),\ldots,\dphi(X_{2k}^*)) \\
 &= \phi^*
 f(F^A)_x(X_1,\ldots,X_{2k}),
 \end{align*}
 denn aufgrund der Kommutativität des Diagramms und der Eindeutigkeit des
-horizontalen Lifts gilt $\dpi(\diffd\pr_2(X^*)) = \dphi(\diffd\bar{\pr}(X^*)) =
+horizontalen Lifts gilt $\dpi(\ddd\pr_2(X^*)) = \dphi(\ddd\bar{\pr}(X^*)) =
 \dphi(X)$. Also gilt auch
 \begin{align*}
-\WW_{\phi^*P}(f) = [f(F^{\pr_2 A})] = \phi^*[f(F^A)]
-= \phi^* \WW_{P}(f).
+\Ws_{\phi^*P}(f) = [f(F^{\pr_2 A})] = \phi^*[f(F^A)]
+= \phi^* \Ws_{P}(f).
 \end{align*}
 
 b): Sei $\psi: P_1\to P_2$ ein Hauptfaserbündelisomorphismus und $A_2$ ein
 Zusammenhang auf $P_2$, dann ist $A_1=\psi^* A_2$ ein Zusammenhang auf $P_1$.
 Für ein Vektorfeld $X$ auf $M$ mit $A_1$-horizontalem Lift $X^*$ auf $P_1$, ist
-$\dpsi(X^*)$ ein $A_2$-horizontaler Lift auf $P_2$. Somit gilt für Vektorfelder
+$\dps(X^*)$ ein $A_2$-horizontaler Lift auf $P_2$. Somit gilt für Vektorfelder
 $X_1,\ldots,X_{2k}$ auf $M$ und eine Abbildung $f\in \Sym^k(\g)^G$,
 \begin{align*}
 f(F^{A_1})_x(X_1,\ldots,X_{2k})_p
 &= f(F^{A_2}\wedge \ldots \wedge
-F^{A_2})_p(\dpsi(X_1^*),\ldots,\dpsi(X_{2k}^*))\\ 
+F^{A_2})_p(\dps(X_1^*),\ldots,\dps(X_{2k}^*))\\ 
 &= f(F^{A_2})_{x}(X_1,\ldots,X_{2k}).
 \end{align*}
 
@@ -8149,7 +8150,7 @@ c): Sei $P$ trivial, also isomorph zum trivialen Bündel $P_0$. Der
 kanonisch flache Zusammenhang $A_0$ auf $P_0$ ist flach, d.h. $F^{A_0}\equiv 0$
 und folglich ist nach b)
 \begin{align*}
-\WW_P = \WW_{P_0} = 0.\qed
+\Ws_P = \Ws_{P_0} = 0.\qed
 \end{align*}
 
 \end{proof}
@@ -8206,7 +8207,7 @@ Die Spur und die Determinante sind invariante Polynome und man erhält,
 \begin{align*}
 \tr(F) &= \sum_{i=1}^n F_{ii} \in \Omega^2(M,\C),\\
 \det(F) &= \sum_{\sigma\in S_n} \sign(\sigma) F_{1\sigma(1)}\wedge \ldots
-\wedge F_{n\sigma(n)} \in \Omega^{2n}(M,\C).\bsp
+\wedge F_{n\sigma(n)} \in \Omega^{2n}(M,\C).\boxc
 \end{align*} 
 \end{ex}
 
@@ -8218,9 +8219,9 @@ Form $p(F^A)$. Insbesondere ist $p(F^\nabla)$ geschlossen und hängt bis auf
 eine exakte Form nicht von der gewählten kovarianten Ableitung $\nabla$ ab, ist also ein Element
 der de-Rham Kohomologie von $M$ und es gilt
 \begin{align*}
-[p(F^\nabla)] = \WW_P(p) = [p(F^A)].
+[p(F^\nabla)] = \Ws_P(p) = [p(F^A)].
 \end{align*}
-Somit übertragen sich die Eigenschaften von $\WW_p$ auch auf $[p(F^\nabla)]$.
+Somit übertragen sich die Eigenschaften von $\Ws_p$ auch auf $[p(F^\nabla)]$.
 
 \begin{lem}
 Sei $E$ ein Vektorbündel über $M$ und $f: N\to M$ differenzierbar. Dann gelten
@@ -8255,7 +8256,7 @@ Entwickeln wir die Determinante $\det(\Id+tX)$, ergibt sich
 \end{align*}
 Analog erhält man beim Entwickeln der Spur,
 \begin{align*}
-s_0(X) = n, \qquad s_1(X) = \sigma_1(X).\bsp
+s_0(X) = n, \qquad s_1(X) = \sigma_1(X).\boxc
 \end{align*}
 \end{ex}
 
@@ -8381,7 +8382,7 @@ c_2(E) &= \frac{1}{2}\left(\frac{i}{2\pi}\right)^2
 \end{align*}
 \item Für den Chern-Charakter evaluiert man mit Hilfe der Newtonformel,
 \begin{align*}
-\ch(E) = \rank(E) + c_1(E)  + \frac{1}{2}(c_1(E)^2 - 2c_2(E)) + \ldots\bsp
+\ch(E) = \rank(E) + c_1(E)  + \frac{1}{2}(c_1(E)^2 - 2c_2(E)) + \ldots\boxc
 \end{align*} 
 \end{exenum}
 \end{ex}
@@ -8592,9 +8593,9 @@ und folglich ist $c_{k}(E)$ reell. Analog dazu rechnet man
 \end{align*}
 also ist $c(E)$ reell.
 
-c): Sei $E= \pcal{E}_{k}+F$, wobei $\pcal{E}_k$ das triviale Bündel vom Rang $k$ bezeichnet. Dann gilt für die totale Chern-Klasse
+c): Sei $E= \Es_{k}+F$, wobei $\Es_k$ das triviale Bündel vom Rang $k$ bezeichnet. Dann gilt für die totale Chern-Klasse
 \begin{align*}
-c(E) = c(\pcal{E}_{k})\cdot c(F) = c(F).
+c(E) = c(\Es_{k})\cdot c(F) = c(F).
 \end{align*}
 Der Rang von $F$ ist $n-k$ und folglich verschwinden alle Chern-Klassen $c_{i}(F)=c_{i}(E)$ für $i>n-k$.\qed
 \end{proof}
@@ -8602,11 +8603,11 @@ Der Rang von $F$ ist $n-k$ und folglich verschwinden alle Chern-Klassen $c_{i}(F
 \begin{rem}
 Die Chern-Klassen sind nicht nur reelle Kohomologieklassen, sondern sogar ganzzahlig. Bezeichnen wir den Homomorphimsmus, der die ganzzahligen Homologieklassen in die de-Rham Kohomologie einbettet, mit
 \begin{align*}
-\pcal{H}_{\Z}^k : H^{2k}(M,\Z) \to H_{\dR}^{2k}(M,\R),
+\Hs_{\Z}^k : H^{2k}(M,\Z) \to H_{\dR}^{2k}(M,\R),
 \end{align*}
 so gilt, dass
 \begin{align*}
-c_{k}(E) \in \im \pcal{H}_{\Z}^k.
+c_{k}(E) \in \im \Hs_{\Z}^k.
 \end{align*}
 Integrieren wir also $c_{k}(E)$ über einen glatten $2k$-Zykel $N$, so gilt
 \begin{align*}
@@ -8928,7 +8929,7 @@ L &= \prod_{i=1}^n \frac{x_{i}}{\tanh(x_{i})}\\
 \end{align*}
 Analog ist für eine kompakte, $4n$ dimensionale Mannigfaltigkeit das \emph{Hirzebruchsche $L$-Geschlecht} definiert als
 \begin{align*}
-L(M) \defl \int_{M} L(TM).\bsp
+L(M) \defl \int_{M} L(TM).\boxc
 \end{align*}
 \end{exenum}
 \end{ex}
@@ -9038,7 +9039,7 @@ X^* \defl g(X,\cdot) \in\Lambda^1 V^* = V^*.
 \begin{ex}
 Seien $X,Y$ und $A,B$ Vektoren in $V$, dann gilt
 \begin{align*}
-g(X^*\wedge Y^*, A^*\wedge B^*) = g(X,A)g(Y,B) - g(X,B)g(Y,A).\bsp
+g(X^*\wedge Y^*, A^*\wedge B^*) = g(X,A)g(Y,B) - g(X,B)g(Y,A).\boxc
 \end{align*}
 \end{ex}
 
@@ -9093,7 +9094,7 @@ Sei $\alpha$ eine Differentialform und $X$ ein Vektorfeld auf $M$, dann gilt
 
 \begin{defn}
 \index{Gradient}
-Sei $f\in\CC^\infty(M)$, dann ist der \emph{Gradient} von $f$ das eindeutig bestimmte Vektorfeld $\grad(f)$ auf $M$ mit
+Sei $f\in\Cs^\infty(M)$, dann ist der \emph{Gradient} von $f$ das eindeutig bestimmte Vektorfeld $\grad(f)$ auf $M$ mit
 \begin{align*}
 g(\grad(f),X) = \df(X) = X(f),\qquad X\in\chi(M),
 \end{align*}
@@ -9141,15 +9142,15 @@ Die Lie-Ableitung erhält den Grad von Differentialformen, daher ist die Lie-Abl
 \begin{prop}
 Sei $X$ ein Vektorfeld auf $M$, dann gilt
 \begin{align*}
-L_{X}\vol = \diffd(*X^*) = \div(X)\,\vol.\fish
+L_{X}\vol = \ddd(*X^*) = \div(X)\,\vol.\fish
 \end{align*}
 \end{prop}
 \begin{proof}
 Mit Hilfe der Cartan-Formel lässt sich die Lie-Ableitung wie folgt ausdrücken
 \begin{align*}
-L_{X}\vol = X\ic \diffd\vol + \diffd(X\ic \vol) = \diffd(*X^*),
+L_{X}\vol = X\ic \ddd\vol + \ddd(X\ic \vol) = \ddd(*X^*),
 \end{align*}
-denn $\diffd\vol = 0$. Weiterhin gilt
+denn $\ddd\vol = 0$. Weiterhin gilt
 \begin{align*}
 (L_{X}\vol)(e_{1},\ldots,e_{n}) &= L_{X}\vol(e_{1},\ldots,e_{n}) - \sum_{i=1}^n \vol(\ldots,L_{X}e_{i},\ldots)\\
 &=- \sum_{i=1}^n\vol(\ldots,[X,e_{i}],\ldots).
@@ -9175,19 +9176,19 @@ Sei $X$ ein Vektorfeld auf $M$, dann gilt
 \begin{align*}
 \int_{M}\div (X)\dM = 0,
 \end{align*}
-wobei $\diffd M$ die Integration über $\vol$ bezeichnet.\fish
+wobei $\ddd M$ die Integration über $\vol$ bezeichnet.\fish
 \end{prop}
 \begin{proof}
 Alle hier betrachteten Mannigfaltigkeiten sind randlos, d.h. $\partial M  =\varnothing$. Die Behauptung folgt nun mit dem vorangegangen Lemma und dem Satz von Stokes,
 \begin{align*}
-\int_{M}\div(X)\dM = \int_{M}\div(X)\vol = \int_{M}\diffd(*X^*) = \int_{\partial M} *X^* = 0.\qed
+\int_{M}\div(X)\dM = \int_{M}\div(X)\vol = \int_{M}\ddd(*X^*) = \int_{\partial M} *X^* = 0.\qed
 \end{align*}
 \end{proof}
 
 \begin{lem}
 Sei $\omega$ eine Diffferentialform auf $M$, dann schreibt sich deren Differential lokal als
 \begin{align*}
-\domega = \sum_{i=1}^n e_{i}^* \wedge \nabla_{e_{i}}\omega.\fish
+\dom = \sum_{i=1}^n e_{i}^* \wedge \nabla_{e_{i}}\omega.\fish
 \end{align*}
 \end{lem}
 
@@ -9195,9 +9196,9 @@ Dieser Ausdruck für das Differential motiviert die Definition eines \textit{Kod
 
 \begin{defn}
 \index{Kodifferential}
-Das \emph{Kodifferential} $\diffd^*: \Omega^k(M)\to \Omega^{k-1}(M)$ ist ein Differentialoperator erster Ordnung definiert durch
+Das \emph{Kodifferential} $\ddd^*: \Omega^k(M)\to \Omega^{k-1}(M)$ ist ein Differentialoperator erster Ordnung definiert durch
 \begin{align*}
-\diffd^*\omega = - \sum_{i=1}^n e_{i}\,\ic \nabla_{e_{i}}\omega,
+\ddd^*\omega = - \sum_{i=1}^n e_{i}\,\ic \nabla_{e_{i}}\omega,
 \end{align*}
 für $\omega\in\Omega^k(M)$ und eine lokale Orthonormalbasis $\setd{e_{i}}$.\fish
 \end{defn}
@@ -9208,9 +9209,9 @@ Wir überzeugen uns davon, dass obige Definition nicht von der Wahl der Basis ab
 \label{lem:Kodifferential-Hodge}
 Sei $\omega\in\Omega^k(M)$, dann gilt
 \begin{align*}
-\diffd^*\omega = -(-1)^{n(k+1)}*\diffd*\omega.
+\ddd^*\omega = -(-1)^{n(k+1)}*\ddd*\omega.
 \end{align*}
-Insbesondere gilt $\div(X) = -\diffd^*X^*$.\fish
+Insbesondere gilt $\div(X) = -\ddd^*X^*$.\fish
 \end{lem}
 
 Während der Gradient einer Funktion durch das gewöhnliche Differential bestimmt ist, ist die Divergenz also durch das Kodifferential gegeben.
@@ -9218,7 +9219,7 @@ Während der Gradient einer Funktion durch das gewöhnliche Differential bestimm
 \begin{proof}
 Wir rechnen in einer lokalen Basis direkt nach, dass
 \begin{align*}
-*\diffd*\omega &= *\left(
+*\ddd*\omega &= *\left(
 \sum_{i=1}^n e_{i}^* \wedge \nabla_{e_{i}}(*\omega)\right)
 = *\left(\sum_{i=1}^n e_{i}^*\wedge *(\nabla_{e_{i}}\omega)\right)\\
 &= (-1)^{k+1}*^2
@@ -9228,7 +9229,7 @@ Wir rechnen in einer lokalen Basis direkt nach, dass
 &= (-1)^{(k+1)(n-k)}
 \left(\sum_{i=1}^n e_{i}\ic (\nabla_{e_{i}}\omega)\right)\\
 &=
--(-1)^{n(k+1)}\diffd^* \omega,
+-(-1)^{n(k+1)}\ddd^* \omega,
 \end{align*}
 denn $(-1)^{k(k+1)} = 1$.\qed
 \end{proof}
@@ -9238,7 +9239,7 @@ Das Kodifferential ist in einem gewissen Sinne dual zum gewöhnlichen Differenti
 \begin{defn}
 Auf dem \emph{Raum $\Omega_{c}^k(M)$ der $k$-Formen auf $M$ mit kompaktem Träger} ist das $L^2$-Skalarprodukt definiert durch
 \begin{align*}
-(\alpha,\beta)\defl \int_{M} g(\alpha,\beta)\diffd M,\qquad \alpha,\beta \in\Omega_{c}^k(M).\fish
+(\alpha,\beta)\defl \int_{M} g(\alpha,\beta)\ddd M,\qquad \alpha,\beta \in\Omega_{c}^k(M).\fish
 \end{align*}
 \end{defn}
 
@@ -9247,7 +9248,7 @@ Falls die Mannigfaltigkeit $M$ selbst schon kompakt ist, gilt $\Omega_{c}^k(M) =
 \begin{lem}
 Das Kodifferential ist formal $L^2$-adjungiert (oder kurz adjungiert) zum Differential, d.h. für Differentialformen $\alpha\in\Omega^{k-1}_{c(M)}$ und $\beta\in\Omega^{k}_{c}(M)$ gilt
 \begin{align*}
-(\diffd\alpha,\beta) = (\alpha,\diffd^*\beta).\fish
+(\ddd\alpha,\beta) = (\alpha,\ddd^*\beta).\fish
 \end{align*}
 \end{lem}
 
@@ -9255,33 +9256,33 @@ Das Kodifferential ist formal $L^2$-adjungiert (oder kurz adjungiert) zum Differ
 \begin{proof}
 Zunächst gilt nach Definition des Hodge-$*$-Operators,
 \begin{align*}
-(\alpha,\diffd^*\beta) = \int_{M} g(\alpha,\diffd^*\beta)\vol
-= \int_{M} \alpha\wedge *\diffd^*\beta.
+(\alpha,\ddd^*\beta) = \int_{M} g(\alpha,\ddd^*\beta)\vol
+= \int_{M} \alpha\wedge *\ddd^*\beta.
 \end{align*}
 Umgekehrt gilt dann natürlich auch
 \begin{align*}
-(\diffd\alpha,\beta) = \int_{M} g(\diffd\alpha,\beta)\vol = \int_{M} \diffd\alpha\wedge *\beta.
+(\ddd\alpha,\beta) = \int_{M} g(\ddd\alpha,\beta)\vol = \int_{M} \ddd\alpha\wedge *\beta.
 \end{align*}
 Weiterhin gilt nach den Rechenregeln für $*$,
 \begin{align*}
-\alpha\wedge *\diffd^*\beta &= (-1)^{n(k+1)+1}\alpha\wedge *^2\diffd *\beta\\
-&= (-1)^{n(k+1)+1}(-1)^{(n-k+1)(k-1)}\alpha\wedge \diffd *\beta\\
-&= (-1)^{k^2}\bigl(\diffd(\alpha\wedge *\beta) - \diffd \alpha\wedge *\beta\bigr)(-1)^{k-1}\\
-&=-\diffd(\alpha\wedge *\beta) + \diffd \alpha\wedge *\beta.
+\alpha\wedge *\ddd^*\beta &= (-1)^{n(k+1)+1}\alpha\wedge *^2\ddd *\beta\\
+&= (-1)^{n(k+1)+1}(-1)^{(n-k+1)(k-1)}\alpha\wedge \ddd *\beta\\
+&= (-1)^{k^2}\bigl(\ddd(\alpha\wedge *\beta) - \ddd \alpha\wedge *\beta\bigr)(-1)^{k-1}\\
+&=-\ddd(\alpha\wedge *\beta) + \ddd \alpha\wedge *\beta.
 \end{align*}
 Bei Integration verschwindet der erste Term nach dem Satz von Stokes, also gilt
 \begin{align*}
-(\alpha,\diffd^*\beta) = 
-\int_{M} \alpha\wedge *\diffd^*\beta = 
-\int_{M} \diffd \alpha\wedge *\beta = (\diffd\alpha,\beta).\qed
+(\alpha,\ddd^*\beta) = 
+\int_{M} \alpha\wedge *\ddd^*\beta = 
+\int_{M} \ddd \alpha\wedge *\beta = (\ddd\alpha,\beta).\qed
 \end{align*}
 \end{proof}
 
 \begin{defn}
 \index{Hessische}
-Die \emph{Hessische} einer Funktion $f\in\CC^\infty(M)$ ist definiert als
+Die \emph{Hessische} einer Funktion $f\in\Cs^\infty(M)$ ist definiert als
 \begin{align*}
-\Hess(f) = \nabla(\diffd f) \in\Gamma(T^*M\otimes T^*M),
+\Hess(f) = \nabla(\ddd f) \in\Gamma(T^*M\otimes T^*M),
 \end{align*}
 d.h. für Vektorfelder $X$ und $Y$ auf $M$ gilt
 \begin{align*}
@@ -9293,7 +9294,7 @@ d.h. für Vektorfelder $X$ und $Y$ auf $M$ gilt
 Sei $f$ eine glatte Funktion auf $M$, dann gelten
 \begin{propenum}
 \item $\Hess(f) = \nabla^2 f$, und
-\item $\Hess(f)$ ist ein symmetrischer $(0,2)$-Tensor, d.h. $\Hess(f)$ ist $\CC^\infty(M)$-bilinear und für Vektorfelder $X$ und $Y$ auf $M$ gilt
+\item $\Hess(f)$ ist ein symmetrischer $(0,2)$-Tensor, d.h. $\Hess(f)$ ist $\Cs^\infty(M)$-bilinear und für Vektorfelder $X$ und $Y$ auf $M$ gilt
 \begin{align*}
 \Hess(f)(X,Y) = \Hess(f)(Y,X).\fish
 \end{align*}
@@ -9319,14 +9320,14 @@ denn der Zusammenhang ist torsionsfrei.\qed
 \index{Laplace-Operator}
 Der \emph{Laplace-Operator} auf $M$ ist ein Differentialoperator 2. Ordnung definiert als
 \begin{align*}
-\D f = - \div(\grad f),\qquad f\in\CC^\infty(M).\fish
+\D f = - \div(\grad f),\qquad f\in\Cs^\infty(M).\fish
 \end{align*}
 \end{defn}
 
 \begin{rem}
 Das Vorzeichen in der Definition des Laplace-Operators ist absichtlich so gewählt, dass $\Delta$ ein positiver Operator auf $M$ wird. Wählen wir $M=\Omega\subset \R^n$ offen, dann entspricht der so definierte Laplace-Operator gerade dem dem negativen klassischen Laplace-Operator, d.h
 \begin{align*}
-\D f = -\D_{\text{klass}}f,\qquad f\in\CC^\infty(\Omega).\map
+\D f = -\D_{\text{klass}}f,\qquad f\in\Cs^\infty(\Omega).\map
 \end{align*}
 \end{rem}
 
@@ -9335,12 +9336,12 @@ Wir listen nun einige Eigenschaften des Laplace-Operators auf.
 \begin{prop}
 Sei $f$ eine glatte Funktion auf $M$ und $\setd{e_{i}}$ eine Orthonormalbasis von $T_{m}M$. Dann gelten
 \begin{propenum}
-\item $\D f = \diffd^*\diffd f = -*\diffd*\diffd f$,
+\item $\D f = \ddd^*\ddd f = -*\ddd*\ddd f$,
 \item $\D f = -\tr(\Hess(f))$,
 \item $(\D f)_{m} = -\sum_{i=1}^n \left[ e_{i}(e_{i}(f)) - (\nabla_{e_{i}}e_{i})f\right]_{m}$,
 \item Seien $\setd{\gamma_{i}}$ Geodätische durch $m$ mit $\dot{\gamma}_{i}(0) = e_{i}$, dann gilt
 \begin{align*}
-(\D f)_{m} = -\sum_{i=1}^n \frac{\diffd}{\dt^2}\bigg|_{t=0} (f\circ\gamma_{i})(t).
+(\D f)_{m} = -\sum_{i=1}^n \frac{\ddd}{\dt^2}\bigg|_{t=0} (f\circ\gamma_{i})(t).
 \end{align*}
 \item In lokalen Koordinaten $(U,x)$ von $M$ gilt
 \begin{align*}
@@ -9351,14 +9352,14 @@ wobei $\bar{g} = \det(g_{ij})$ und $g_{ij} = g\left( \frac{\partial}{\partial x_
 \begin{align*}
 (\D f,g) = (f,\D g),\qquad \text{und}\qquad (\D f,f) \ge 0,
 \end{align*}
-für alle Funktionen $f,g\in\CC_{c}^\infty(M)$.\fish
+für alle Funktionen $f,g\in\Cs_{c}^\infty(M)$.\fish
 \end{propenum}
 \end{prop}
 
 \begin{proof}
-a): Nach Lemma \ref{lem:Kodifferential-Hodge} gilt $\div(X) = -\diffd^*X^*$. Folglich gilt für eine glatte Funktion $f$, dass
+a): Nach Lemma \ref{lem:Kodifferential-Hodge} gilt $\div(X) = -\ddd^*X^*$. Folglich gilt für eine glatte Funktion $f$, dass
 \begin{align*}
--*\diffd * \df = -\diffd^* \df = -\diffd^* (\grad f)^* = -\div(\grad f).
+-*\ddd * \df = -\ddd^* \df = -\ddd^* (\grad f)^* = -\div(\grad f).
 \end{align*}
 
 b) \& c): Man rechnet im Punkt $m$ nach, dass
@@ -9371,14 +9372,14 @@ b) \& c): Man rechnet im Punkt $m$ nach, dass
 
 d): Setzen wir die Orthonormalbasis $\setd{e_{i}}$ durch Parallelverschiebung in einer kleinen Umgebung $U$ um $m$ fort, dann ist $(\nabla e_{i})_{m} = 0$ und für die Geodätischen gilt $\dot{\gamma}_{i}(t) = e_{i}\big|_{\gamma_{i}(t)}$. Dann gilt
 \begin{align*}
-\D f = - \sum_{i=1}^n e_{i}(e_{i}(f)) =  - \sum_{i=1}^n \frac{\diffd^2}{\dt^2} f\circ\gamma_{i}(t).
+\D f = - \sum_{i=1}^n e_{i}(e_{i}(f)) =  - \sum_{i=1}^n \frac{\ddd^2}{\dt^2} f\circ\gamma_{i}(t).
 \end{align*}
 
 f): Das Kodifferential ist adjungiert zum gewöhnlichen Differential, also gilt für glatte Funktionen $f$ und $g$ auf $M$,
 \begin{align*}
-(\D f,g) = (\diffd^* \diffd f,g) = (\diffd f,\diffd g) = (f,\diffd^*\diffd g) = (f,\D g).
+(\D f,g) = (\ddd^* \ddd f,g) = (\ddd f,\ddd g) = (f,\ddd^*\ddd g) = (f,\D g).
 \end{align*}
-Insbesondere gilt $(\D f,f) = (\diffd f,\diffd f) = \norm{\diffd f}^2 \ge 0$.\qed
+Insbesondere gilt $(\D f,f) = (\ddd f,\ddd f) = \norm{\ddd f}^2 \ge 0$.\qed
 \end{proof}
 
 \begin{prop}[Produktregel]
@@ -9412,14 +9413,14 @@ Sei $\ph: (M,g)\to (N,h)$ eine Isometrie. Dann gilt
 \end{align*}
 \end{prop}
 \begin{proof}
-Sei $\eta\in\CC^\infty(N)$, dann gilt
+Sei $\eta\in\Cs^\infty(N)$, dann gilt
 \begin{align*}
 (\D^M(f\circ\ph),\eta\circ\ph)_{M} &= 
-(\diffd(\ph^* f),\diffd(\ph^*\eta))_{M}
+(\ddd(\ph^* f),\ddd(\ph^*\eta))_{M}
 =
-(\ph^*\diffd f,\ph^*\diffd\eta)_{M}\\
+(\ph^*\ddd f,\ph^*\ddd\eta)_{M}\\
 &=
-(\diffd f,\diffd\eta)_{N}
+(\ddd f,\ddd\eta)_{N}
 =
 (\nabla^N f,\eta)_{N}\\
 &= 
@@ -9452,9 +9453,9 @@ Wähle Orthonormalbasen $\setd{w_{i}}$ von $T_{m}^h$ und $\{v_{j}\}$ von $T_{m}^
 \end{align*}
 Da die Submersion total geodätisch ist, ist $\pi\circ\gamma_{i}$ eine Geodätische von $N$ und $\delta_{j}$ verläuft vollständig in der Faser $F=\pi^{-1}(n)$ mit $m\in F$. Somit gilt
 \begin{align*}
-\D^M(f\circ\ph)_{m} &= -\sum_{i}\frac{\diffd^2}{\dt^2}\bigg|_{0} (f\circ\pi)\circ \gamma_{i}(t)
- -\sum_{j}\frac{\diffd^2}{\dt^2}\bigg|_{0} (f\circ\pi)\circ \delta_{j}(t)\\
-&  = -\sum_{i}\frac{\diffd^2}{\dt^2}\bigg|_{0} f\circ(\pi\circ \gamma_{i})(t)\\
+\D^M(f\circ\ph)_{m} &= -\sum_{i}\frac{\ddd^2}{\dt^2}\bigg|_{0} (f\circ\pi)\circ \gamma_{i}(t)
+ -\sum_{j}\frac{\ddd^2}{\dt^2}\bigg|_{0} (f\circ\pi)\circ \delta_{j}(t)\\
+&  = -\sum_{i}\frac{\ddd^2}{\dt^2}\bigg|_{0} f\circ(\pi\circ \gamma_{i})(t)\\
 &  = (\Delta^N f)_{\pi(m)}.\qed
 \end{align*}
 \end{proof}
@@ -9467,10 +9468,10 @@ Seien nun $(M,g)$ und $(N,h)$ Riemannsche Mannigfaltigkeiten und $(M\times N,g\o
 totalgeodätische Riemannsche Submersionen. 
 
 \begin{prop}
-Seien $a\in\CC^\infty(M)$ und $b\in\CC^\infty(N)$, dann ist
+Seien $a\in\Cs^\infty(M)$ und $b\in\Cs^\infty(N)$, dann ist
 \begin{align*}
 a\star b\defl
-\pr_{M}^*a \cdot \pr_{N}^*b = (a\circ\pr_{M})\cdot (b\circ \pr_{N})\in\CC^\infty(M\times N),
+\pr_{M}^*a \cdot \pr_{N}^*b = (a\circ\pr_{M})\cdot (b\circ \pr_{N})\in\Cs^\infty(M\times N),
 \end{align*}
 mit $a\star b(m,n) = a(m)b(n)$, und es gilt
 \begin{align*}
@@ -9506,12 +9507,12 @@ Sei $a$ eine $\D^M$ Eigenfunktion zum Eigenwert $\lambda$ und sei $b$ eine $\D^N
 \end{cor}
 \begin{proof}
 Aus dem vorangegangen Satz folgt, dass $\pr_{M}^* a\cdot \pr_{N}^* b$ eine Eigenfunktion zum Eigenwert $\lambda+\mu$ ist. 
-Sowohl $\D^M$ als auch $\D^N$ besitzt ein vollständiges Orthogonalsystem aus Eigenfunktionen $\EE^M$ bzw. $\EE^N$.
+Sowohl $\D^M$ als auch $\D^N$ besitzt ein vollständiges Orthogonalsystem aus Eigenfunktionen $\Ec^M$ bzw. $\Ec^N$.
 Da die Metrik auf $M\times N$ durch $g\oplus h$ gegeben ist, erhält man ein Orthonormalsystem aus Eigenfunktionen von $\D^{M\times N}$ durch
 \begin{align*}
-\EE^M\star \EE^N\defl \setdef{a\star b}{a\in \EE^M\text{ und }b\in\EE^N}.
+\Ec^M\star \Ec^N\defl \setdef{a\star b}{a\in \Ec^M\text{ und }b\in\Ec^N}.
 \end{align*}
-Da $\EE^M$ dicht in $\CC^\infty(M)$ und $\EE^N$ dicht in $\CC^\infty(N)$ liegt, liegt $\EE^M\star \EE^N$ dicht in $\CC^\infty(M\times N)$ und daher sind durch $\EE^M\star \EE^N$ bereits alle möglichen Eigenfunktionen beschrieben.~\qed
+Da $\Ec^M$ dicht in $\Cs^\infty(M)$ und $\Ec^N$ dicht in $\Cs^\infty(N)$ liegt, liegt $\Ec^M\star \Ec^N$ dicht in $\Cs^\infty(M\times N)$ und daher sind durch $\Ec^M\star \Ec^N$ bereits alle möglichen Eigenfunktionen beschrieben.~\qed
 \end{proof}
 
 \section{Anwendung: Der Laplace-Operator auf der Sphäre}
@@ -9533,16 +9534,16 @@ Sei $v=p\in S^n\subset\R^{n+1}$ und $v_{1},\ldots,v_{n}$ eine Orthonormalbasis v
 \begin{align*}
 \gamma_{i}(t) = \cos t \cdot p + \sin t \cdot v_{i},\qquad 1\le i\le n.
 \end{align*}
-Mit Hilfe der Geodätischen können wir nun $\D$ auf der Sphäre berechnen . Sei dazu $f\in\CC^\infty(\R^{n+1})$, dann gilt
+Mit Hilfe der Geodätischen können wir nun $\D$ auf der Sphäre berechnen . Sei dazu $f\in\Cs^\infty(\R^{n+1})$, dann gilt
 \begin{align*}
-\frac{\diffd}{\dt} f(\gamma_{i}(t)) &= \df(\dot\gamma_{i}(t)) = 
+\frac{\ddd}{\dt} f(\gamma_{i}(t)) &= \df(\dot\gamma_{i}(t)) = 
 \df(-\sin t\cdot p + \cos t \cdot v_{i})\\
 &= -\sin t \cdot v(f) + \cos t \cdot v_{i}(f)\bigg|_{\gamma_{i}(t)}.
 \end{align*}
 Analog erhalten wir für die zweite Ableitung
 \begin{align*}
-\frac{\diffd^2}{\dt^2}\bigg|_{t=0} f(\gamma_{i}(t)) &=
-\frac{\diffd}{\dt}
+\frac{\ddd^2}{\dt^2}\bigg|_{t=0} f(\gamma_{i}(t)) &=
+\frac{\ddd}{\dt}
 -\sin t \cdot v(f) + \cos t \cdot v_{i}(f)\bigg|_{t=0}\\
 &= -v(f) + v_{i}(v_{i}(f))\bigg|_{\gamma_{i}(0)}.
 \end{align*}
@@ -9550,7 +9551,7 @@ Somit ist der Laplace-Operator auf der Sphäre gegeben durch,
 \begin{align*}
 \D(f\big|_{S^n})_{p} &=
 -\sum_{i=1}^n 
-\frac{\diffd^2}{\dt^2}\bigg|_{t=0} f(\gamma_{i}(t))\\
+\frac{\ddd^2}{\dt^2}\bigg|_{t=0} f(\gamma_{i}(t))\\
 &= -\sum_{i=1}^n v_{i}(v_{i}(f))\bigg|_{\gamma_{i}(0)} + n v(f)\bigg|_{\gamma_{i}(0)}\\
 &= (\D^{\R^n} f)_{p} + v(v(f))_{p} + nv(f)_{p}.
 \end{align*}
@@ -9581,17 +9582,17 @@ Die harmonischen, homogenen Polynome vom Grad $k$ auf $\R^{n+1}$ sind also Eigen
 \D^{S^n}(H\big|_{S^n}) = k(n+k-1) H\big|_{S^n}.\tag{*}
 \end{align*}
 
-Wir wollen nun zeigen, dass jede Eigenfunktion als Linearkombination harmonischer, homogener Polynome gegeben ist. Dazu bezeichnen wir den Raum der homogenen Polynome vom Grad $k$ auf $\R^{n+1}$ mit $\PP_{k}$ und den Raum der harmonischen, homogenen Polynome vom Grad $k$ mit $\HH_{k}$. Weiterhin bezeichnen wir die Einschränkung einer Funktion $f\in\CC ^\infty(\R^{n+1})$ auf $S^n$ mit
+Wir wollen nun zeigen, dass jede Eigenfunktion als Linearkombination harmonischer, homogener Polynome gegeben ist. Dazu bezeichnen wir den Raum der homogenen Polynome vom Grad $k$ auf $\R^{n+1}$ mit $\Pc_{k}$ und den Raum der harmonischen, homogenen Polynome vom Grad $k$ mit $\Hs_{k}$. Weiterhin bezeichnen wir die Einschränkung einer Funktion $f\in\Cs ^\infty(\R^{n+1})$ auf $S^n$ mit
 \begin{align*}
 \tilde{f} \defl f\big|_{S^n},
 \end{align*}
 und schreiben
 \begin{align*}
-\tilde\HH_{k} \defl \setdef{\tilde{f}}{f\in\HH_{k}},\qquad \tilde\PP_{k} \defl \setdef{\tilde{f}}{f\in\PP_{k}}.
+\tilde\Hs_{k} \defl \setdef{\tilde{f}}{f\in\Hs_{k}},\qquad \tilde\Pc_{k} \defl \setdef{\tilde{f}}{f\in\Pc_{k}}.
 \end{align*}
-Für Funktionen $P$ und $Q\in\PP_{k}$ definieren wir ein Skalarprodukt durch
+Für Funktionen $P$ und $Q\in\Pc_{k}$ definieren wir ein Skalarprodukt durch
 \begin{align*}
-\lin{P,Q} \defl \int_{S^n} \tilde P \tilde Q\diffd S^n.
+\lin{P,Q} \defl \int_{S^n} \tilde P \tilde Q\ddd S^n.
 \end{align*}
 Mit dieser Notation können wir unser Resultat wie folgt postulieren:
 \begin{prop}
@@ -9599,7 +9600,7 @@ Das Spektrum von $\D^{S^n}$ ist gegeben durch eine abzählbare Folge von ganzzah
 \begin{align*}
 \lambda_{k} = k(n+k-1),\qquad k=0,1,\ldots,
 \end{align*}
-und der Eigenraum zu $\lambda_{k}$ ist $\tilde\HH_{k}$.\fish
+und der Eigenraum zu $\lambda_{k}$ ist $\tilde\Hs_{k}$.\fish
 \end{prop}
 
 \newcommand{\scal}{\mathrm{scal}}
@@ -9621,42 +9622,42 @@ Bevor wir den Satz beweisen, benötigen wir ein Resultat über die Struktur der 
 \begin{lem}
 Für $k\ge 0$ lassen sich die Räume homogener Polynome wie folgt orthogonal zerlegen
 \begin{align*}
-&\PP_{2k} = \HH_{2k}\oplus r^2 \HH_{2k-2} \oplus \ldots \oplus r^{2k} \HH_{0},\\
-&\PP_{2k+1} = \HH_{2k+1}\oplus r^2 \HH_{2k-1} \oplus \ldots \oplus r^{2k}\HH_{1}.\fish
+&\Pc_{2k} = \Hs_{2k}\oplus r^2 \Hs_{2k-2} \oplus \ldots \oplus r^{2k} \Hs_{0},\\
+&\Pc_{2k+1} = \Hs_{2k+1}\oplus r^2 \Hs_{2k-1} \oplus \ldots \oplus r^{2k}\Hs_{1}.\fish
 \end{align*}
 \end{lem}
 \begin{proof}
 Wir zeigen die Behauptung per Induktion. Offenbar liegen die konstanten und die linearen Funktionen im Kern des Laplace Operators und daher gilt 
 \begin{align*}
-\PP_{0} = \HH_{0},\qquad \PP_{1} = \HH_{1}.
+\Pc_{0} = \Hs_{0},\qquad \Pc_{1} = \Hs_{1}.
 \end{align*}
-Sei also für $k\ge 0$ die Zerlegung $\PP_{k} = \HH_{k}\oplus r^2\PP_{k-2}$ gegeben, dann ist zu zeigen, dass
+Sei also für $k\ge 0$ die Zerlegung $\Pc_{k} = \Hs_{k}\oplus r^2\Pc_{k-2}$ gegeben, dann ist zu zeigen, dass
 \begin{align*}
-\PP_{k+2} = \HH_{k+2}\oplus r^2\PP_{k}.
+\Pc_{k+2} = \Hs_{k+2}\oplus r^2\Pc_{k}.
 \end{align*}
 Bezeichne $E(\lambda_{k})$ den Eigenraum von $\D^{S^n}$ zu $\lambda_{k}$, so haben wir bereits gezeigt, dass
 \begin{align*}
-\tilde\HH_{k+2} \subset E(\lambda_{k+2}).
+\tilde\Hs_{k+2} \subset E(\lambda_{k+2}).
 \end{align*}
 Nach Induktionsvoraussetzung gilt somit
 \begin{align*}
-\PP_{k} \subset \bigoplus_{i=1}^k E(\lambda_{i}).
+\Pc_{k} \subset \bigoplus_{i=1}^k E(\lambda_{i}).
 \end{align*}
-Da $\D$ selbstadjungiert ist, sind Eigenräume zu verschiedenen Eigenwerten orthogonal und daher gilt insbesondere $\HH_{k+2}\bot \PP_{k}$, sodass
+Da $\D$ selbstadjungiert ist, sind Eigenräume zu verschiedenen Eigenwerten orthogonal und daher gilt insbesondere $\Hs_{k+2}\bot \Pc_{k}$, sodass
 \begin{align*}
-\HH_{k+2}\oplus r^2\PP_{k} \subset \PP_{k+2}.
+\Hs_{k+2}\oplus r^2\Pc_{k} \subset \Pc_{k+2}.
 \end{align*}
-Um die umgekehrte Inklusion einzusehen, betrachte ein Polynom $p\in\PP_{k+2}$ mit $p\,\bot\, \PP_{k}$. Dann ist
+Um die umgekehrte Inklusion einzusehen, betrachte ein Polynom $p\in\Pc_{k+2}$ mit $p\,\bot\, \Pc_{k}$. Dann ist
 \begin{align*}
-\D p\in\PP_{k}=\HH_{k}\oplus r^2\HH_{k-2}\oplus \ldots,
+\D p\in\Pc_{k}=\Hs_{k}\oplus r^2\Hs_{k-2}\oplus \ldots,
 \end{align*}
 d.h. $p$ ist genau dann harmonisch, wenn
 \begin{align*}
-\D p \,\bot\, r^{2l}\HH_{k-2l} \text{ für }0\le 2l\le k
+\D p \,\bot\, r^{2l}\Hs_{k-2l} \text{ für }0\le 2l\le k
 \quad
 \iff
 \quad
-\widetilde{\D p} \,\bot\, \tilde\HH_{k-2l} \text{ für }0\le 2l\le k.
+\widetilde{\D p} \,\bot\, \tilde\Hs_{k-2l} \text{ für }0\le 2l\le k.
 \end{align*}
 Nach voriger Rechnung ist
 \begin{align*}
@@ -9671,25 +9672,25 @@ Somit gilt für ein harmonisches, homogenes Polynom $H$ vom Grad $k-2l$, dass
 &= (\tilde{p},\D\tilde{H}) - \lambda_{k+2}(\tilde{p},\tilde{H})\\
 &= (\lambda_{2k-l}-\lambda_{k+2}) (\tilde{p},\tilde{H}) = 0,
 \end{align*}
-denn $\tilde p\,\bot\, \tilde\PP_{k}=\bigoplus_{0\le 2l\le k} \tilde\HH_{k-2l}$. Also ist $p\in\HH_{k+2}$ und folglich gilt
+denn $\tilde p\,\bot\, \tilde\Pc_{k}=\bigoplus_{0\le 2l\le k} \tilde\Hs_{k-2l}$. Also ist $p\in\Hs_{k+2}$ und folglich gilt
 \begin{align*}
-\HH_{k+2}\oplus r^2\PP_{k} \supset \PP_{k+2}.\qed
+\Hs_{k+2}\oplus r^2\Pc_{k} \supset \Pc_{k+2}.\qed
 \end{align*}
 \end{proof}
 
 \begin{proof}[Beweis des Satzes.]
 Jedes homogene Polynom lässt sich als Linearkombination von harmonischen, homogenen Polynomen darstellen. Weiterhin liegen die Polynome nach dem Satz von Weierstrass dicht in den glatten Funktionen, d.h. auch
 \begin{align*}
-\bigoplus_{k\ge 0}\tilde\HH_{k} = \bigoplus_{k\ge 0}\tilde\PP_{k} \subset \CC^\infty(S^n)
+\bigoplus_{k\ge 0}\tilde\Hs_{k} = \bigoplus_{k\ge 0}\tilde\Pc_{k} \subset \Cs^\infty(S^n)
 \end{align*}
-liegt dicht. Somit sind die $\lambda_{k}$ die einzigen Eigenwerte von $\D$, denn für ein weiteres $\lambda\in\R$ gäbe es auch einen Eigenraum $E(\lambda)$ der senkrecht auf allen $\tilde\HH_{k}$ stehen müsste, dann könnten die $\HH_{k}$ aber nicht dicht liegen. Somit gilt auch $E(\lambda_{k}) = \tilde\HH_{k}$, denn andernfalls gäbe es eine Eigenfunktion $\ph_{k}$ zu $\lambda_{k}$, die orthogonal auf $\tilde\HH_{k}$ steht und da $E_{\lambda}$ abgeschlossen ist, ist dies wiederum ein Widerspruch zur Dichtheit.\qed
+liegt dicht. Somit sind die $\lambda_{k}$ die einzigen Eigenwerte von $\D$, denn für ein weiteres $\lambda\in\R$ gäbe es auch einen Eigenraum $E(\lambda)$ der senkrecht auf allen $\tilde\Hs_{k}$ stehen müsste, dann könnten die $\Hs_{k}$ aber nicht dicht liegen. Somit gilt auch $E(\lambda_{k}) = \tilde\Hs_{k}$, denn andernfalls gäbe es eine Eigenfunktion $\ph_{k}$ zu $\lambda_{k}$, die orthogonal auf $\tilde\Hs_{k}$ steht und da $E_{\lambda}$ abgeschlossen ist, ist dies wiederum ein Widerspruch zur Dichtheit.\qed
 \end{proof}
 
 \begin{rem}
 Die Dimension der Eigenräume lässt sich nun wie folgt berechnen,
 \begin{align*}
-\dim E(\lambda_{k}) = \dim \HH_{k} = 
-\dim \PP_{k}-\dim\PP_{k-2} =
+\dim E(\lambda_{k}) = \dim \Hs_{k} = 
+\dim \Pc_{k}-\dim\Pc_{k-2} =
 \binom{n+k}{k} - 
 \binom{n+k-2}{n-2}.\map
 \end{align*}
@@ -9752,7 +9753,7 @@ Dabei erfüllen die Parametrisierungen die sogenannten \textit{branching rules},
 \end{align*}
 Für $\bar{\lambda}=0$ ist so z.B. $\lambda=(\lambda_{1},0,\ldots,0)$. Daher können wir die glatten Funktionen auf $S^{2n}$ darstellen als
 \begin{align*}
-\CC^\infty(S^{2n}) = \bigoplus V_{(\lambda_{1},0,\ldots,0)}\otimes \Hom_{k}(V_{(\lambda_{1},0,\ldots,0)},V).
+\Cs^\infty(S^{2n}) = \bigoplus V_{(\lambda_{1},0,\ldots,0)}\otimes \Hom_{k}(V_{(\lambda_{1},0,\ldots,0)},V).
 \end{align*}
 Für $M=S^{2n}$ ist $G=\SO(2n+1)$ und auf $\g=\so(2n+1)$ sei das Skalarprodukt durch die Killing-Form induziert. Man berechnet, dass hier
 \begin{align*}
@@ -9762,7 +9763,7 @@ und daher ist der Casimir gegeben durch
 \begin{align*}
 \Cas_{V_{(\lambda_{k},0,\ldots,0)}} = k^2+k(2n-1) = k(k+2n-1) = \lambda_{k}.
 \end{align*}
-Die Bestimmung des Spektrums der Sphäre lässt sich also in ein Problem der Darstellungstheorie von Lie-Gruppen übersetzen.\bsp
+Die Bestimmung des Spektrums der Sphäre lässt sich also in ein Problem der Darstellungstheorie von Lie-Gruppen übersetzen.\boxc
 \end{ex}
 
 
@@ -9781,46 +9782,46 @@ Der \emph{Hodge-Laplace-Operator} auf Formen
 \end{align*}
 ist für $\omega\in\Omega^k(M)$ definiert durch
 \begin{align*}
-\D\omega = \diffd^*\diffd\omega + \diffd\diffd^*\omega.\fish
+\D\omega = \ddd^*\ddd\omega + \ddd\ddd^*\omega.\fish
 \end{align*}
 \end{defn}
 
-Der Term $\diffd\diffd^*$ verschwindet auf Funktionen und trat daher in der ursprünglichen Definition nicht auf. Viele Eigenschaften des Laplace-Operators auf Funktionen übertragen sich auch auf den Hodge-Laplace-Operator.
+Der Term $\ddd\ddd^*$ verschwindet auf Funktionen und trat daher in der ursprünglichen Definition nicht auf. Viele Eigenschaften des Laplace-Operators auf Funktionen übertragen sich auch auf den Hodge-Laplace-Operator.
 
 \begin{lem}
 \begin{propenum}
-\item Es gilt $\D = (\diffd + \diffd^*)^2$.
+\item Es gilt $\D = (\ddd + \ddd^*)^2$.
 \item Der Laplace-Operator ist selbstadjungiert und positiv, genauer gilt für Formen $\alpha$, $\beta\in \Omega^p_{c}(M)$,
 \begin{align*}
-(\D \alpha,\beta) = (\alpha,\D\beta),\qquad \text{und} \qquad (\D\alpha,\alpha) = \norm{\diffd\alpha}^2 + \norm{\diffd^*\alpha}^2 \ge 0.
+(\D \alpha,\beta) = (\alpha,\D\beta),\qquad \text{und} \qquad (\D\alpha,\alpha) = \norm{\ddd\alpha}^2 + \norm{\ddd^*\alpha}^2 \ge 0.
 \end{align*}
 \item Der Laplace-Operator vertauscht mit dem Differential, dem Kodifferential und dem Hodge-$*$-Operator, d.h. es gilt
 \begin{align*}
-\D\diffd = \diffd\D,\qquad \D\diffd^* = \diffd^* \D,\qquad\text{und}\qquad \D* = *\D. \fish
+\D\ddd = \ddd\D,\qquad \D\ddd^* = \ddd^* \D,\qquad\text{und}\qquad \D* = *\D. \fish
 \end{align*}
 \end{propenum}
 \end{lem}
 \begin{proof}
-a): Eine formale Rechnung zeigt $(\diffd + \diffd^*)^2 = \diffd^2+ \diffd^*\diffd + \diffd\diffd^*  + (\diffd^*)^2=\D$, denn die Quadrate von Differential und Kodifferential verschwinden.
+a): Eine formale Rechnung zeigt $(\ddd + \ddd^*)^2 = \ddd^2+ \ddd^*\ddd + \ddd\ddd^*  + (\ddd^*)^2=\D$, denn die Quadrate von Differential und Kodifferential verschwinden.
 
 b): Wir haben bereits verifiziert, dass das Kodifferential der zum Differential adjungierte Operator ist. Somit gilt
 \begin{align*}
-(\D\alpha,\beta)  &=(\diffd^*\diffd\alpha,\beta) + 
-(\diffd\diffd^*\alpha,\beta) = 
-(\diffd \alpha,\diffd\beta) + (\diffd^*\alpha,\diffd^*\beta) \\ &= 
-(\beta,\diffd^*\diffd\alpha) + (\beta,\diffd\diffd^*\beta) = 
+(\D\alpha,\beta)  &=(\ddd^*\ddd\alpha,\beta) + 
+(\ddd\ddd^*\alpha,\beta) = 
+(\ddd \alpha,\ddd\beta) + (\ddd^*\alpha,\ddd^*\beta) \\ &= 
+(\beta,\ddd^*\ddd\alpha) + (\beta,\ddd\ddd^*\beta) = 
 (\beta,\D\alpha),
 \end{align*}
-und insbesondere $(\D\alpha,\alpha) = \norm{\diffd\alpha}^2 + \norm{\diffd^*\alpha}^2$.
+und insbesondere $(\D\alpha,\alpha) = \norm{\ddd\alpha}^2 + \norm{\ddd^*\alpha}^2$.
 
-c): Vertauschung von $\D$ mit $\diffd$ bzw. $\diffd^*$ zeigt eine formale Rechnung. Sei weiterhin $\omega\in\Omega^k(M)$, dann gilt
+c): Vertauschung von $\D$ mit $\ddd$ bzw. $\ddd^*$ zeigt eine formale Rechnung. Sei weiterhin $\omega\in\Omega^k(M)$, dann gilt
 \begin{align*}
-\D*\omega &= -(-1)^{n(k+1)}\left(*\diffd*\diffd*\omega + 
-\diffd*\diffd**\omega\right)\\
-&= -(-1)^{n(k+1)}\left(*\diffd*\diffd*\omega + 
-**\diffd*\diffd\omega\right)\\
-&= -(-1)^{n(k+1)}*\left(\diffd * \diffd*\omega + *\diffd  *\diffd \omega\right)\\
-&=*\left(\diffd\diffd^* + \diffd^*\diffd\right)\omega = 
+\D*\omega &= -(-1)^{n(k+1)}\left(*\ddd*\ddd*\omega + 
+\ddd*\ddd**\omega\right)\\
+&= -(-1)^{n(k+1)}\left(*\ddd*\ddd*\omega + 
+**\ddd*\ddd\omega\right)\\
+&= -(-1)^{n(k+1)}*\left(\ddd * \ddd*\omega + *\ddd  *\ddd \omega\right)\\
+&=*\left(\ddd\ddd^* + \ddd^*\ddd\right)\omega = 
 *\D\omega.\qed
 \end{align*}
 \end{proof}
@@ -9832,7 +9833,7 @@ Der Laplace-Operator ist ein elliptischer Differentialoperator. Auf kompakten Ma
 \begin{defn}
 Die Formen im Kern des Laplace-Operators heißen \emph{harmonisch} und mit
 \begin{align*}
-\HH^k(M) \defl \ker\left(\D\big|_{\Omega^k(M)} \right)
+\Hs^k(M) \defl \ker\left(\D\big|_{\Omega^k(M)} \right)
 \end{align*}
 bezeichnet man den \emph{Raum der harmonischen $k$-Formen}.\fish
 \end{defn}
@@ -9840,13 +9841,13 @@ bezeichnet man den \emph{Raum der harmonischen $k$-Formen}.\fish
 \begin{lem}
 Sei $(M,g)$ eine kompakte Riemannsche Mannigfaltigkeit. Dann ist eine $k$-Form $\omega$ genau dann harmonisch, wenn
 \begin{align*}
-\diffd\omega = 0\qquad \text{und}\qquad \diffd^*\omega = 0.\fish
+\ddd\omega = 0\qquad \text{und}\qquad \ddd^*\omega = 0.\fish
 \end{align*}
 \end{lem}
 \begin{proof}
 Da $\D$ ein positiver Operator ist, ist $\omega$ genau dann harmonisch, wenn
 \begin{align*}
-(\D\omega,\omega) = \norm{\diffd\omega}^2 + \norm{\diffd^*\omega}^2 = 0.\qed
+(\D\omega,\omega) = \norm{\ddd\omega}^2 + \norm{\ddd^*\omega}^2 = 0.\qed
 \end{align*}
 \end{proof}
 
@@ -9860,36 +9861,36 @@ Sei nun $(M,g)$ eine kompakte, $n$-dimensionale Riemannsche Mannigfaltigkeit.
 
 \begin{prop}[Satz von Hodge-de-Rham]
 \begin{propenum}
-\item Der Raum $\HH^k(M)$ der harmonischen $k$-Formen auf $M$ ist endlichdimensional.
+\item Der Raum $\Hs^k(M)$ der harmonischen $k$-Formen auf $M$ ist endlichdimensional.
 \item Es gilt die Hodge-Zerlegung
 \begin{align*}
-\Omega^k(M) = \HH^k(M)\oplus \im \left(\diffd\big|_{\Omega^{k-1}(M)}\right)
-\oplus \im \left(\diffd^*\big|_{\Omega^{k+1}(M)}\right).
+\Omega^k(M) = \Hs^k(M)\oplus \im \left(\ddd\big|_{\Omega^{k-1}(M)}\right)
+\oplus \im \left(\ddd^*\big|_{\Omega^{k+1}(M)}\right).
 \end{align*}
-\item $\HH^k(M) \cong H_{\dR}^k(M)$.\fish
+\item $\Hs^k(M) \cong H_{\dR}^k(M)$.\fish
 \end{propenum}
 \end{prop}
 
 \begin{proof}
-a): Der Raum der harmonischen Formen $\HH^k(M)$ entspricht gerade dem Eigenraum von $\D\big|_{\Omega ^k(M)}$ zum Eigenwert $0$. Da $\D$ elliptisch und $M$ kompakt ist, ist $0$ ein Eigenwert endlicher Vielfachheit.
+a): Der Raum der harmonischen Formen $\Hs^k(M)$ entspricht gerade dem Eigenraum von $\D\big|_{\Omega ^k(M)}$ zum Eigenwert $0$. Da $\D$ elliptisch und $M$ kompakt ist, ist $0$ ein Eigenwert endlicher Vielfachheit.
 
 b): Der Laplace-Operator bildet $\Omega^k(M)$ auf sich selbst ab und ist selbstadjungiert, d.h. es gilt 
 \begin{align*}
-\Omega^k(M) = \HH^k(M) \oplus \im\left(\Delta\big|_{\Omega^k(M)}\right).
+\Omega^k(M) = \Hs^k(M) \oplus \im\left(\Delta\big|_{\Omega^k(M)}\right).
 \end{align*}
 Für alle weiteren Details siehe \cite{deRham:1984vp}.
 
 c): Die Abbildung
 \begin{align*}
-\HH^k(M) \to H_{\dR}^k(M),\qquad \omega\mapsto [\omega],
+\Hs^k(M) \to H_{\dR}^k(M),\qquad \omega\mapsto [\omega],
 \end{align*}
-ist injektiv. Angenommen $[\omega]=0$, dann ist $\omega$ exakt, d.h. $\omega = \diffd\eta$ für eine $k-1$-Form $\eta$. Außerdem liegt $\omega$ im Kern von $\D$, d.h. es gilt
+ist injektiv. Angenommen $[\omega]=0$, dann ist $\omega$ exakt, d.h. $\omega = \ddd\eta$ für eine $k-1$-Form $\eta$. Außerdem liegt $\omega$ im Kern von $\D$, d.h. es gilt
 \begin{align*}
-0 = \norm{\diffd\omega}^2 + \norm{\diffd^*\omega}^2,
+0 = \norm{\ddd\omega}^2 + \norm{\ddd^*\omega}^2,
 \end{align*}
 also ist $\omega$ geschlossen und kogeschlossen. Dann gilt aber auch
 \begin{align*}
-0 = (\diffd^*\omega,\eta) = (\diffd\eta,\diffd\eta) =\norm{\omega}^2,
+0 = (\ddd^*\omega,\eta) = (\ddd\eta,\ddd\eta) =\norm{\omega}^2,
 \end{align*}
 also ist $\omega = 0$. Für die Surjektivität siehe \cite{deRham:1984vp}.\qed
 \end{proof}
@@ -9905,11 +9906,11 @@ H^0_{\dR}(M) = H^n_{\dR}(M) = \R.
 \end{align*}
 \item Die Betti-Zahlen entsprechen  der Dimension des Raums der harmonischen $k$-Formen
 \begin{align*}
-b_{k}(M) = \dim H_{\dR}^k(M) = \dim \HH^k(M).
+b_{k}(M) = \dim H_{\dR}^k(M) = \dim \Hs^k(M).
 \end{align*}
 Somit ist die Euler-Charakteristik gegeben durch
 \begin{align*}
-\chi(M) = \sum_{k=0}^n (-1)^k b_{k}(M) = \sum_{k=0}^n (-1)^k \dim \HH^k(M).\map
+\chi(M) = \sum_{k=0}^n (-1)^k b_{k}(M) = \sum_{k=0}^n (-1)^k \dim \Hs^k(M).\map
 \end{align*}
 \end{remenum}
 \end{rem}
@@ -9927,7 +9928,7 @@ b_{2k}(\CP^n) = 1,\qquad b_{2k+1}(\CP^n) =0.
 \item Sei $\Sigma_{g}$ eine Riemannsche Fläche vom Geschlecht $g$, dann gilt $b_{1} = 2g$.
 \item Die Betti-Zahlen des Torus $T^n = S_{1}\times \ldots \times S_{1}$ sind
 \begin{align*}
-b_{k}(T^n) = \binom{n}{k}.\bsp
+b_{k}(T^n) = \binom{n}{k}.\boxc
 \end{align*}
 \end{exenum}
 \end{ex}
@@ -9941,7 +9942,7 @@ Insbesondere gilt $b_{n-k}(M) = b_{k}(M)$.\fish
 \end{cor}
 
 \begin{proof}
-Da $*$ mit $\D$ vertauscht, definiert der Hodge-$*$-Operator den gewünschten Isomorphismus von $\HH^{n-k}(M)$ und $\HH^k(M)$.\qed
+Da $*$ mit $\D$ vertauscht, definiert der Hodge-$*$-Operator den gewünschten Isomorphismus von $\Hs^{n-k}(M)$ und $\Hs^k(M)$.\qed
 \end{proof}
 
 \begin{rem}
@@ -9989,7 +9990,7 @@ Durch Kontraktion des Ausdrucks erhalten wir
 \begin{align*}
 \nabla^*\nabla \omega = - \tr\left(\nabla^2\omega\right) =  -\sum_{i,j=1}^n \nabla_{e_{i}e_{j}}^2\omega
 \end{align*}
-und daher ist insbesondere $\nabla^*\nabla f = \D f$ für eine Funktion $f\in\CC^\infty(M)$.\map
+und daher ist insbesondere $\nabla^*\nabla f = \D f$ für eine Funktion $f\in\Cs^\infty(M)$.\map
 \end{rem}
 
 Wir betrachten für einen Moment die allgemeine Situation eines Vektorbündels $E$ versehen mit einem metrischen Zusammenhang $\nabla^E$, einer Fasermetrik $\lin{\cdot,\cdot}$ und der induzierten $L^2$ Metrik $(\cdot,\cdot)$. Die kovariante Ableitung schreibt sich dann als
@@ -10034,7 +10035,7 @@ So gilt dann
 \end{align*}
 Seien $\omega$, $\eta$ zwei $k$-Formen auf $M$, dann gilt
 \begin{align*}
-\lin{\nabla \omega, \nabla \eta} = \sum_{i=1}^n \lin{\nabla_{e_{i}}\omega, \nabla_{e_{i}}\eta}.\bsp
+\lin{\nabla \omega, \nabla \eta} = \sum_{i=1}^n \lin{\nabla_{e_{i}}\omega, \nabla_{e_{i}}\eta}.\boxc
 \end{align*}
 \end{ex}
 
@@ -10161,9 +10162,9 @@ Somit rechnet man für $q(R)$ nach, dass
 \end{proof}
 
 \begin{proof}[Beweis der Weitzenböck-Formel I.]
-Wir wählen in einem Punkt $m\in M$ geodätische Normalkoordinaten, so dass $(\nabla e_{i})_{m} = 0$ gilt. Mit den lokalen Darstellungen von $\diffd$ und $\diffd^*$ erhalten wir,
+Wir wählen in einem Punkt $m\in M$ geodätische Normalkoordinaten, so dass $(\nabla e_{i})_{m} = 0$ gilt. Mit den lokalen Darstellungen von $\ddd$ und $\ddd^*$ erhalten wir,
 \begin{align*}
-\diffd^*\diffd \omega &= \diffd^* \left(\sum_{i=1}^n e_{i}^* \wedge \nabla_{e_{i}}\omega\right) 
+\ddd^*\ddd \omega &= \ddd^* \left(\sum_{i=1}^n e_{i}^* \wedge \nabla_{e_{i}}\omega\right) 
 = 
 -\sum_{i,j=1}^n e_{j}\ic  \nabla_{e_{j}}\left( e_{i}^* \wedge \nabla_{e_{i}}\omega\right)\\
 &=
@@ -10178,8 +10179,8 @@ Wir wählen in einem Punkt $m\in M$ geodätische Normalkoordinaten, so dass $(\n
 \end{align*}
 Analog berechnet man
 \begin{align*}
-\diffd\diffd^*\omega &= 
-\diffd\left( -\sum_{j=1}^n e_{j}\ic \nabla_{e_{j}} \omega\right)
+\ddd\ddd^*\omega &= 
+\ddd\left( -\sum_{j=1}^n e_{j}\ic \nabla_{e_{j}} \omega\right)
 = 
  -\sum_{i,j=1}^n e_{i}^* \wedge \nabla_{e_{i}} \left(  e_{j}\ic \nabla_{e_{j}} \omega\right)\\
  &=
@@ -10187,7 +10188,7 @@ Analog berechnet man
 \end{align*}
 Addieren dieser Terme ergibt schließlich
 \begin{align*}
-\D \omega &= \diffd^*\diffd\omega + \diffd\diffd^*\omega \\ 
+\D \omega &= \ddd^*\ddd\omega + \ddd\ddd^*\omega \\ 
 & = \nabla^*\nabla \omega + \sum_{i,j=1}^n e_{i}^*\wedge \left(
 e_{j}\ic \left(\nabla_{e_{j}}\nabla_{e_{i}}\omega - \nabla_{e_{i}}\nabla_{e_{j}}\omega\right)\right)\\
 & = \nabla^*\nabla \omega + \sum_{i,j=1}^n e_{i}^*\wedge \left(
@@ -10234,7 +10235,7 @@ wobei Gleichheit nur dann gilt, wenn $g$ flach ist.\fish
 \end{cor}
 
 \begin{proof}
-a): Nach vorigem Korollar gilt $(\Ric(\omega),\omega) = 0$ für jede harmonische 1-Form. Die Ricci-Krümmung ist jedoch nach Voraussetzung in mindestens einem Punkt strikt positiv. Daher kann es keine nichttriviale harmonische 1-Form geben und folglich  ist $b_{1}(M) = \dim \HH^1(M) = 0$.
+a): Nach vorigem Korollar gilt $(\Ric(\omega),\omega) = 0$ für jede harmonische 1-Form. Die Ricci-Krümmung ist jedoch nach Voraussetzung in mindestens einem Punkt strikt positiv. Daher kann es keine nichttriviale harmonische 1-Form geben und folglich  ist $b_{1}(M) = \dim \Hs^1(M) = 0$.
 
 b): Auf einer $n$-dimensionalen Mannigfaltigkeit kann es höchstens $n$ linear unabhängige parallele 1-Formen geben, denn diese trivialisieren das Bündel $\Lambda^1TM$ lokal.
 
@@ -10295,16 +10296,16 @@ die vom Levi-Civita-Zusammenhang erhalten wird. Man nennt $\Lambda^{k,1}T^*M$ au
 \end{align*}
 während Differential und Kodifferential gegeben sind durch
 \begin{align*}
-\diffd \omega = \sum_{i=1}^n e_{i}^* \wedge \nabla_{e_{i}}\omega,\qquad
-\diffd^* \omega = -\sum_{i=1}^n e_{i} \ic \nabla_{e_{i}}\omega.
+\ddd \omega = \sum_{i=1}^n e_{i}^* \wedge \nabla_{e_{i}}\omega,\qquad
+\ddd^* \omega = -\sum_{i=1}^n e_{i} \ic \nabla_{e_{i}}\omega.
 \end{align*}
 Wenden wir obige Projektionsabbildungen an, erhalten wir unmittelbar folgendes Ergebnis.
 
 \begin{lem}
 Sei $\omega$ eine $k$-Form auf $M$. Dann gelten
 \begin{propenum}
-\item $\domega = \pr_{k+1}(\nabla \omega)$, und
-\item $\diffd^*\omega = -\pr_{k-1}(\nabla \omega)$.\fish
+\item $\dom = \pr_{k+1}(\nabla \omega)$, und
+\item $\ddd^*\omega = -\pr_{k-1}(\nabla \omega)$.\fish
 \end{propenum}
 \end{lem}
 
@@ -10318,7 +10319,7 @@ P\defl \pr_{k,1}\circ \nabla : \Omega^k(M)\to \Gamma(T^*M\otimes \Lambda^k T^*M)
 \end{align*}
 d.h. für ein Vektorfeld $X$ auf $M$ und eine $k$-Form $\omega$ gilt
 \begin{align*}
-(P\omega)(X) = \nabla_{X}\omega - \frac{1}{k+1}X \ic \domega + \frac{1}{n-k+1} X^*\wedge \diffd^*\omega.\fish
+(P\omega)(X) = \nabla_{X}\omega - \frac{1}{k+1}X \ic \dom + \frac{1}{n-k+1} X^*\wedge \ddd^*\omega.\fish
 \end{align*}
 \end{defn}
 
@@ -10327,21 +10328,21 @@ d.h. für ein Vektorfeld $X$ auf $M$ und eine $k$-Form $\omega$ gilt
 Sei $X$ ein Vektorfeld auf $M$.
 \begin{propenum}
 \item Es gilt $PX^* = 0$ genau dann, wenn $X$ ein konformes Vektorfeld ist, d.h. wenn $L_{X}g = f\cdot g$ mit einer glatten Funktion $f$ gilt.
-\item Es gilt $PX^* = 0$ und $\diffd^* X^* = 0$ genau dann, wenn $X$ ein Killing-Vektorfeld auf $M$ ist, d.h. wenn $L_{X}g = 0$ gilt.\fish
+\item Es gilt $PX^* = 0$ und $\ddd^* X^* = 0$ genau dann, wenn $X$ ein Killing-Vektorfeld auf $M$ ist, d.h. wenn $L_{X}g = 0$ gilt.\fish
 \end{propenum}
 \end{lem}
 
 \begin{proof}
 Wir schreiben $\omega = X^*$, dann gilt $P\omega = 0$ genau dann, wenn für jedes Vektorfeld $Y,Z$ auf $M$ gilt,
 \begin{align*}
-0 &=  (\nabla_{Y}\omega)(Z) - \frac{1}{2}\domega(Y,Z) + \frac{1}{n} Y^*(Z) \cdot \diffd^*\omega\\
-&= (\nabla_{Y}\omega)(Z) - \frac{1}{2}\left( (\nabla_{Y}\omega)(Z) - (\nabla_{Z}\omega)(Y) \right) + \frac{1}{n} g(Y,Z) \cdot \diffd^*\omega\\
-&= \frac{1}{2}\left( (\nabla_{Y}\omega)(Z) + (\nabla_{Z}\omega)(Y) \right) + \frac{1}{n} g(Y,Z) \cdot \diffd^*\omega\\
-&= \frac{1}{2}(L_{X})g(Y,Z) + \frac{1}{n} g(Y,Z) \cdot \diffd^*\omega.
+0 &=  (\nabla_{Y}\omega)(Z) - \frac{1}{2}\dom(Y,Z) + \frac{1}{n} Y^*(Z) \cdot \ddd^*\omega\\
+&= (\nabla_{Y}\omega)(Z) - \frac{1}{2}\left( (\nabla_{Y}\omega)(Z) - (\nabla_{Z}\omega)(Y) \right) + \frac{1}{n} g(Y,Z) \cdot \ddd^*\omega\\
+&= \frac{1}{2}\left( (\nabla_{Y}\omega)(Z) + (\nabla_{Z}\omega)(Y) \right) + \frac{1}{n} g(Y,Z) \cdot \ddd^*\omega\\
+&= \frac{1}{2}(L_{X})g(Y,Z) + \frac{1}{n} g(Y,Z) \cdot \ddd^*\omega.
 \end{align*}
 Also gilt $PX^* = 0$ genau dann, wenn
 \begin{align*}
-L_{X}g = -\frac{2}{n}\diffd^*X^*\cdot g.
+L_{X}g = -\frac{2}{n}\ddd^*X^*\cdot g.
 \end{align*}
 Somit folgen a) und b).\qed
 \end{proof}
@@ -10351,11 +10352,11 @@ Sei $\omega$ eine $k$-Form auf $M$. Dann gelten die Formeln
 \begin{propenum}
 \item 
 \[
-\frac{1}{k+1}\diffd^*\diffd\omega + \frac{1}{n-k+1}\diffd\diffd^*\omega + P^*P\omega = \nabla^*\nabla\omega,
+\frac{1}{k+1}\ddd^*\ddd\omega + \frac{1}{n-k+1}\ddd\ddd^*\omega + P^*P\omega = \nabla^*\nabla\omega,
 \]
 \item 
 \[
-\frac{k}{k+1}\diffd^*\diffd\omega + \frac{n-k}{n-k+1}\diffd\diffd^*\omega - P^*P\omega = q(R)\omega.\fish
+\frac{k}{k+1}\ddd^*\ddd\omega + \frac{n-k}{n-k+1}\ddd\ddd^*\omega - P^*P\omega = q(R)\omega.\fish
 \]
 \end{propenum}
 \end{prop}
@@ -10364,7 +10365,7 @@ Offenbar ergeben a) und b) aufaddiert wiederum $\D\omega = \nabla^*\nabla\omega 
 \begin{cor}
 Sei $\omega$ eine 1-Form auf $M$. So gilt
 \begin{align*}
-\frac{1}{2}\diffd^*\domega + \frac{n-1}{n}\diffd\diffd^*\omega - P^*P\omega = \Ric(\omega).\fish
+\frac{1}{2}\ddd^*\dom + \frac{n-1}{n}\ddd\ddd^*\omega - P^*P\omega = \Ric(\omega).\fish
 \end{align*}
 \end{cor}
 
@@ -10379,13 +10380,13 @@ wobei Gleichheit genau dann gilt, wenn $(M,g)$ isometrisch zur Standardsphäre i
 \begin{proof}
 Sei $\lambda_{1}$ der erste positive Eigenwert, also $\D f = \lambda_{1}f$ mit einer nichtkonstanten Funktion $f$, d.h. $\df \neq 0$. Dann gilt nach der Weitzenböck Formel II, dass
 \begin{align*}
-\frac{1}{2}\diffd^*\diffd\df + \frac{n-1}{n}\diffd\diffd^*\df = 
+\frac{1}{2}\ddd^*\ddd\df + \frac{n-1}{n}\ddd\ddd^*\df = 
 \frac{n-1}{n}\D\df = 
 \Ric(\df) + P^*P(\df).
 \end{align*}
 Durch Integration dieser Gleichung und Verwendung von $\Ric \ge \kappa$ und $P^*P \ge 0$, erhalten wir
 \begin{align*}
-\frac{n}{n-1}\kappa(\df,\df) \le (\D\df,\df) = (\diffd\D f,\df) = \lambda_{1}(\df,\df).
+\frac{n}{n-1}\kappa(\df,\df) \le (\D\df,\df) = (\ddd\D f,\df) = \lambda_{1}(\df,\df).
 \end{align*}
 Folglich ist $\lambda_{1} \ge n/(n+1)\kappa$.\qed
 \end{proof}
@@ -10422,18 +10423,18 @@ Die Killing-Vektorfelder kodieren also Informationen über die Isometriegruppe. 
 Sei $X$ ein Killing-Vektorfeld auf $M$. Dann gelten
 \begin{propenum}
 \item $\D X^* = 2\Ric(X^*)$, und
-\item $\diffd^* X^*  = 0$.\fish
+\item $\ddd^* X^*  = 0$.\fish
 \end{propenum}
 Ist die Mannigfaltigkeit $M$ kompakt, so charakterisieren die Eigenschaften a) und b) die Killing-Vektorfelder.\fish
 \end{cor}
 \begin{proof}
-Nach Lemma \ref{lem:Killing-Twistor} ist ein Vektorfeld $X$ genau dann Killing, wenn $PX^* = 0$ und $\diffd^* X^* = 0$ gilt. 
+Nach Lemma \ref{lem:Killing-Twistor} ist ein Vektorfeld $X$ genau dann Killing, wenn $PX^* = 0$ und $\ddd^* X^* = 0$ gilt. 
 Sei $X$ Killing, also $PX^* = 0$, dann folgt mit der Weitzenböck Formel II, dass
 \begin{align*}
-\frac{1}{2}\D X^* = \frac{1}{2}\diffd^*\diffd X^* = \Ric(X^*).
+\frac{1}{2}\D X^* = \frac{1}{2}\ddd^*\ddd X^* = \Ric(X^*).
 \end{align*}
 
-Umgekehrt sei nun $\D X^* = 2\Ric(X^*)$ und $\diffd^* X^* = 0$. Dann gilt $\D X^* = \diffd^*\diffd X^* $ und es folgt
+Umgekehrt sei nun $\D X^* = 2\Ric(X^*)$ und $\ddd^* X^* = 0$. Dann gilt $\D X^* = \ddd^*\ddd X^* $ und es folgt
 \begin{align*}
 P^*P(X^*) = \frac{1}{2}\D X^* - \Ric(X^*) = 0.
 \end{align*}
@@ -10473,7 +10474,7 @@ c): Da die Ricci-Krümmung identisch verschwindet, ist ein Vektorfeld genau dann
 \end{align*}
 gilt. Somit gilt
 \begin{align*}
-b_{1}(M) = \dim\HH^1(M) = \dim\Lie(I(M,g)) = \dim I(M,g).\qed
+b_{1}(M) = \dim\Hs^1(M) = \dim\Lie(I(M,g)) = \dim I(M,g).\qed
 \end{align*}
 \end{proof}
 
