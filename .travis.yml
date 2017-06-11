@@ -7,4 +7,4 @@ before_install:
 - sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended texlive-lang-german texlive-pstricks dvipng latexmk
 
 script:
-- latexmk -pdf -interaction=nonstopmode rgeom-skript.tex
+- latexmk -xelatex -interaction=nonstopmode rgeom-skript.tex
