@@ -2,24 +2,34 @@
 \ProvidesPackage{custom}[2017/06/11 v1.0 project specific customizations]
 
 %: custom packages
-%\RequirePackage[refpage,intoc,german]{nomencl}  % nomenclature
-\RequirePackage{makeidx}                        % index
-
-\RequirePackage{pstricks-add,pst-pdf}	% Zeichnungen mit pstricks
-
-\RequirePackage{tikz}					% Kommutative Diagramme
+\RequirePackage{makeidx}                            % index
+\RequirePackage[pdf,usenames,dvipsnames]{pstricks}  % drawing figures
+\RequirePackage{float}					            % placing figures
+\RequirePackage{tikz}					            % commutative diagramms
 \usetikzlibrary{matrix,arrows}
+\RequirePackage{caption} 				            % figure captions
 
-\RequirePackage{float}					% Setzen von figures.
-\RequirePackage{caption} 				% Abbildungs�berschriten
 
 %: custom seciton numbering
+
+\DeclareCaptionFont{gray-bold}{\small\bfseries\color{gray}}
+\DeclareCaptionFont{gray-light}{\color{gray}\footnotesize}
+
+\DeclareCaptionLabelFormat{number-only}{#2}
+\DeclareCaptionFormat{llap}{\llap{#1#2}\quad#3\par}
+
+\captionsetup{format=llap,labelformat=number-only,labelsep=quad,singlelinecheck=no,labelfont=gray-light,textfont=gray-bold}
+
 \renewcommand\thesection{\arabic{chapter}-\Alph{section}}
 \renewcommand\thesubsection{{\small\ensuremath{\blacksquare}}}
 
 %: custom styles
 \def\pagedeclaration#1{,\nobreakspace\hyperpage{#1}}%
 %\setlength{\nomitemsep}{-1mm}
+
+\psset{linecolor=darkgray}
+%\psset{tickcolor=darkgray}
+\psset{fillcolor=lightgray}
 
 %: custom math symbols
 \renewcommand\O{\mathrm{O}}
