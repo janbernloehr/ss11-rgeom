@@ -266,7 +266,7 @@ Für den Spezialfall einer Untermannigfaltigkeit $i\colon N\opento M$ ist gerade
 \end{ex}
 
 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
 \matrix (m) [matrix of math nodes, row sep=3em,
@@ -1709,7 +1709,7 @@ T^v_uP \defl T_uP_x\subset T_uP
 \emph{vertikaler Tangentialraum} an $P$ im Punkt $u$.\fish 
 \end{defn}
 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(0,-1.49)(4.76,1.51)
 \psbezier(0.4,-1.47)(1.38,-0.99)(2.76,-1.05)(3.58,-1.29)
@@ -1858,7 +1858,7 @@ Sei $u\in P$, dann nennt man einen zu $T^v_uP\subset T_uP$ komplementären
 Unterraum \emph{horizontal}.\fish
 \end{defn}
 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(0,-1.69)(3.46,1.69)
 \psbezier(0.74,-1.29)(0.84,-1.65)(2.14,-1.67)(2.3,-1.29)(2.46,-0.91)(0.64,-0.93)(0.74,-1.29)
@@ -2087,7 +2087,7 @@ erhält man einen Zusammenhang auf $P$, den sogenannten \emph{kanonischen
 flachen Zusammenhang}.\boxc
 \end{ex}
 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(0,-1.99)(5.3,1.99)
 \psframe(4.08,1.51)(0.0,-0.91)
@@ -2379,7 +2379,7 @@ eine Verklebungsvorschrift für die lokalen 1-Formen $A^s$ mit deren Hilfe man
 die Zusammenhangsform auf dem Hauptfaserbündel aus den lokalen
 Zusammenhangsformen wiedergewinnen kann.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(0,-1.75)(6,1.73)
 \psline(0.4,-1.19)(3.8,-1.19)
@@ -2485,7 +2485,7 @@ Somit ist $T_x U_i$ komplementär zu $T_gG \cong T^v_uP_{U_i}$, d.h.
 T_uP_{U_i} = T^v_uP_{U_i} \oplus \ds_i(T_xU_i).
 \end{align*}
 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(-0.2,-1.55)(5.26,1.55)
 \psline(0.68,-1.39)(4.08,-1.39)
@@ -2678,7 +2678,7 @@ ebenfalls eine Lie-Gruppe und wirkt durch die Multiplikation in
 natürlicher Weise von rechts auf $G$. Der Quotient $M=G/H$ ist eine
 differenzierbare Mannigfaltigkeit, ein sogenannter \emph{homogener Raum} und
 $(G,\pi,M;H)$ ist ein $H$-Hauptfaserbündel.
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
 \matrix (m) [matrix of math nodes, row sep=3em,
@@ -4300,7 +4300,7 @@ Sei $X$ ein Vektorfeld auf $M$. Ein Vektorfeld $X^*$ auf $P$ heißt
 \end{defnenum}
 \end{defn}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(0,-1.9)(4.87,1.9)
 
@@ -4564,7 +4564,7 @@ Sei $\gamma\colon I\to M$ eine Kurve in $M$. Eine Kurve $\gamma^* : I\to P$ hei�
 \end{defnenum}
 \end{defn}
 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 % \begin{pspicture}(0,-2.02)(4.86,2.02)
 % 
@@ -4717,7 +4717,7 @@ gilt für $t_1< t \le t_2$,
 Analog setzt man $g$ auf ganz $[0,1]$ fort.\qed
 \end{proof}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(-0.2,-1.9)(5.0,1.9)
 \psline{->}(0.14,-1.36)(0.16,1.44)
@@ -4907,8 +4907,7 @@ $\delta_u^*$, so gilt (siehe Abbildung \ref{abb:S1-2x-lifts})
 Also ist $\gamma_u^*(1) = v' \neq v = \delta_u^*(1)$. Somit hängt die
 Parallelverschiebung in $S^1$ vom gewählten Weg ab!
 
-\begin{figure}[h]
-\label{abb:S1-2x-lifts}
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(0,-1.72)(3.24,1.7)
 \psbezier(1.58,0.98)(0.64,0.94)(0.66,0.12)(1.28,0.14)(1.9,0.16)(3.16,1.68)(1.58,1.52)(0.0,1.36)(1.3,0.46)(1.94,0.46)(2.58,0.46)(2.52,1.02)(1.58,0.98)
@@ -4981,6 +4980,7 @@ Parallelverschiebung in $S^1$ vom gewählten Weg ab!
 \end{pspicture} 
 \caption{Zweifache Überlagerung der $S^1$ (links), sowie mit den $x$ und $y$
 verbinden Kurven samt Lifts (rechts)}
+\label{abb:S1-2x-lifts}
 \end{figure}
 
 % Vorlesung vom 22. Juni 2011
@@ -5317,7 +5317,7 @@ P_{\tau_2}\circ P_{\tau_1}\circ P_{\gamma_1}\\
 &= P_{\gamma_2}\circ P_{\gamma_1} = P_{\gamma}.\qed\map
 \end{align*}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(0,-2.08)(7.54,2.1)
 \psbezier[linecolor=darkblue](4.14,-0.02)(4.74,-2.06)(7.52,-0.82)(7.38,0.68)
@@ -5365,8 +5365,8 @@ P_{\tau_2}\circ P_{\tau_1}\circ P_{\gamma_1}\\
 
 \rput(3.92,1.925){\color{darkgray}$F$}
 \end{pspicture} 
-\label{fig:Unabhangigkeit-Wegewahl}
 \caption{Zum Beweis der Unabhängigkeit der Wahl des Weges.}
+\label{fig:Unabhangigkeit-Wegewahl}
 \end{figure}
 \end{proof}
 
@@ -5713,7 +5713,7 @@ Außerdem hängen die Lösungen differenzierbar vom Anfangswert ab. Die $f_i$
 liefern nun die Koeffizienten des gesuchten Vektorfeldes $Z$.\qed
 \end{proof}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(-0.2,-1.31)(5,1.33)
 \psbezier[linecolor=darkblue](0.08,-0.31)(1.14,0.83)(2.78,-1.29)(3.7,0.03)
@@ -5760,7 +5760,7 @@ Translation von Vektoren gegeben.\boxc
 
 Im Allgemeinen hängt die Parallelverschiebung vom Zusammenhang ab und kann
 beliebig kompliziert werden. Die Menge aller möglichen Parallelverschiebungen
-lässt sich durch die Holonomiegruppe (siehe Kapitel \ref{chap:Holonimietheore})
+lässt sich durch die Holonomiegruppe (siehe Kapitel \ref{chap:Holonomietheorie})
 beschreiben.
 
 \begin{rem}[Bemerkung zur Notation.]
@@ -5981,7 +5981,7 @@ P_{xy}^{\nabla^F}(v_i) = 0,
 denn $P^{\nabla^F}$ hängt nicht vom gewählten Weg ab.\qed 
 \end{proof}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(0,-2.18)(4.98,2.18)
 \psbezier[linecolor=darkblue](0.6,0.2)(1.22,0.82)(2.74,0.06)(3.44,1.16)
@@ -6209,7 +6209,7 @@ Punkte des Hilbertfunktionals sind.\map
 \end{remenum}
 \end{rem}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(0,-1.4)(3.6,1.4)
 \psbezier[linecolor=darkblue](0.26,-0.04)(0.9,-1.26)(2.58,-0.6)(3.3,-0.02)
@@ -6367,7 +6367,7 @@ Somit ist das Differential ein Isomorphismus und $\exp_x$ nach dem Umkehrsatz
 ein lokaler Diffeomorphismus um Null.\qed
 \end{proof}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(0,-1.4936931)(7.2658916,1.5136931)
 \psbezier(4.5658913,-0.54630697)(5.4258914,-0.38630694)(6.2058916,-0.64630693)(6.625891,-1.266307)
@@ -6781,6 +6781,7 @@ und $\gamma$ selbst ist ein Großkreis.\boxc
 \end{ex}
 
 \chapter{Holonomietheorie}
+\label{chap:Holonomietheorie}
 
 \section{Die Holonomie-Gruppe}
 
@@ -6821,7 +6822,7 @@ P_\gamma^A(p) = p\cdot g\text{ für ein }\gamma\in \Omega_\o(x)} \subset
 \end{defn}
 
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(0,-2.19)(3.5531259,2.21)
 
@@ -7525,7 +7526,7 @@ denn $P_{\sigma_{j}^i}$ ist gerade die Translation einer Schleife an $x$. Somit
 ist $P_{\gamma}$ als Hintereinanderausführung aller $P_{\delta_{j}^i}$ gerade ein Produkt von Elementen aus $H_1$ und $H_2$.\qed
 \end{proof}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{pspicture}(0,-1.846467)(3.5031214,1.8464673)
 \psframe[linecolor=darkblue](2.6431212,1.0535328)(0.6231213,-0.9664672)
